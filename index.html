@@ -38,7 +38,6 @@
         .progress-bar { height: 4px; background: #333; margin-bottom: 25px; }
         #progress-fill { height: 100%; background: var(--accent-gold); width: 0%; transition: 0.5s; }
         .option-btn { display: block; width: 100%; padding: 16px; margin-bottom: 12px; background: #1a1a1a; border: 1px solid #333; color: #fff; text-align: left; cursor: pointer; transition: 0.3s; font-size: 14px; border-radius: 4px; }
-        .option-btn:hover { border-color: var(--accent-gold); background: #222; }
 
         .portal-grid { display: flex; flex-direction: column; gap: 40px; margin: 40px auto; }
         @media (min-width: 992px) { .portal-grid { display: grid; grid-template-columns: 2fr 1fr; gap: 60px; } }
@@ -54,9 +53,10 @@
         .sidebar-block { background: #111; color: #fff; padding: 30px; margin-bottom: 25px; border-top: 4px solid var(--accent-gold); border-radius: 4px; }
         .btn-action { width: 100%; padding: 18px; background: var(--accent-gold); color: #fff; border: none; font-weight: 700; text-transform: uppercase; cursor: pointer; border-radius: 4px; transition: 0.3s; display: block; text-align: center; text-decoration: none; margin-bottom: 10px; }
         .btn-share { background: #25d366 !important; font-size: 12px !important; padding: 12px !important; }
+        input, select, textarea { width: 100%; padding: 15px; background: #1a1a1a; border: 1px solid #333; color: #fff; font-size: 14px; border-radius: 4px; margin-bottom: 12px; }
 
         .modal-overlay { display: none; position: fixed; top:0; left:0; width:100%; height:100%; background: rgba(0,0,0,0.9); z-index: 9999; padding: 20px; align-items: center; justify-content: center; }
-        .modal-box { background: var(--white); max-width: 650px; width: 100%; max-height: 85vh; padding: 50px 30px 40px; position: relative; border-radius: 8px; border-top: 8px solid var(--accent-gold); overflow-y: auto; }
+        .modal-box { background: var(--white); max-width: 650px; width: 100%; max-height: 85vh; padding: 50px 30px 40px; position: relative; border-radius: 8px; border-top: 8px solid var(--accent-gold); overflow-y: auto; box-shadow: 0 20px 50px rgba(0,0,0,0.5); }
         .close-x { position: absolute; top: 10px; right: 20px; font-size: 40px; cursor: pointer; color: #333; font-weight: bold; z-index: 10000; }
 
         .perfil-img { width: 180px; height: 180px; border-radius: 50%; border: 4px solid var(--accent-gold); object-fit: cover; object-position: top; margin-bottom: 20px; }
@@ -82,7 +82,7 @@
     <main class="container">
         <section class="quiz-section">
             <div style="text-align:center; margin-bottom:30px;">
-                <h3 style="font-family:'Playfair Display'; color:var(--accent-gold); font-size:26px;">Maturidade Patrimonial</h3>
+                <h3 style="font-family:'Playfair Display'; color:var(--accent-gold); font-size:26px;">Teste de Maturidade Patrimonial</h3>
                 <p style="font-size:13px; opacity:0.8;">Avalie seus riscos reais em questões estratégicas.</p>
             </div>
             <div class="progress-bar"><div id="progress-fill"></div></div>
@@ -106,21 +106,21 @@
                     <a href="https://insigneacademica.com.br/editora-insigne/livros?busca=Antonio+Eduardo" class="btn-action" target="_blank" style="padding:12px; font-size:11px;">ADQUIRIR OBRA →</a>
                 </div>
 
-                <span class="section-label" style="margin-top:40px;">Casos Reais: Inteligência Aplicada</span>
+                <span class="section-label" style="margin-top:40px;">Casos Reais: Inteligência Aplicada (5)</span>
                 <div id="container-casos"></div>
                 
-                <span class="section-label" style="margin-top:40px;">Jurisprudência em Foco (Top 5)</span>
+                <span class="section-label" style="margin-top:40px;">Jurisprudência em Foco (5)</span>
                 <div id="container-juris"></div>
             </section>
 
             <aside>
                 <div class="sidebar-block">
                     <h3 style="font-family:'Playfair Display'; color:var(--accent-gold); margin-bottom:20px;">Análise Estratégica</h3>
-                    <form onsubmit="event.preventDefault(); alert('Solicitação enviada!');">
+                    <form onsubmit="event.preventDefault(); alert('Pergunta enviada com sucesso!');">
                         <input type="text" placeholder="Nome Completo" required>
                         <input type="tel" placeholder="WhatsApp" required>
-                        <textarea placeholder="Resumo do caso imobiliário..." rows="4"></textarea>
-                        <button type="submit" class="btn-action">Solicitar Consultoria</button>
+                        <textarea placeholder="Escreva sua pergunta ou resumo do caso..." rows="4" required></textarea>
+                        <button type="submit" class="btn-action">Enviar Pergunta</button>
                     </form>
                     <button class="btn-action btn-share" onclick="compartilharSite()">📲 Compartilhar Site</button>
                 </div>
@@ -151,6 +151,18 @@
                     <a href="https://www.linkedin.com/in/antonioeduardo--/" target="_blank">LinkedIn</a>
                 </div>
                 <p style="font-size:14px; text-align: justify; margin-top:20px;">Bacharel em Direito com vivência estratégica de 2 anos no <strong>TJRN</strong>. Experiência na <strong>PGE-RN</strong> e <strong>Sefaz-RN</strong>. Especialista em Processo Civil e Pós-graduando em Direito Negocial e Imobiliário.</p>
+                
+                <span class="section-label" style="margin-top:25px;">Dossiê Literário</span>
+                <div class="obra-card">
+                    <img src="noticia.jpg" alt="Capa Notícia" class="capa-livro">
+                    <h4 style="font-family:'Playfair Display';">O Que Está Por Trás da Notícia?</h4>
+                    <p style="font-size:12px; color:#555; text-align: justify;">Uma análise abrangente e profunda dos dilemas enfrentados pela liberdade de imprensa no Brasil contemporâneo.</p>
+                </div>
+                <div class="obra-card">
+                    <img src="genero.jpg" alt="Capa Gênero" class="capa-livro">
+                    <h4 style="font-family:'Playfair Display';">Advocacia sob uma Análise de Gênero</h4>
+                    <p style="font-size:12px; color:#555; text-align: justify;">Estudo revelador sobre os desafios únicos enfrentados pelas mulheres na advocacia potiguar.</p>
+                </div>
             </div>
         </div>
     </div>
@@ -167,23 +179,35 @@
     <footer><p><strong>ANTÔNIO APPRATTO MIRANDA</strong> | Natal/RN | 2026</p></footer>
 
     <script>
+    const frases = ["SEGURANÇA JURÍDICA PATRIMONIAL", "ESTRATÉGIA IMOBILIÁRIA", "ESPECIALISTA EM PROCESSO CIVIL"];
+    let fIdx = 0; setInterval(() => { document.getElementById('frase-dinamica').innerText = frases[fIdx]; fIdx = (fIdx + 1) % frases.length; }, 3500);
+
     const bancoCasos = [
-        { t: "1. Penhora de Imóvel 'Limpo'", r: "A compra de um imóvel aparentemente sem dívidas pode ser anulada meses depois se o vendedor tiver processos trabalhistas ocultos.", f: "Ocorre quando dívidas em outros estados não aparecem localmente.", d: "A justiça anulou a venda. O comprador perdeu o bem.", l: "Auditorias nacionais são vitais." }
+        { t: "1. Penhora de Imóvel 'Limpo'", r: "A compra de um imóvel aparentemente sem dívidas pode ser anulada meses depois se o vendedor tiver processos trabalhistas ocultos.", f: "Ocorre quando dívidas em outros estados não aparecem localmente.", d: "A justiça anulou a venda para pagar credores. O comprador perdeu o bem e o dinheiro.", l: "Auditorias nacionais profundas são o único seguro real." },
+        { t: "2. O Herdeiro Surpresa", r: "Ao comprar de um herdeiro único, existe o risco de um novo filho provar paternidade e anular a venda original para garantir sua parte.", f: "Filho desconhecido provou paternidade via DNA após o negócio.", d: "A partilha foi desfeita e a venda anulada. O comprador ficou no prejuízo.", l: "Prazos sucessórios e histórico familiar exigem análise estratégica." },
+        { t: "3. Retenção de 70% em Distrato", r: "Construtoras frequentemente aplicam multas abusivas para quem desiste de imóveis na planta, retendo quase todo o valor pago.", f: "A empresa tentou reter 70% do valor pago pelo cliente em distrato.", d: "Após análise técnica, a justiça reduziu a multa para 20%, protegendo o patrimônio do comprador.", l: "Cláusulas abusivas podem ser anuladas com a estratégia correta." },
+        { t: "4. Dívida de Condomínio Propter Rem", r: "Dívidas de condomínio 'andam' com o imóvel. Quem compra o bem, herda automaticamente toda a dívida acumulada.", f: "Investidor arrematou imóvel em leilão sem auditar débitos de 10 anos.", d: "Foi obrigado a pagar R$ 100 mil em taxas acumuladas, zerando o lucro do investimento.", l: "Auditoria de editais é obrigatória antes de qualquer lance em leilão." },
+        { t: "5. Fraude por Procuração Falsa", r: "Criminosos usam documentos forjados para vender casas de terceiros sem que o verdadeiro dono saiba do negócio.", f: "Criminosos forjaram procuração em outro estado e venderam casa de alto padrão.", d: "O dono real retomou o bem e o comprador ficou no prejuízo total.", l: "Sempre verifique a validade de mandatos diretamente no cartório de origem." }
     ];
 
     const bancoJuris = [
-        { t: "1. Retomada Extrajudicial (STF)", desc: "Bancos podem retomar imóveis financiados com parcelas atrasadas rapidamente via Cartório.", r: "Lei 9.514/97.", c: "O STF validou a retomada direta.", e: "Exige defesa estratégica imediata." }
+        { t: "1. Retomada Extrajudicial (STF)", desc: "Bancos podem retomar imóveis financiados com parcelas atrasadas de forma rápida via Cartório, sem juiz.", r: "Lei 9.514/97.", c: "O STF validou a retomada direta após notificação.", e: "Exige atenção total aos prazos e defesas imediatas." },
+        { t: "2. Súmula 543 (STJ)", desc: "Garante que, se a construtora atrasar a entrega, o comprador deve receber todo o seu dinheiro de volta de uma vez só.", r: "Restituição integral.", c: "A devolução deve ser de 100% e imediata em caso de culpa da empresa.", e: "Proteção essencial para quem investe em imóveis na planta." },
+        { t: "3. Penhora de Fiador (STF)", desc: "Fiadores de contratos comerciais correm o risco de perder a própria casa para pagar a dívida do inquilino.", r: "Bem de família.", c: "O STF autoriza o leilão do único bem do fiador comercial.", e: "Reforça a necessidade de blindagem preventiva de patrimônio." },
+        { t: "4. Taxas em Loteamentos (STF)", desc: "Loteamentos fechados só podem cobrar taxas de moradores que concordaram expressamente em participar da associação.", r: "Tema 492.", c: "Cobrança exige adesão formal ou registro prévio na matrícula.", e: "Segurança jurídica contra cobranças inesperadas." },
+        { t: "5. Vícios de Construção (STJ)", desc: "Proprietários têm até 10 anos para processar construtoras por defeitos estruturais graves (rachaduras, infiltrações).", r: "Prazo Decenal.", c: "O prazo de garantia para vícios graves é de uma década.", e: "Garante reparação de longo prazo para investidores." }
     ];
 
     const bancoQuestoes = [
-        { q: "Quem não registra na matrícula é dono?", o: ["Sim.", "Não, exige registro."], r: 1, e: "O registro na matrícula é o único ato que transfere a propriedade legal." }
+        { q: "Quem não registra na matrícula é dono?", o: ["Sim.", "Não, exige registro."], r: 1, e: "O registro na matrícula é o único ato que transfere a propriedade legal." },
+        { q: "Dívidas de condomínio seguem o imóvel?", o: ["Não.", "Sim (Propter Rem)."], r: 1, e: "Ao comprar, você herda as dívidas acumuladas do bem." }
     ];
 
     let qIdx = 0; let score = 0;
     function init() {
         showQ();
-        document.getElementById('container-casos').innerHTML = bancoCasos.map(c => `<div class="card"><h4>${c.t}</h4><p style="font-size:13px; margin:10px 0; color:#444;">${c.r}</p><button class="btn-action" style="padding:10px; font-size:11px;" onclick="abrirInfo('${c.t}', '${c.f}<br><br>${c.d}', '🚨 Lição: ${c.l}')">Ver Desfecho →</button></div>`).join('');
-        document.getElementById('container-juris').innerHTML = bancoJuris.map(j => `<div class="juris-item" onclick="abrirInfo('${j.t}', '${j.desc}<br><br>Base: ${j.c}', 'Impacto: ${j.e}')"><p style="font-weight:700;">${j.t}</p><p style="font-size:12px; color:#666;">${j.r}</p></div>`).join('');
+        document.getElementById('container-casos').innerHTML = bancoCasos.map(c => `<div class="card"><h4>${c.t}</h4><p style="font-size:13px; margin:10px 0; color:#444;">${c.r}</p><button class="btn-action" style="padding:10px; font-size:11px;" onclick="abrirInfo('${c.t.replace(/'/g, "\\'")}', '${c.f.replace(/'/g, "\\'")}<br><br>${c.d.replace(/'/g, "\\'")}', '🚨 Lição: ${c.l.replace(/'/g, "\\'")}')">Ver Desfecho →</button></div>`).join('');
+        document.getElementById('container-juris').innerHTML = bancoJuris.map(j => `<div class="juris-item" onclick="abrirInfo('${j.t.replace(/'/g, "\\'")}', '${j.desc.replace(/'/g, "\\'")}<br><br><strong>Base:</strong> ${j.c.replace(/'/g, "\\'")}', 'Impacto: ${j.e.replace(/'/g, "\\'")}')"><p style="font-weight:700;">${j.t}</p><p style="font-size:12px; color:#666; margin-top:5px;">${j.r}</p></div>`).join('');
     }
 
     function showQ() {
@@ -198,12 +222,13 @@
         qIdx++; if(qIdx < bancoQuestoes.length) { showQ(); } else { endQuiz(); }
     }
 
-    function endQuiz() { abrirInfo('Fim', `Acertos: ${score}/${bancoQuestoes.length}.`, 'Consulte um estrategista.'); qIdx = 0; score = 0; init(); }
+    function endQuiz() { abrirInfo('Fim', `Acertos: ${score}/${bancoQuestoes.length}.`, 'Consulte um estrategista para blindar seu patrimônio.'); qIdx = 0; score = 0; init(); }
     function abrirModal(id) { document.getElementById(id).style.display = 'flex'; }
     function fecharModal(id) { document.getElementById(id).style.display = 'none'; }
     function fecharModalExterno(e, id) { if(e.target.id === id) fecharModal(id); }
     function abrirInfo(t, c, ex) { document.getElementById('info-titulo').innerText = t; document.getElementById('info-corpo').innerHTML = c; document.getElementById('info-extra').innerText = ex; abrirModal('modal-info'); }
-    function compartilharSite() { const msg = encodeURIComponent("Conheça o portal do Dr. Antônio Appratto Miranda.\n🌐 " + window.location.href); window.open("https://wa.me/?text=" + msg, "_blank"); }
+    function compartilharSite() { const msg = encodeURIComponent("Conheça o portal do estrategista Antônio Appratto Miranda.\n🌐 " + window.location.href); window.open("https://wa.me/?text=" + msg, "_blank"); }
+    
     window.onload = init;
     </script>
 </body>
