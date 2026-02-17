@@ -44,23 +44,44 @@
         .section-label { font-size: 11px; font-weight: 700; color: var(--accent-gold); text-transform: uppercase; margin-bottom: 25px; display: block; border-bottom: 1px solid rgba(0,0,0,0.1); padding-bottom: 10px; }
 
         .card { background: #fff; padding: 30px; border: 1px solid #eee; margin-bottom: 25px; border-top: 4px solid var(--alert-red); border-radius: 4px; }
-        .juris-item { background: #fff; padding: 20px; border: 1px solid #eee; margin-bottom: 10px; cursor: pointer; transition: 0.3s; border-radius: 4px; }
-        .juris-item:hover { border-left: 5px solid var(--accent-gold); background: #fafafa; }
-
-        .sidebar-block { background: #111; color: #fff; padding: 30px; margin-bottom: 25px; border-top: 4px solid var(--accent-gold); border-radius: 4px; }
-        .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-bottom: 12px; }
-        input, select, textarea { width: 100%; padding: 15px; background: #1a1a1a; border: 1px solid #333; color: #fff; font-size: 14px; border-radius: 4px; }
         .btn-action { width: 100%; padding: 18px; background: var(--accent-gold); color: #fff; border: none; font-weight: 700; text-transform: uppercase; cursor: pointer; border-radius: 4px; transition: 0.3s; }
 
-        /* MODAIS E BOTÃO DE FECHAR AJUSTADOS */
-        .modal-overlay { display: none; position: fixed; top:0; left:0; width:100%; height:100%; background: rgba(0,0,0,0.9); z-index: 9999; padding: 20px; align-items: center; justify-content: center; overflow-y: auto; }
-        .modal-box { background: var(--white); max-width: 800px; width: 100%; padding: 50px 40px 40px; position: relative; border-radius: 4px; border-top: 8px solid var(--accent-gold); box-shadow: 0 20px 50px rgba(0,0,0,0.3); }
+        /* MODAIS BLINDADOS E REDIMENSIONADOS */
+        .modal-overlay { display: none; position: fixed; top:0; left:0; width:100%; height:100%; background: rgba(0,0,0,0.85); z-index: 9999; padding: 20px; align-items: center; justify-content: center; }
         
-        /* O "X" de fechar agora é fixo e visível */
-        .close-x { position: absolute; top: 10px; right: 20px; font-size: 40px; cursor: pointer; color: #333; font-weight: 300; line-height: 1; transition: 0.3s; z-index: 10000; }
-        .close-x:hover { color: var(--alert-red); transform: scale(1.1); }
+        .modal-box { 
+            background: var(--white); 
+            max-width: 600px; /* Reduzido para não sufocar a tela */
+            width: 100%; 
+            max-height: 90vh; /* Garante margem superior e inferior */
+            padding: 40px 30px; 
+            position: relative; 
+            border-radius: 8px; 
+            border-top: 8px solid var(--accent-gold); 
+            overflow-y: auto; /* Ativa scroll se o conteúdo for grande */
+            box-shadow: 0 15px 40px rgba(0,0,0,0.4);
+        }
+        
+        .close-x { 
+            position: fixed; /* Mantém o X fixo no topo da viewport do modal */
+            top: 25px; 
+            right: 25px; 
+            font-size: 35px; 
+            cursor: pointer; 
+            color: #000; 
+            font-weight: bold; 
+            background: #fff; 
+            width: 45px; 
+            height: 45px; 
+            display: flex; 
+            align-items: center; 
+            justify-content: center; 
+            border-radius: 50%;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            z-index: 10001; 
+        }
 
-        .perfil-img { width: 180px; height: 180px; border-radius: 50%; border: 4px solid var(--accent-gold); object-fit: cover; object-position: top; margin-bottom: 20px; background: #eee; }
+        .perfil-img { width: 160px; height: 160px; border-radius: 50%; border: 4px solid var(--accent-gold); object-fit: cover; object-position: top; margin-bottom: 20px; background: #eee; }
         .obra-card { background: #f9f9f9; padding: 20px; border-left: 4px solid var(--accent-gold); margin-top: 20px; border-radius: 4px; }
 
         .wpp-float { position: fixed; bottom: 20px; right: 20px; background: #25d366; color: #fff; width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 30px; z-index: 9000; text-decoration: none; box-shadow: 0 10px 25px rgba(0,0,0,0.2); }
@@ -70,21 +91,20 @@
 </head>
 <body>
 
-    <a href="https://wa.me/5584981911309?text=Olá%20Dr.%20Antonio%2C%20concluí%20o%20diagnóstico%20no%20seu%20portal%20e%20gostaria%20de%20uma%20análise%20estratégica." class="wpp-float" target="_blank">💬</a>
+    <a href="https://wa.me/5584981911309" class="wpp-float" target="_blank">💬</a>
 
     <header>
         <div class="container">
             <div class="logo">ANTONIO APPRATTO MIRANDA</div>
             <div id="frase-dinamica">SEGURANÇA JURÍDICA PATRIMONIAL</div>
-            <div style="cursor:pointer; font-size:11px; text-decoration:underline; margin-top:10px; font-weight:700; color:var(--text-dark);" onclick="abrirModal('modal-perfil')">Informações Técnicas e Literárias</div>
+            <div style="cursor:pointer; font-size:11px; text-decoration:underline; margin-top:10px; font-weight:700;" onclick="abrirModal('modal-perfil')">Informações Técnicas e Literárias</div>
         </div>
     </header>
 
     <main class="container">
         <section class="quiz-section">
             <div style="text-align:center; margin-bottom:30px;">
-                <h3 style="font-family:'Playfair Display'; color:var(--accent-gold); font-size:26px;">Teste de Maturidade Patrimonial</h3>
-                <p style="font-size:13px; opacity:0.8;">Avalie seus riscos reais em 5 questões estratégicas.</p>
+                <h3 style="font-family:'Playfair Display'; color:var(--accent-gold); font-size:24px;">Teste de Maturidade Patrimonial</h3>
             </div>
             <div class="progress-bar"><div id="progress-fill"></div></div>
             <div id="quiz-body"></div>
@@ -92,20 +112,17 @@
 
         <div class="portal-grid">
             <section>
-                <span class="section-label">Na Vida Real: Inteligência Aplicada</span>
+                <span class="section-label">Casos Reais</span>
                 <div id="container-casos"></div>
-                <span class="section-label" style="margin-top:40px;">Jurisprudência em Foco (Top 5)</span>
-                <div id="container-juris"></div>
             </section>
-
             <aside>
                 <div class="sidebar-block">
-                    <h3 style="font-family:'Playfair Display'; color:var(--accent-gold); margin-bottom:20px;">Análise Estratégica</h3>
-                    <form onsubmit="event.preventDefault(); alert('Solicitação enviada!');">
-                        <input type="text" placeholder="Nome completo" required style="margin-bottom:12px;">
-                        <input type="tel" placeholder="WhatsApp" required style="margin-bottom:12px;">
-                        <textarea placeholder="Resumo do caso..." rows="4" style="margin-bottom:12px;"></textarea>
-                        <button type="submit" class="btn-action">Solicitar Consultoria</button>
+                    <h3 style="font-family:'Playfair Display'; color:var(--accent-gold); margin-bottom:20px;">Consultoria Estratégica</h3>
+                    <form onsubmit="event.preventDefault(); alert('Enviado!');">
+                        <input type="text" placeholder="Seu nome" required style="margin-bottom:10px;">
+                        <input type="tel" placeholder="Seu WhatsApp" required style="margin-bottom:10px;">
+                        <textarea placeholder="Resumo do caso..." rows="3" style="margin-bottom:10px;"></textarea>
+                        <button type="submit" class="btn-action">Solicitar Agora</button>
                     </form>
                 </div>
             </aside>
@@ -115,25 +132,25 @@
     <div id="modal-perfil" class="modal-overlay" onclick="fecharModalExterno(event, 'modal-perfil')">
         <div class="modal-box">
             <span class="close-x" onclick="fecharModal('modal-perfil')">&times;</span>
-            <div style="display:flex; flex-direction:column; align-items:center; text-align:center; gap:20px; margin-bottom:30px;">
-                <img src="perfil.jpeg" id="img-perfil" alt="Antonio Eduardo Miranda" class="perfil-img" 
-                     onerror="if (this.src.indexOf('jpeg') > -1) { this.src='perfil.jpg'; } else { this.src='https://via.placeholder.com/180?text=Antonio+Miranda'; }">
-                <div>
-                    <h2 style="font-family:'Playfair Display'; font-size: 28px;">Antonio Eduardo Miranda de Souza</h2>
-                    <p style="color:var(--accent-gold); font-weight:700; font-size:12px; text-transform:uppercase;">Estrategista Jurídico | Pós-Doutorando | Autor Científico</p>
-                </div>
+            <div style="text-align:center; margin-top:10px;">
+                <img src="perfil.jpeg" alt="Antonio Miranda" class="perfil-img" 
+                     onerror="this.src='https://via.placeholder.com/160?text=Antonio+Miranda'">
+                <h2 style="font-family:'Playfair Display'; font-size: 24px;">Antonio Eduardo Miranda de Souza</h2>
+                <p style="color:var(--accent-gold); font-weight:700; font-size:11px; text-transform:uppercase;">Estrategista Jurídico | Pós-Doutorando</p>
             </div>
             
-            <span class="section-label">Informações Técnicas</span>
-            <p style="font-size:14px; margin-bottom:20px;">
-                Bacharel em Direito com vivência estratégica no <strong>TJRN</strong> (14ª Vara Criminal e 2ª Vara da Fazenda Pública), <strong>Sefaz-RN</strong> e <strong>PGE-RN</strong>. Atuação focada em blindagem documental e regularização de ativos de alto valor.
-            </p>
-            
-            <span class="section-label">Vitrine Literária</span>
-            <div class="obra-card">
-                <h4 style="font-family:'Playfair Display';">Livro: Advocacia sob uma Análise de Gênero (2024)</h4>
-                <p style="font-size:12px; color:#555; margin:10px 0;">Estudo premiado sobre o protagonismo feminino na advocacia potiguar. Ed. Insigne Acadêmica.</p>
-                <a href="https://wa.me/5584981911309" class="btn-action" style="padding:10px; font-size:11px; text-decoration:none; display:inline-block; width:auto;">Adquirir Obra →</a>
+            <div style="margin-top:30px;">
+                <span class="section-label">Informações Técnicas</span>
+                <p style="font-size:14px; margin-bottom:20px;">
+                    Bacharel em Direito com vivência estratégica no <strong>TJRN</strong>, <strong>Sefaz-RN</strong> e <strong>PGE-RN</strong>. Atuação em blindagem documental e regularização de ativos de alto valor.
+                </p>
+                
+                <span class="section-label">Vitrine Literária</span>
+                <div class="obra-card">
+                    <h4 style="font-family:'Playfair Display';">Livro: Advocacia sob uma Análise de Gênero (2024)</h4>
+                    <p style="font-size:12px; margin:10px 0;">Estudo premiado sobre a advocacia potiguar.</p>
+                    <a href="https://wa.me/5584981911309" class="btn-action" style="padding:10px; font-size:11px; text-decoration:none; display:inline-block; width:auto;">Adquirir Obra →</a>
+                </div>
             </div>
         </div>
     </div>
@@ -152,57 +169,45 @@
     </footer>
 
     <script>
-    const frases = ["SEGURANÇA JURÍDICA PATRIMONIAL", "PÓS-DOUTORANDO EM DIREITO", "ESTRATÉGIA IMOBILIÁRIA"];
-    let fIdx = 0; setInterval(() => { document.getElementById('frase-dinamica').innerText = frases[fIdx]; fIdx = (fIdx + 1) % frases.length; }, 3500);
-
-    const bancoCasos = [
-        { t: "1. Penhora de Imóvel 'Limpo'", f: "Compra sem auditoria.", d: "Dívidas em outro estado anularam a venda por fraude à execução.", l: "Busca nacional é o único seguro real." },
-        { t: "2. O Herdeiro Surpresa", f: "Compra de herdeiro único.", d: "Surgimento de herdeiro via DNA anulou a partilha.", l: "Prazos de sucessão devem ser auditados." }
-    ];
-
-    const bancoJuris = [
-        { t: "1. Retomada Extrajudicial (STF)", r: "Celeridade da Lei 9.514/97.", c: "O STF validou a retomada rápida via Cartório.", e: "Exige defesa imediata em inadimplência." },
-        { t: "2. Súmula 543 (STJ)", r: "Restituição integral.", c: "Culpa da construtora exige devolução de 100%.", e: "Protege contra o parcelamento abusivo." }
-    ];
-
     const bancoQuestoes = [
-        { q: "Quem não registra na matrícula é dono?", o: ["Sim, contrato de gaveta garante.", "Não, propriedade exige registro."], r: 1, e: "O registro é o único ato que transfere a propriedade legal." },
-        { q: "O que é Due Diligence?", o: ["Uma taxa de cartório.", "Auditoria preventiva profunda."], r: 1, e: "É a análise de riscos indispensável antes de qualquer compra." }
+        { q: "Quem não registra na matrícula é dono?", o: ["Sim, contrato basta.", "Não, exige registro."], r: 1, e: "A propriedade só se transfere no registro da matrícula." },
+        { q: "O que é Due Diligence?", o: ["Taxa de cartório.", "Auditoria de riscos."], r: 1, e: "Análise profunda para evitar fraudes e penhoras." }
     ];
 
-    let qAtuais = []; let qIdx = 0; let score = 0;
+    let qIdx = 0; let score = 0;
 
     function init() {
-        qAtuais = bancoQuestoes.sort(() => 0.5 - Math.random()).slice(0, 5);
         showQ();
-        document.getElementById('container-casos').innerHTML = bancoCasos.map(c => `
+        document.getElementById('container-casos').innerHTML = `
             <div class="card">
-                <h4>${c.t}</h4>
-                <button class="btn-action" style="padding:10px; font-size:11px; margin-top:10px;" onclick="abrirInfo('${c.t}', '${c.d}', '🚨 Lição: ${c.l}')">Ver Desfecho Jurídico →</button>
-            </div>`).join('');
-        document.getElementById('container-juris').innerHTML = bancoJuris.map(j => `
-            <div class="juris-item" onclick="abrirInfo('${j.t}', '${j.c}', 'Impacto: ${j.e}')">
-                <p style="font-weight:700;">${j.t}</p><p style="font-size:12px; color:#666;">${j.r}</p>
-            </div>`).join('');
+                <h4>Penhora de Imóvel 'Limpo'</h4>
+                <button class="btn-action" style="padding:10px; font-size:11px; margin-top:10px;" onclick="abrirInfo('Penhora', 'Dívidas trabalhistas em outro estado podem anular a venda.', '🚨 Lição: Auditoria nacional é vital.')">Ver Detalhes →</button>
+            </div>`;
     }
 
     function showQ() {
-        const q = qAtuais[qIdx]; if(!q) return;
-        document.getElementById('progress-fill').style.width = (qIdx / 5 * 100) + "%";
-        document.getElementById('quiz-body').innerHTML = `<p style="font-size:18px; margin-bottom:20px; font-weight:600;">${q.q}</p>${q.o.map((o,i) => `<button class="option-btn" onclick="check(${i})">${o}</button>`).join('')}`;
+        const q = bancoQuestoes[qIdx]; if(!q) return;
+        document.getElementById('progress-fill').style.width = ((qIdx+1) / bancoQuestoes.length * 100) + "%";
+        document.getElementById('quiz-body').innerHTML = `<p style="font-size:16px; margin-bottom:15px;">${q.q}</p>${q.o.map((o,i) => `<button class="option-btn" onclick="check(${i})">${o}</button>`).join('')}`;
     }
 
     function check(i) {
-        const q = qAtuais[qIdx]; if(i === q.r) score++;
-        abrirInfo(i === q.r ? '✅ Correto' : '❌ Atenção', q.e, i === q.r ? 'Excelente.' : 'Risco identificado.');
-        qIdx++; if(qIdx < 5) { setTimeout(showQ, 400); } else { setTimeout(endQuiz, 600); }
+        const q = bancoQuestoes[qIdx]; if(i === q.r) score++;
+        abrirInfo(i === q.r ? '✅ Correto' : '❌ Atenção', q.e, 'Continue o teste.');
+        qIdx++; if(qIdx < bancoQuestoes.length) { showQ(); } else { endQuiz(); }
     }
 
-    function endQuiz() { abrirInfo('Fim do Diagnóstico', `Você acertou ${score} de 5.`, `🚨 Procure uma análise estratégica.`); qIdx = 0; score = 0; init(); }
+    function endQuiz() { abrirInfo('Resultado', `Você acertou ${score} de ${bancoQuestoes.length}.`, 'Consulte um estrategista.'); qIdx = 0; score = 0; showQ(); }
+    
     function abrirModal(id) { document.getElementById(id).style.display = 'flex'; }
     function fecharModal(id) { document.getElementById(id).style.display = 'none'; }
     function fecharModalExterno(e, id) { if(e.target.id === id) fecharModal(id); }
-    function abrirInfo(t, c, ex) { document.getElementById('info-titulo').innerText = t; document.getElementById('info-corpo').innerText = c; document.getElementById('info-extra').innerText = ex; abrirModal('modal-info'); }
+    function abrirInfo(t, c, ex) { 
+        document.getElementById('info-titulo').innerText = t; 
+        document.getElementById('info-corpo').innerText = c; 
+        document.getElementById('info-extra').innerText = ex; 
+        abrirModal('modal-info'); 
+    }
     window.onload = init;
     </script>
 </body>
