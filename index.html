@@ -53,7 +53,8 @@
         .juris-item:hover { border-left: 5px solid var(--accent-gold); background: #fafafa; }
 
         .sidebar-block { background: #111; color: #fff; padding: 30px; margin-bottom: 25px; border-top: 4px solid var(--accent-gold); border-radius: 4px; }
-        .btn-action { width: 100%; padding: 18px; background: var(--accent-gold); color: #fff; border: none; font-weight: 700; text-transform: uppercase; cursor: pointer; border-radius: 4px; transition: 0.3s; display: block; text-align: center; text-decoration: none; }
+        .btn-action { width: 100%; padding: 18px; background: var(--accent-gold); color: #fff; border: none; font-weight: 700; text-transform: uppercase; cursor: pointer; border-radius: 4px; transition: 0.3s; display: block; text-align: center; text-decoration: none; margin-bottom: 10px; }
+        .btn-share { background: #25d366 !important; font-size: 12px !important; padding: 12px !important; }
         input, select, textarea { width: 100%; padding: 15px; background: #1a1a1a; border: 1px solid #333; color: #fff; font-size: 14px; border-radius: 4px; margin-bottom: 12px; }
 
         .modal-overlay { display: none; position: fixed; top:0; left:0; width:100%; height:100%; background: rgba(0,0,0,0.9); z-index: 9999; padding: 20px; align-items: center; justify-content: center; }
@@ -61,7 +62,7 @@
         .close-x { position: absolute; top: 10px; right: 20px; font-size: 40px; cursor: pointer; color: #333; font-weight: bold; z-index: 10000; line-height: 1; }
 
         .perfil-img { width: 180px; height: 180px; border-radius: 50%; border: 4px solid var(--accent-gold); object-fit: cover; object-position: top; margin-bottom: 20px; background: #eee; }
-        .obra-card { background: #f9f9f9; padding: 20px; border-left: 4px solid var(--accent-gold); margin-top: 20px; border-radius: 4px; }
+        .obra-card { background: #f9f9f9; padding: 20px; border-left: 4px solid var(--accent-gold); margin-top: 15px; border-radius: 4px; }
 
         .wpp-float { position: fixed; bottom: 20px; right: 20px; background: #25d366; color: #fff; width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 30px; z-index: 9000; text-decoration: none; box-shadow: 0 10px 25px rgba(0,0,0,0.2); }
 
@@ -114,6 +115,7 @@
                         <textarea placeholder="Resumo do caso..." rows="4"></textarea>
                         <button type="submit" class="btn-action">Solicitar Consultoria</button>
                     </form>
+                    <button class="btn-action btn-share" onclick="compartilharSite()">📲 Compartilhar com alguém</button>
                 </div>
 
                 <div class="sidebar-block" style="background:#fff; color:#111; border:1px solid #ddd;">
@@ -141,16 +143,12 @@
             </div>
             <div style="margin-top:30px;">
                 <span class="section-label">Informações Técnicas</span>
-                <p style="font-size:14px;">Bacharel em Direito com vivência estratégica no <strong>TJRN</strong>, <strong>Sefaz-RN</strong> e <strong>PGE-RN</strong>. Atuação em blindagem documental e regularização de ativos.</p>
+                <p style="font-size:14px;">Bacharel em Direito com vivência estratégica no <strong>TJRN</strong>, <strong>Sefaz-RN</strong> e <strong>PGE-RN</strong>. Atuação em blindagem documental e regularização de ativos de alto valor.</p>
                 
                 <span class="section-label" style="margin-top:25px;">Vitrine Literária</span>
                 <div class="obra-card">
                     <h4 style="font-family:'Playfair Display';">Livro: Advocacia sob uma Análise de Gênero (2024)</h4>
-                    <p style="font-size:12px;">Estudo premiado sobre a advocacia potiguar. Ed. Insigne Acadêmica.</p>
-                </div>
-                <div class="obra-card">
-                    <h4 style="font-family:'Playfair Display';">Livro: Inteligência e Estratégia Imobiliária (2025)</h4>
-                    <p style="font-size:12px;">Manual estratégico sobre segurança jurídica e blindagem patrimonial em ativos de alto valor.</p>
+                    <p style="font-size:12px; color:#555;">Estudo premiado sobre o protagonismo feminino na advocacia potiguar. Publicado pela Ed. Insigne Acadêmica.</p>
                 </div>
             </div>
         </div>
@@ -162,6 +160,7 @@
             <h3 id="info-titulo" style="font-family:'Playfair Display'; margin-bottom:20px; color:var(--alert-red);"></h3>
             <div id="info-corpo" style="font-size:15px; color:#444;"></div>
             <div id="info-extra" style="background:#fdf2f2; padding:20px; margin-top:20px; border-left:4px solid var(--accent-gold); font-size:14px;"></div>
+            <button class="btn-action btn-share" style="margin-top: 20px;" onclick="compartilharQuestao()">📲 Compartilhar esta informação</button>
         </div>
     </div>
 
@@ -225,7 +224,7 @@
         qIdx++; if(qIdx < 5) { showQ(); } else { endQuiz(); }
     }
 
-    function endQuiz() { abrirInfo('Fim', `Acertos: ${score}/5.`, 'Procure um estrategista.'); qIdx = 0; score = 0; init(); }
+    function endQuiz() { abrirInfo('Fim', `Acertos: ${score}/5.`, 'Procure um estrategista para blindar o seu patrimônio.'); qIdx = 0; score = 0; init(); }
     function abrirModal(id) { document.getElementById(id).style.display = 'flex'; }
     function fecharModal(id) { document.getElementById(id).style.display = 'none'; }
     function fecharModalExterno(e, id) { if(e.target.id === id) fecharModal(id); }
@@ -235,6 +234,18 @@
         document.getElementById('info-extra').innerText = ex; 
         abrirModal('modal-info'); 
     }
+
+    function compartilharSite() {
+        const msg = encodeURIComponent("Olá! Estive no portal do Dr. Antonio Appratto Miranda e achei que este conteúdo sobre Segurança Jurídica Patrimonial pode te ajudar muito.\n\n🌐 Acesse aqui: " + window.location.href + "\n📞 Contato: (84) 98191-1309\n\n💬 Clique aqui para conversar via WhatsApp: https://wa.me/5584981911309");
+        window.open("https://wa.me/?text=" + msg, "_blank");
+    }
+
+    function compartilharQuestao() {
+        const titulo = document.getElementById('info-titulo').innerText;
+        const msg = encodeURIComponent("Olá! Veja esta informação estratégica sobre " + titulo + " que acabei de descobrir no portal do Dr. Antonio Appratto Miranda. Acredito que seja relevante para você!\n\n🌐 Saiba mais no site: " + window.location.href + "\n📞 Dúvidas? Ligue (84) 98191-1309\n\n💬 Ou clique aqui para conversar pelo WhatsApp: https://wa.me/5584981911309");
+        window.open("https://wa.me/?text=" + msg, "_blank");
+    }
+
     window.onload = init;
     </script>
 </body>
