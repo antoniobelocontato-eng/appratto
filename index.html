@@ -44,9 +44,7 @@
         .section-label { font-size: 11px; font-weight: 700; color: var(--accent-gold); text-transform: uppercase; margin-bottom: 25px; display: block; border-bottom: 1px solid rgba(0,0,0,0.1); padding-bottom: 10px; }
 
         .card { background: #fff; padding: 30px; border: 1px solid #eee; margin-bottom: 25px; border-top: 4px solid var(--alert-red); border-radius: 4px; position: relative; }
-        .sidebar-block { background: #111; color: #fff; padding: 30px; margin-bottom: 25px; border-top: 4px solid var(--accent-gold); border-radius: 4px; }
         .btn-action { width: 100%; padding: 18px; background: var(--accent-gold); color: #fff; border: none; font-weight: 700; text-transform: uppercase; cursor: pointer; border-radius: 4px; transition: 0.3s; display: block; text-align: center; text-decoration: none; margin-bottom: 10px; }
-        .btn-share { background: #25d366 !important; font-size: 12px !important; padding: 12px !important; }
 
         .modal-overlay { display: none; position: fixed; top:0; left:0; width:100%; height:100%; background: rgba(0,0,0,0.9); z-index: 9999; padding: 20px; align-items: center; justify-content: center; }
         .modal-box { background: var(--white); max-width: 600px; width: 100%; max-height: 85vh; padding: 50px 30px 40px; position: relative; border-radius: 8px; border-top: 8px solid var(--accent-gold); overflow-y: auto; box-shadow: 0 20px 50px rgba(0,0,0,0.5); }
@@ -69,7 +67,7 @@
     <header>
         <div class="container">
             <div class="logo">ANTONIO EDUARDO MIRANDA DE SOUZA</div>
-            <div id="frase-dinamica">SEGURANÇA JURÍDICA PATRIMONIAL</div>
+            <div id="frase-dinamica">ESTRATEGISTA JURÍDICO | ESPECIALISTA</div>
             <div style="cursor:pointer; font-size:11px; text-decoration:underline; margin-top:10px; font-weight:700;" onclick="abrirModal('modal-perfil')">Informações Técnicas e Literárias</div>
         </div>
     </header>
@@ -88,13 +86,13 @@
             <section>
                 <span class="section-label">Casos Reais e Inteligência Aplicada</span>
                 <div id="container-casos"></div>
-                <span class="section-label" style="margin-top:40px;">Jurisprudência em Foco (Top 5)</span>
+                <span class="section-label" style="margin-top:40px;">Jurisprudência em Foco</span>
                 <div id="container-juris"></div>
             </section>
             <aside>
                 <div class="sidebar-block">
                     <h3 style="font-family:'Playfair Display'; color:var(--accent-gold); margin-bottom:20px;">Análise Estratégica</h3>
-                    <button class="btn-action btn-share" onclick="compartilharSite()">📲 Compartilhar com alguém</button>
+                    <button class="btn-action" style="background:#25d366" onclick="compartilharSite()">📲 Compartilhar Site</button>
                 </div>
             </aside>
         </div>
@@ -104,10 +102,9 @@
         <div class="modal-box">
             <span class="close-x" onclick="fecharModal('modal-perfil')">&times;</span>
             <div style="display:flex; flex-direction:column; align-items:center; text-align:center;">
-                <img src="perfil.jpeg" id="img-perfil" alt="Antonio Eduardo Miranda" class="perfil-img" 
-                     onerror="this.src='https://via.placeholder.com/180?text=Foto+Antonio';">
+                <img src="perfil.jpg" id="img-perfil" alt="Antonio Eduardo Miranda" class="perfil-img">
                 <h2 style="font-family:'Playfair Display'; font-size: 28px;">Antonio Eduardo Miranda de Souza</h2>
-                <p style="color:var(--accent-gold); font-weight:700; font-size:12px; text-transform:uppercase;">Estrategista Jurídico | Pós-Doutorando | Autor Científico</p>
+                <p style="color:var(--accent-gold); font-weight:700; font-size:12px; text-transform:uppercase;">Estrategista Jurídico | Especialista em Proc. Civil | Pós-graduando em Direito Imobiliário</p>
                 
                 <div class="social-links">
                     <a href="https://www.instagram.com/antonioadvogado_/" target="_blank">Instagram</a>
@@ -117,26 +114,24 @@
             
             <div style="margin-top:30px;">
                 <span class="section-label">Informações Técnicas</span>
-                <p style="font-size:14px; text-align: justify;">Bacharel em Direito com vivência estratégica no <strong>TJRN</strong> (14ª Vara Criminal e 2ª Vara da Fazenda Pública), <strong>Sefaz-RN</strong> e <strong>PGE-RN</strong>. Atuação especializada em blindagem documental e regularização de ativos de alto valor.</p>
+                <p style="font-size:14px; text-align: justify;">
+                    Bacharel em Direito com vivência estratégica de 2 anos no <strong>TJRN</strong> (Residente Judicial). Especialista em Processo Civil e Pós-graduando em Direito Negocial e Imobiliário pela EBRADI ESA OAB. Atuação focada em blindagem documental e regularização de ativos de alto valor.
+                </p>
                 
                 <span class="section-label" style="margin-top:25px;">Vitrine Literária</span>
                 
                 <div class="obra-card">
-                    <img src="noticia.jpg" alt="Capa O Que Está Por Trás da Notícia?" class="capa-livro">
+                    <img src="noticia.jpg" alt="Capa Livro Notícia" class="capa-livro">
                     <h4 style="font-family:'Playfair Display';">O Que Está Por Trás da Notícia? (2024)</h4>
-                    <p style="font-size:12px; color:#555; text-align: justify; margin-top:10px;">
-                        <strong>Sinopse:</strong> Uma análise abrangente e profunda dos dilemas enfrentados pela liberdade de imprensa no Brasil contemporâneo, contrastando com os direitos individuais. Este trabalho destaca as complexidades jurídicas associadas à imprensa e examina os desafios impostos pela era digital.
-                    </p>
-                    <a href="https://insigneacademica.com.br/editora-insigne/livros?busca=Antonio+Eduardo" class="btn-action" target="_blank" style="padding:10px; font-size:11px; margin-top:15px;">ADQUIRIR OBRA →</a>
+                    <p style="font-size:12px; color:#555; text-align: justify; margin-top:10px;">Análise abrangente dos dilemas enfrentados pela liberdade de imprensa no Brasil contemporâneo frente aos direitos individuais.</p>
+                    <a href="https://insigneacademica.com.br/editora-insigne/livros?busca=Antonio+Eduardo" class="btn-action" target="_blank" style="padding:10px; font-size:11px;">ADQUIRIR OBRA →</a>
                 </div>
 
                 <div class="obra-card" style="margin-top:30px;">
-                    <img src="genero.jpg" alt="Capa Advocacia sob uma Análise de Gênero" class="capa-livro">
+                    <img src="genero.jpg" alt="Capa Livro Gênero" class="capa-livro">
                     <h4 style="font-family:'Playfair Display';">Advocacia sob uma Análise de Gênero (2024)</h4>
-                    <p style="font-size:12px; color:#555; text-align: justify; margin-top:10px;">
-                        <strong>Sinopse:</strong> Obra reveladora que mergulha nas questões de gênero dentro do campo jurídico, focando nas dificuldades únicas enfrentadas pelas mulheres na advocacia em Natal-RN. Os autores proporcionam uma visão crítica sobre as barreiras estruturais e culturais que impedem a igualdade de gênero na profissão.
-                    </p>
-                    <a href="https://insigneacademica.com.br/editora-insigne/livros?busca=Antonio+Eduardo" class="btn-action" target="_blank" style="padding:10px; font-size:11px; margin-top:15px;">ADQUIRIR OBRA →</a>
+                    <p style="font-size:12px; color:#555; text-align: justify; margin-top:10px;">Obra que mergulha nas questões de gênero no campo jurídico, explorando desafios enfrentados pelas mulheres na advocacia em Natal-RN.</p>
+                    <a href="https://insigneacademica.com.br/editora-insigne/livros?busca=Antonio+Eduardo" class="btn-action" target="_blank" style="padding:10px; font-size:11px;">ADQUIRIR OBRA →</a>
                 </div>
             </div>
         </div>
@@ -158,14 +153,20 @@
         { t: "1. Penhora de Imóvel 'Limpo'", f: "Compra sem auditoria.", d: "Dívidas em outro estado anularam a venda por fraude.", l: "Busca nacional em tribunais é vital." }
     ];
 
+    const bancoJuris = [
+        { t: "1. Retomada Extrajudicial (STF)", r: "Lei 9.514/97.", c: "O STF validou a retomada rápida via Cartório em alienação fiduciária.", e: "Exige defesa imediata em inadimplência." }
+    ];
+
     const bancoQuestoes = [
-        { q: "Quem não registra na matrícula é dono?", o: ["Sim.", "Não, exige registro."], r: 1, e: "O registro é o único ato que transfere a propriedade legal." }
+        { q: "Quem não registra na matrícula é dono?", o: ["Sim.", "Não, exige registro."], r: 1, e: "O registro é o único ato que transfere a propriedade legal." },
+        { q: "Dívidas de condomínio seguem o imóvel?", o: ["Não.", "Sim (Propter Rem)."], r: 1, e: "Você herda as dívidas do imóvel ao comprá-lo." }
     ];
 
     let qIdx = 0; let score = 0;
     function init() {
         showQ();
-        document.getElementById('container-casos').innerHTML = bancoCasos.map(c => `<div class="card"><h4>${c.t}</h4><button class="btn-action" style="padding:10px; font-size:11px; margin-top:10px;" onclick="abrirInfo('${c.t}', '${c.d}', '🚨 Lição: ${c.l}')">Ver Desfecho →</button></div>`).join('');
+        document.getElementById('container-casos').innerHTML = bancoCasos.map(c => `<div class="card"><h4>${c.t}</h4><button class="btn-action" style="padding:10px; font-size:11px; margin-top:10px;" onclick="abrirInfo('${c.t.replace(/'/g, "\\'")}', '${c.d.replace(/'/g, "\\'")}', '🚨 Lição: ${c.l.replace(/'/g, "\\'")}')">Ver Desfecho →</button></div>`).join('');
+        document.getElementById('container-juris').innerHTML = bancoJuris.map(j => `<div class="juris-item" onclick="abrirInfo('${j.t.replace(/'/g, "\\'")}', '${j.c.replace(/'/g, "\\'")}', 'Impacto: ${j.e.replace(/'/g, "\\'")}')"><p style="font-weight:700;">${j.t}</p><p style="font-size:12px; color:#666;">${j.r}</p></div>`).join('');
     }
 
     function showQ() {
@@ -186,6 +187,7 @@
     function fecharModalExterno(e, id) { if(e.target.id === id) fecharModal(id); }
     function abrirInfo(t, c, ex) { document.getElementById('info-titulo').innerText = t; document.getElementById('info-corpo').innerText = c; document.getElementById('info-extra').innerText = ex; abrirModal('modal-info'); }
     function compartilharSite() { const msg = encodeURIComponent("Conheça o portal do Dr. Antonio Eduardo Miranda.\n🌐 " + window.location.href); window.open("https://wa.me/?text=" + msg, "_blank"); }
+    
     window.onload = init;
     </script>
 </body>
