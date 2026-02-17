@@ -40,12 +40,11 @@
         .option-btn { display: block; width: 100%; padding: 16px; margin-bottom: 12px; background: #1a1a1a; border: 1px solid #333; color: #fff; text-align: left; cursor: pointer; transition: 0.3s; font-size: 14px; border-radius: 4px; }
         .option-btn:hover { background: #222; border-color: var(--accent-gold); }
 
-        /* Grid e Seções */
+        /* Cards, Vídeos e Jurisprudência */
         .portal-grid { display: flex; flex-direction: column; gap: 40px; margin: 40px auto; }
         @media (min-width: 992px) { .portal-grid { display: grid; grid-template-columns: 2fr 1fr; gap: 60px; } }
         .section-label { font-size: 11px; font-weight: 700; color: var(--accent-gold); text-transform: uppercase; margin-bottom: 25px; display: block; border-bottom: 1px solid rgba(0,0,0,0.1); padding-bottom: 10px; }
 
-        /* Cards, Vídeos e Jurisprudência */
         .card { background: #fff; padding: 30px; border: 1px solid #eee; margin-bottom: 25px; border-top: 4px solid var(--alert-red); border-radius: 4px; }
         .video-grid { display: grid; grid-template-columns: 1fr; gap: 15px; margin-top: 15px; margin-bottom: 40px; }
         @media (min-width: 600px) { .video-grid { grid-template-columns: 1fr 1fr; } }
@@ -65,7 +64,10 @@
         .modal-overlay { display: none; position: fixed; top:0; left:0; width:100%; height:100%; background: rgba(0,0,0,0.95); z-index: 9999; padding: 20px; align-items: center; justify-content: center; overflow-y: auto; }
         .modal-box { background: var(--white); max-width: 800px; width: 100%; padding: 40px; position: relative; border-radius: 4px; border-top: 8px solid var(--accent-gold); }
         .close-x { position: absolute; top: 15px; right: 20px; font-size: 35px; cursor: pointer; color: #999; }
-        .perfil-img { width: 180px; height: 180px; border-radius: 50%; border: 4px solid var(--accent-gold); object-fit: cover; margin-bottom: 20px; background: #eee; }
+        
+        /* AJUSTE NA FOTO: object-position: top evita corte na cabeça */
+        .perfil-img { width: 180px; height: 180px; border-radius: 50%; border: 4px solid var(--accent-gold); object-fit: cover; object-position: top; margin-bottom: 20px; background: #eee; }
+        
         .obra-card { background: #f9f9f9; padding: 20px; border-left: 4px solid var(--accent-gold); margin-top: 20px; border-radius: 4px; }
 
         /* WhatsApp */
@@ -83,7 +85,7 @@
         <div class="container">
             <div class="logo">ANTONIO APPRATTO MIRANDA</div>
             <div id="frase-dinamica">SEGURANÇA JURÍDICA PATRIMONIAL</div>
-            <div style="cursor:pointer; font-size:11px; text-decoration:underline; margin-top:10px; font-weight:700; color:var(--text-dark);" onclick="abrirModal('modal-perfil')">Dossiê Técnico e Literário</div>
+            <div style="cursor:pointer; font-size:11px; text-decoration:underline; margin-top:10px; font-weight:700; color:var(--text-dark);" onclick="abrirModal('modal-perfil')">Informações Técnicas e Literárias</div>
         </div>
     </header>
 
@@ -115,27 +117,14 @@
             <aside>
                 <div class="sidebar-block">
                     <h3 style="font-family:'Playfair Display'; color:var(--accent-gold); margin-bottom:20px;">Análise Estratégica</h3>
-                    <form onsubmit="event.preventDefault(); alert('Solicitação enviada! Entraremos em contato.');">
+                    <form onsubmit="event.preventDefault(); alert('Solicitação enviada!');">
                         <div class="form-row">
                             <input type="text" placeholder="Nome" required>
                             <input type="tel" placeholder="WhatsApp" required>
                         </div>
                         <input type="text" placeholder="Cidade e Estado" required style="margin-bottom:12px;">
-                        <textarea placeholder="Resumo do caso imobiliário..." rows="4" style="margin-bottom:12px;"></textarea>
+                        <textarea placeholder="Resumo do caso..." rows="4" style="margin-bottom:12px;"></textarea>
                         <button type="submit" class="btn-action">Solicitar Consultoria</button>
-                    </form>
-                </div>
-
-                <div class="sidebar-block" style="background:#fff; color:#111; border:1px solid #ddd;">
-                    <h3 style="font-family:'Playfair Display'; color:#111; margin-bottom:15px;">Parcerias Estratégicas</h3>
-                    <form onsubmit="event.preventDefault(); alert('Buscando parceiros na região...');">
-                        <select style="background:#f9f9f9; color:#000; border:1px solid #eee; margin-bottom:12px;">
-                            <option value="" disabled selected>Área de Atuação</option>
-                            <option>Alto Padrão</option>
-                            <option>Leilões</option>
-                            <option>Regularização Fiduciária</option>
-                        </select>
-                        <button type="submit" class="btn-action" style="background:#111;">Buscar Corretor</button>
                     </form>
                 </div>
             </aside>
@@ -154,15 +143,15 @@
                 </div>
             </div>
             
-            <span class="section-label">Dossiê Técnico</span>
+            <span class="section-label">Informações Técnicas</span>
             <p style="font-size:14px; margin-bottom:20px;">
-                Bacharel em Direito com vivência estratégica no <strong>TJRN</strong> (14ª Vara Criminal e 2ª Vara da Fazenda Pública), <strong>Sefaz-RN</strong> e <strong>PGE-RN</strong>. Sua atuação é focada em blindagem documental e regularização de ativos de alto valor.
+                Bacharel em Direito com vivência estratégica no <strong>TJRN</strong> (14ª Vara Criminal e 2ª Vara da Fazenda Pública), <strong>Sefaz-RN</strong> e <strong>PGE-RN</strong>. Atuação focada em blindagem documental e regularização de ativos de alto valor.
             </p>
             
             <span class="section-label">Vitrine Literária</span>
             <div class="obra-card">
                 <h4 style="font-family:'Playfair Display';">Livro: Advocacia sob uma Análise de Gênero (2024)</h4>
-                <p style="font-size:12px; color:#555; margin:10px 0;">Um estudo premiado sobre o protagonismo feminino na advocacia potiguar. Ed. Insigne Acadêmica.</p>
+                <p style="font-size:12px; color:#555; margin:10px 0;">Estudo premiado sobre o protagonismo feminino na advocacia potiguar. Ed. Insigne Acadêmica.</p>
                 <a href="https://wa.me/5584981911309" class="btn-action" style="padding:10px; font-size:11px; text-decoration:none; display:inline-block; width:auto;">Adquirir Obra →</a>
             </div>
         </div>
@@ -178,37 +167,35 @@
     </div>
 
     <footer>
-        <p><strong>ANTONIO APPRATTO MIRANDA</strong> | OAB/RN Consultoria | Natal/RN | 2026</p>
+        <p><strong>ANTONIO APPRATTO MIRANDA</strong> | Natal/RN | 2026</p>
     </footer>
 
     <script>
-    // BRANDING DYNAMISM
-    const frases = ["SEGURANÇA JURÍDICA PATRIMONIAL", "PÓS-DOUTORANDO EM DIREITO", "ESTRATÉGIA IMOBILIÁRIA AVANÇADA"];
+    const frases = ["SEGURANÇA JURÍDICA PATRIMONIAL", "PÓS-DOUTORANDO EM DIREITO", "ESTRATÉGIA IMOBILIÁRIA"];
     let fIdx = 0; setInterval(() => { document.getElementById('frase-dinamica').innerText = frases[fIdx]; fIdx = (fIdx + 1) % frases.length; }, 3500);
 
-    // BANCO DE DADOS
     const bancoCasos = [
         { t: "1. Penhora de Imóvel 'Limpo'", f: "Compra sem auditoria nacional.", d: "Dívidas trabalhistas em outro estado anularam a venda por fraude à execução.", l: "Busca nacional em tribunais é o único seguro real." },
         { t: "2. O Herdeiro Surpresa", f: "Compra de herdeiro único.", d: "Surgimento de herdeiro via DNA anulou a partilha e a venda.", l: "Prazos de sucessão devem ser auditados estrategicamente." },
-        { t: "3. Retenção Abusiva em Distrato", f: "Construtora aplicou multa de 70%.", d: "Justiça reduziu para 20% após auditoria técnica de cláusulas.", l: "Nunca aceite acordos sem conferência jurídica." },
-        { t: "4. Dívida Propter Rem Oculta", f: "Leilão sem análise de edital.", d: "Comprador herdou R$ 100 mil em taxas de condomínio.", l: "Auditoria de edital é obrigatória em leilões." },
+        { t: "3. Retenção Abusiva", f: "Construtora aplicou multa de 70%.", d: "Justiça reduziu para 20% após auditoria técnica de cláusulas.", l: "Nunca aceite acordos sem conferência jurídica." },
+        { t: "4. Dívida Propter Rem", f: "Leilão sem análise de edital.", d: "Comprador herdou R$ 100 mil em taxas de condomínio.", l: "Auditoria de edital é obrigatória em leilões." },
         { t: "5. Fraude por Procuração", f: "Compra via mandato falso.", d: "O verdadeiro proprietário provou a fraude e retomou o bem.", l: "Validade de mandatos deve ser auditada na origem." }
     ];
 
     const bancoJuris = [
         { t: "1. Retomada Extrajudicial (STF)", r: "Celeridade da Lei 9.514/97.", c: "O STF validou a retomada rápida via Cartório em alienação fiduciária.", e: "Exige defesa imediata em casos de inadimplência." },
-        { t: "2. Súmula 543 (STJ)", r: "Restituição integral em distratos.", c: "Culpa da construtora exige devolução de 100% integral e imediata.", e: "Protege o consumidor contra o parcelamento abusivo." },
-        { t: "3. Penhora de Fiador (STF)", r: "Alerta para garantidores.", c: "O imóvel do fiador (mesmo sendo único) pode ser leiloado em contratos comerciais.", e: "Necessidade de blindagem preventiva." },
-        { t: "4. Taxas em Loteamentos (STF)", r: "Tema 492.", c: "Cobranças só valem com adesão formal ou registro na matrícula.", e: "Segurança contra cobranças de associações sem vínculo." },
-        { t: "5. Vícios de Construção (STJ)", r: "Prazo Decenal.", c: "Defeitos graves permitem ação de reparação por até 10 anos.", e: "Proteção contra erros estruturais de engenharia." }
+        { t: "2. Súmula 543 (STJ)", r: "Restituição integral em distratos.", c: "Culpa da construtora exige devolução de 100% integral e imediata.", e: "Protege contra o parcelamento abusivo." },
+        { t: "3. Penhora de Fiador (STF)", r: "Alerta para garantidores.", c: "O imóvel do fiador comercial pode ser leiloado mesmo sendo único.", e: "Necessidade de blindagem preventiva." },
+        { t: "4. Taxas em Loteamentos (STF)", r: "Tema 492.", c: "Cobranças só valem com adesão formal ou registro na matrícula.", e: "Segurança contra cobranças de associações." },
+        { t: "5. Vícios de Construção (STJ)", r: "Prazo Decenal.", c: "Defeitos graves permitem ação de reparação por até 10 anos.", e: "Proteção contra erros estruturais." }
     ];
 
     const bancoQuestoes = [
-        { q: "Quem não registra na matrícula é dono?", o: ["Sim, o contrato de gaveta garante.", "Não, a propriedade só se transfere no registro."], r: 1, e: "Conforme o Código Civil, quem não registra não é dono legal perante terceiros." },
-        { q: "Dívidas de condomínio seguem o proprietário ou o imóvel?", o: ["Seguem o antigo dono.", "Seguem o imóvel (Dívida Propter Rem)."], r: 1, e: "Você herda todas as dívidas do imóvel ao adquiri-lo." },
-        { q: "É seguro comprar imóvel de herdeiro sem inventário?", o: ["Sim, com escritura pública.", "Não, há risco de herdeiros desconhecidos."], r: 1, e: "O inventário é indispensável para a segurança da cadeia dominial." },
-        { q: "O banco pode retomar imóvel financiado sem juiz?", o: ["Sim, via cartório (Lei 9.514/97).", "Não, precisa de processo judicial."], r: 0, e: "A alienação fiduciária permite a retomada extrajudicial rápida." },
-        { q: "O que garante a segurança total de uma compra?", o: ["A palavra do vendedor.", "Uma Due Diligence imobiliária."], r: 1, e: "A auditoria profunda (Due Diligence) é o único seguro real do investidor." }
+        { q: "Quem não registra na matrícula é dono?", o: ["Sim, contrato de gaveta garante.", "Não, propriedade exige registro."], r: 1, e: "O registro é o único ato que transfere a propriedade legal." },
+        { q: "Dívidas de condomínio seguem o quê?", o: ["Seguem o antigo dono.", "Seguem o imóvel."], r: 1, e: "Dívidas propter rem vinculam o comprador ao débito acumulado." },
+        { q: "Bem de família de fiador comercial?", o: ["É impenhorável.", "Pode ser leiloado."], r: 1, e: "O STF autoriza a penhora do bem de família do fiador em locação comercial." },
+        { q: "Banco retoma imóvel sem juiz?", o: ["Sim, via cartório.", "Não, só judicialmente."], r: 0, e: "A Lei 9.514/97 permite a execução extrajudicial rápida." },
+        { q: "O que é Due Diligence?", o: ["Uma taxa de cartório.", "Auditoria preventiva profunda."], r: 1, e: "É a análise de riscos indispensável antes de qualquer compra." }
     ];
 
     let qAtuais = []; let qIdx = 0; let score = 0;
@@ -219,8 +206,7 @@
         document.getElementById('container-casos').innerHTML = bancoCasos.map(c => `
             <div class="card">
                 <h4>${c.t}</h4>
-                <p style="font-size:14px; margin:10px 0;"><strong>Risco:</strong> ${c.f}</p>
-                <button class="btn-action" style="padding:10px; font-size:11px;" onclick="abrirInfo('${c.t}', '${c.d}', '🚨 Lição: ${c.l}')">Ver Desfecho Jurídico →</button>
+                <button class="btn-action" style="padding:10px; font-size:11px; margin-top:10px;" onclick="abrirInfo('${c.t}', '${c.d}', '🚨 Lição: ${c.l}')">Ver Desfecho Jurídico →</button>
             </div>`).join('');
         
         document.getElementById('container-juris').innerHTML = bancoJuris.map(j => `
@@ -242,21 +228,17 @@
         const q = qAtuais[qIdx];
         const correto = (i === q.r);
         if(correto) score++;
-        
-        abrirInfo(correto ? '✅ Correto' : '❌ Ponto de Atenção', q.e, correto ? 'Sua percepção está alinhada à lei.' : 'Este é um erro comum que gera grandes prejuízos.');
-        
+        abrirInfo(correto ? '✅ Correto' : '❌ Atenção', q.e, correto ? 'Excelente.' : 'Risco identificado.');
         qIdx++;
         if(qIdx < 5) { setTimeout(showQ, 400); } 
         else { setTimeout(endQuiz, 600); }
     }
 
     function endQuiz() {
-        let msg = score >= 4 ? "Maturidade Alta." : "Necessita de Assessoria.";
-        abrirInfo('Resultado do Diagnóstico', `Você acertou ${score} de 5 questões.`, `🚨 ${msg} Clique no WhatsApp para uma análise personalizada.`);
+        abrirInfo('Diagnóstico Concluído', `Você acertou ${score} de 5.`, `🚨 Procure uma análise estratégica para blindar seu patrimônio.`);
         qIdx = 0; score = 0; init();
     }
 
-    // UTILS
     function abrirModal(id) { document.getElementById(id).style.display = 'flex'; }
     function fecharModal(id) { document.getElementById(id).style.display = 'none'; }
     function fecharModalExterno(e, id) { if(e.target.id === id) fecharModal(id); }
