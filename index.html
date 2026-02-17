@@ -37,7 +37,8 @@
         .quiz-section { background: #111; color: #fff; padding: clamp(25px, 5vw, 45px); border-radius: 4px; margin: 40px 0; border-top: 5px solid var(--accent-gold); }
         .progress-bar { height: 4px; background: #333; margin-bottom: 25px; }
         #progress-fill { height: 100%; background: var(--accent-gold); width: 0%; transition: 0.5s; }
-        .option-btn { display: block; width: 100%; padding: 16px; margin-bottom: 12px; background: #1a1a1a; border: 1px solid #333; color: #fff; text-align: left; cursor: pointer; transition: 0.3s; font-size: 14px; }
+        .option-btn { display: block; width: 100%; padding: 16px; margin-bottom: 12px; background: #1a1a1a; border: 1px solid #333; color: #fff; text-align: left; cursor: pointer; transition: 0.3s; font-size: 14px; border-radius: 4px; }
+        .option-btn:hover { background: #222; border-color: var(--accent-gold); }
 
         /* Grid e Seções */
         .portal-grid { display: flex; flex-direction: column; gap: 40px; margin: 40px auto; }
@@ -45,31 +46,33 @@
         .section-label { font-size: 11px; font-weight: 700; color: var(--accent-gold); text-transform: uppercase; margin-bottom: 25px; display: block; border-bottom: 1px solid rgba(0,0,0,0.1); padding-bottom: 10px; }
 
         /* Cards, Vídeos e Jurisprudência */
-        .card { background: #fff; padding: 30px; border: 1px solid #eee; margin-bottom: 25px; border-top: 4px solid var(--alert-red); }
+        .card { background: #fff; padding: 30px; border: 1px solid #eee; margin-bottom: 25px; border-top: 4px solid var(--alert-red); border-radius: 4px; }
         .video-grid { display: grid; grid-template-columns: 1fr; gap: 15px; margin-top: 15px; margin-bottom: 40px; }
         @media (min-width: 600px) { .video-grid { grid-template-columns: 1fr 1fr; } }
         .video-placeholder { background: #eee; aspect-ratio: 9/16; border-radius: 8px; display: flex; align-items: center; justify-content: center; text-align: center; padding: 20px; color: #888; border: 2px dashed #ccc; font-size: 12px; }
         
-        .juris-item { background: #fff; padding: 20px; border: 1px solid #eee; margin-bottom: 10px; cursor: pointer; transition: 0.3s; }
-        .juris-item:hover { border-left: 5px solid var(--accent-gold); }
+        .juris-item { background: #fff; padding: 20px; border: 1px solid #eee; margin-bottom: 10px; cursor: pointer; transition: 0.3s; border-radius: 4px; }
+        .juris-item:hover { border-left: 5px solid var(--accent-gold); background: #fafafa; }
 
-        /* Formulários Simétricos */
-        .sidebar-block { background: #111; color: #fff; padding: 30px; margin-bottom: 25px; border-top: 4px solid var(--accent-gold); }
+        /* Formulários */
+        .sidebar-block { background: #111; color: #fff; padding: 30px; margin-bottom: 25px; border-top: 4px solid var(--accent-gold); border-radius: 4px; }
         .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-bottom: 12px; }
-        input, select, textarea { width: 100%; padding: 15px; background: #1a1a1a; border: 1px solid #333; color: #fff; font-size: 14px; }
-        .btn-action { width: 100%; padding: 18px; background: var(--accent-gold); color: #fff; border: none; font-weight: 700; text-transform: uppercase; cursor: pointer; }
+        input, select, textarea { width: 100%; padding: 15px; background: #1a1a1a; border: 1px solid #333; color: #fff; font-size: 14px; border-radius: 4px; }
+        .btn-action { width: 100%; padding: 18px; background: var(--accent-gold); color: #fff; border: none; font-weight: 700; text-transform: uppercase; cursor: pointer; border-radius: 4px; transition: 0.3s; }
+        .btn-action:hover { filter: brightness(1.2); }
 
         /* Modais */
         .modal-overlay { display: none; position: fixed; top:0; left:0; width:100%; height:100%; background: rgba(0,0,0,0.95); z-index: 9999; padding: 20px; align-items: center; justify-content: center; overflow-y: auto; }
         .modal-box { background: var(--white); max-width: 800px; width: 100%; padding: 40px; position: relative; border-radius: 4px; border-top: 8px solid var(--accent-gold); }
         .close-x { position: absolute; top: 15px; right: 20px; font-size: 35px; cursor: pointer; color: #999; }
         .perfil-img { width: 180px; height: 180px; border-radius: 50%; border: 4px solid var(--accent-gold); object-fit: cover; margin-bottom: 20px; background: #eee; }
-        .obra-card { background: #f9f9f9; padding: 20px; border-left: 4px solid var(--accent-gold); margin-top: 20px; }
+        .obra-card { background: #f9f9f9; padding: 20px; border-left: 4px solid var(--accent-gold); margin-top: 20px; border-radius: 4px; }
 
-        /* WhatsApp flutuante corrigido */
-        .wpp-float { position: fixed; bottom: 20px; right: 20px; background: #25d366; color: #fff; width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 30px; z-index: 9000; text-decoration: none; box-shadow: 0 10px 25px rgba(0,0,0,0.2); }
+        /* WhatsApp */
+        .wpp-float { position: fixed; bottom: 20px; right: 20px; background: #25d366; color: #fff; width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 30px; z-index: 9000; text-decoration: none; box-shadow: 0 10px 25px rgba(0,0,0,0.2); transition: 0.3s; }
+        .wpp-float:hover { transform: scale(1.1); }
 
-        footer { padding: 40px; text-align: center; font-size: 11px; }
+        footer { padding: 40px; text-align: center; font-size: 11px; opacity: 0.7; }
     </style>
 </head>
 <body>
@@ -96,7 +99,7 @@
 
         <div class="portal-grid">
             <section>
-                <span class="section-label">Na Vida Real: Inteligência Aplicada (5 Histórias)</span>
+                <span class="section-label">Na Vida Real: Inteligência Aplicada</span>
                 <div id="container-casos"></div>
 
                 <span class="section-label" style="margin-top:40px;">Pílulas de Inteligência (Vídeos Curtos)</span>
@@ -111,27 +114,28 @@
 
             <aside>
                 <div class="sidebar-block">
-                    <h3 style="font-family:'Playfair Display'; color:var(--accent-gold); margin-bottom:20px;">Como podemos ajudar?</h3>
-                    <form>
+                    <h3 style="font-family:'Playfair Display'; color:var(--accent-gold); margin-bottom:20px;">Análise Estratégica</h3>
+                    <form onsubmit="event.preventDefault(); alert('Solicitação enviada! Entraremos em contato.');">
                         <div class="form-row">
                             <input type="text" placeholder="Nome" required>
                             <input type="tel" placeholder="WhatsApp" required>
                         </div>
                         <input type="text" placeholder="Cidade e Estado" required style="margin-bottom:12px;">
                         <textarea placeholder="Resumo do caso imobiliário..." rows="4" style="margin-bottom:12px;"></textarea>
-                        <button class="btn-action">Solicitar Análise Estratégica</button>
+                        <button type="submit" class="btn-action">Solicitar Consultoria</button>
                     </form>
                 </div>
 
                 <div class="sidebar-block" style="background:#fff; color:#111; border:1px solid #ddd;">
-                    <h3 style="font-family:'Playfair Display'; color:#111; margin-bottom:15px;">Encontre um Corretor</h3>
-                    <form>
+                    <h3 style="font-family:'Playfair Display'; color:#111; margin-bottom:15px;">Parcerias Estratégicas</h3>
+                    <form onsubmit="event.preventDefault(); alert('Buscando parceiros na região...');">
                         <select style="background:#f9f9f9; color:#000; border:1px solid #eee; margin-bottom:12px;">
                             <option value="" disabled selected>Área de Atuação</option>
                             <option>Alto Padrão</option>
                             <option>Leilões</option>
+                            <option>Regularização Fiduciária</option>
                         </select>
-                        <button class="btn-action" style="background:#111;">Buscar Parceiro</button>
+                        <button type="submit" class="btn-action" style="background:#111;">Buscar Corretor</button>
                     </form>
                 </div>
             </aside>
@@ -143,7 +147,7 @@
             <span class="close-x" onclick="fecharModal('modal-perfil')">&times;</span>
             <div style="display:flex; flex-direction:column; align-items:center; text-align:center; gap:20px; margin-bottom:30px;">
                 <img src="perfil.jpeg" id="img-perfil" alt="Antonio Eduardo Miranda" class="perfil-img" 
-                     onerror="this.onerror=null; this.src='perfil.jpg'; this.parentElement.querySelector('#img-perfil').onerror = function(){this.src='https://via.placeholder.com/180?text=Antonio+Advogado'};">
+                     onerror="if (this.src.indexOf('jpeg') > -1) { this.src='perfil.jpg'; } else if (this.src.indexOf('jpg') > -1) { this.src='https://via.placeholder.com/180?text=Antonio+Miranda'; }">
                 <div>
                     <h2 style="font-family:'Playfair Display'; font-size: 28px;">Antonio Eduardo Miranda de Souza</h2>
                     <p style="color:var(--accent-gold); font-weight:700; font-size:12px; text-transform:uppercase;">Estrategista Jurídico | Pós-Doutorando | Autor Científico</p>
@@ -174,39 +178,37 @@
     </div>
 
     <footer>
-        <p><strong>ANTONIO APPRATTO MIRANDA</strong> | Natal/RN | 2026</p>
+        <p><strong>ANTONIO APPRATTO MIRANDA</strong> | OAB/RN Consultoria | Natal/RN | 2026</p>
     </footer>
 
     <script>
-    // BRANDING
-    const frases = ["SEGURANÇA JURÍDICA PATRIMONIAL", "PÓS-DOUTORANDO EM DIREITO", "2 ANOS DE VIVÊNCIA NO TJRN"];
+    // BRANDING DYNAMISM
+    const frases = ["SEGURANÇA JURÍDICA PATRIMONIAL", "PÓS-DOUTORANDO EM DIREITO", "ESTRATÉGIA IMOBILIÁRIA AVANÇADA"];
     let fIdx = 0; setInterval(() => { document.getElementById('frase-dinamica').innerText = frases[fIdx]; fIdx = (fIdx + 1) % frases.length; }, 3500);
 
-    // BANCO DE DADOS 5x5
+    // BANCO DE DADOS
     const bancoCasos = [
         { t: "1. Penhora de Imóvel 'Limpo'", f: "Compra sem auditoria nacional.", d: "Dívidas trabalhistas em outro estado anularam a venda por fraude à execução.", l: "Busca nacional em tribunais é o único seguro real." },
         { t: "2. O Herdeiro Surpresa", f: "Compra de herdeiro único.", d: "Surgimento de herdeiro via DNA anulou a partilha e a venda.", l: "Prazos de sucessão devem ser auditados estrategicamente." },
-        { t: "3. Retenção de 70% em Distrato", f: "Construtora aplicou multa abusiva.", d: "Justiça reduziu para 20% após auditoria técnica de cláusulas.", l: "Nunca aceite acordos sem conferência jurídica." },
-        { t: "4. Dívida de Condomínio de 10 Anos", f: "Leilão sem análise de edital.", d: "Comprador herdou R$ 100 mil em taxas por ser dívida propter rem.", l: "Auditoria de edital é obrigatória em leilões." },
-        { t: "5. A Venda por quem não é dono", f: "Compra via procuração falsa.", d: "Verdadeiro dono provou a fraude e retomou o imóvel.", l: "Validade de mandatos deve ser auditada na origem." }
+        { t: "3. Retenção Abusiva em Distrato", f: "Construtora aplicou multa de 70%.", d: "Justiça reduziu para 20% após auditoria técnica de cláusulas.", l: "Nunca aceite acordos sem conferência jurídica." },
+        { t: "4. Dívida Propter Rem Oculta", f: "Leilão sem análise de edital.", d: "Comprador herdou R$ 100 mil em taxas de condomínio.", l: "Auditoria de edital é obrigatória em leilões." },
+        { t: "5. Fraude por Procuração", f: "Compra via mandato falso.", d: "O verdadeiro proprietário provou a fraude e retomou o bem.", l: "Validade de mandatos deve ser auditada na origem." }
     ];
 
     const bancoJuris = [
-        { t: "1. Retomada Extrajudicial (STF)", r: "Celeridade da Lei 9.514/97.", c: "O STF validou a retomada rápida via Cartório em alienação fiduciária.", e: "💎 Exige defesa imediata em inadimplência." },
-        { t: "2. Súmula 543 (STJ)", r: "Restituição integral em distratos.", c: "Culpa da construtora exige devolução de 100% integral e imediata.", e: "💎 Protege contra o parcelamento abusivo." },
-        { t: "3. Penhora de Fiador (STJ)", r: "Alerta para garantidores.", c: "Único imóvel do fiador comercial pode ser leiloado.", e: "💎 Necessidade de blindagem preventiva." },
-        { t: "4. Taxas em Loteamentos (STF)", r: "Livre associação (Tema 492).", c: "Cobranças só valem com adesão formal ou registro na matrícula.", e: "💎 Proteção contra taxas abusivas." },
-        { t: "5. Vícios de Construção (STJ)", r: "Prazo de 10 anos.", c: "Defeitos graves permitem ação de reparação por uma década.", e: "💎 Proteção contra erros de engenharia." }
+        { t: "1. Retomada Extrajudicial (STF)", r: "Celeridade da Lei 9.514/97.", c: "O STF validou a retomada rápida via Cartório em alienação fiduciária.", e: "Exige defesa imediata em casos de inadimplência." },
+        { t: "2. Súmula 543 (STJ)", r: "Restituição integral em distratos.", c: "Culpa da construtora exige devolução de 100% integral e imediata.", e: "Protege o consumidor contra o parcelamento abusivo." },
+        { t: "3. Penhora de Fiador (STF)", r: "Alerta para garantidores.", c: "O imóvel do fiador (mesmo sendo único) pode ser leiloado em contratos comerciais.", e: "Necessidade de blindagem preventiva." },
+        { t: "4. Taxas em Loteamentos (STF)", r: "Tema 492.", c: "Cobranças só valem com adesão formal ou registro na matrícula.", e: "Segurança contra cobranças de associações sem vínculo." },
+        { t: "5. Vícios de Construção (STJ)", r: "Prazo Decenal.", c: "Defeitos graves permitem ação de reparação por até 10 anos.", e: "Proteção contra erros estruturais de engenharia." }
     ];
 
-    // BANCO DE QUESTÕES DO QUIZ (20 ITENS)
     const bancoQuestoes = [
-        { q: "Quem não registra é dono?", o: ["Sim, contrato garante a posse.", "Não, propriedade exige registro na matrícula."], r: 1, e: "Sem registro, o vendedor continua dono legal perante a sociedade." },
-        { q: "Dívidas de condomínio seguem a pessoa?", o: ["Sim, quem morava paga.", "Não, seguem o imóvel (propter rem)."], r: 1, e: "Ao comprar, você herda as dívidas condominiais acumuladas." },
-        { q: "Bem de família do fiador é impenhorável?", o: ["Sim.", "Não, o STF permite a penhora."], r: 1, e: "O fiador coloca seu patrimônio em risco sem estratégia jurídica." },
-        { q: "Retomada de imóvel financiado exige juiz?", o: ["Sim.", "Não, é extrajudicial."], r: 1, e: "O banco retoma via cartório muito rápido (Lei 9.514/97)." },
-        { q: "O que é Due Diligence?", o: ["Taxa.", "Investigação profunda."], r: 1, e: "É o seguro preventivo do seu investimento imobiliário." }
-        // Adicione aqui as outras 15 questões conforme necessário
+        { q: "Quem não registra na matrícula é dono?", o: ["Sim, o contrato de gaveta garante.", "Não, a propriedade só se transfere no registro."], r: 1, e: "Conforme o Código Civil, quem não registra não é dono legal perante terceiros." },
+        { q: "Dívidas de condomínio seguem o proprietário ou o imóvel?", o: ["Seguem o antigo dono.", "Seguem o imóvel (Dívida Propter Rem)."], r: 1, e: "Você herda todas as dívidas do imóvel ao adquiri-lo." },
+        { q: "É seguro comprar imóvel de herdeiro sem inventário?", o: ["Sim, com escritura pública.", "Não, há risco de herdeiros desconhecidos."], r: 1, e: "O inventário é indispensável para a segurança da cadeia dominial." },
+        { q: "O banco pode retomar imóvel financiado sem juiz?", o: ["Sim, via cartório (Lei 9.514/97).", "Não, precisa de processo judicial."], r: 0, e: "A alienação fiduciária permite a retomada extrajudicial rápida." },
+        { q: "O que garante a segurança total de uma compra?", o: ["A palavra do vendedor.", "Uma Due Diligence imobiliária."], r: 1, e: "A auditoria profunda (Due Diligence) é o único seguro real do investidor." }
     ];
 
     let qAtuais = []; let qIdx = 0; let score = 0;
@@ -214,26 +216,56 @@
     function init() {
         qAtuais = bancoQuestoes.sort(() => 0.5 - Math.random()).slice(0, 5);
         showQ();
-        document.getElementById('container-casos').innerHTML = bancoCasos.map(c => `<div class="card"><h4>${c.t}</h4><p style="font-size:14px; margin:10px 0;"><strong>Início:</strong> ${c.f}</p><button class="btn-action" style="padding:10px; font-size:11px;" onclick="abrirInfo('${c.t}', '${c.d}', '🚨 Lição: ${c.l}')">Ver Desfecho →</button></div>`).join('');
-        document.getElementById('container-juris').innerHTML = bancoJuris.map(j => `<div class="juris-item" onclick="abrirInfo('${j.t}', '${j.c}', 'Impacto: ${j.e}')"><p style="font-weight:700;">${j.t}</p><p style="font-size:12px; color:#666;">${j.r}</p></div>`).join('');
+        document.getElementById('container-casos').innerHTML = bancoCasos.map(c => `
+            <div class="card">
+                <h4>${c.t}</h4>
+                <p style="font-size:14px; margin:10px 0;"><strong>Risco:</strong> ${c.f}</p>
+                <button class="btn-action" style="padding:10px; font-size:11px;" onclick="abrirInfo('${c.t}', '${c.d}', '🚨 Lição: ${c.l}')">Ver Desfecho Jurídico →</button>
+            </div>`).join('');
+        
+        document.getElementById('container-juris').innerHTML = bancoJuris.map(j => `
+            <div class="juris-item" onclick="abrirInfo('${j.t}', '${j.c}', 'Impacto: ${j.e}')">
+                <p style="font-weight:700;">${j.t}</p>
+                <p style="font-size:12px; color:#666;">${j.r}</p>
+            </div>`).join('');
     }
 
     function showQ() {
-        const q = qAtuais[qIdx]; document.getElementById('progress-fill').style.width = (qIdx / 5 * 100) + "%";
-        document.getElementById('quiz-body').innerHTML = `<p style="font-size:18px; margin-bottom:20px; font-weight:600;">${q.q}</p>${q.o.map((o,i) => `<button class="option-btn" onclick="check(${i})">${o}</button>`).join('')}`;
+        const q = qAtuais[qIdx]; 
+        document.getElementById('progress-fill').style.width = (qIdx / 5 * 100) + "%";
+        document.getElementById('quiz-body').innerHTML = `
+            <p style="font-size:18px; margin-bottom:20px; font-weight:600;">${q.q}</p>
+            ${q.o.map((o,i) => `<button class="option-btn" onclick="check(${i})">${o}</button>`).join('')}`;
     }
 
     function check(i) {
-        const q = qAtuais[qIdx]; if(i === q.r) score++;
-        abrirInfo('Resultado', q.e, (i === q.r ? '✅ Correto' : '❌ Incorreto'));
-        qIdx++; if(qIdx < 5) { setTimeout(showQ, 300); } else { endQuiz(); }
+        const q = qAtuais[qIdx];
+        const correto = (i === q.r);
+        if(correto) score++;
+        
+        abrirInfo(correto ? '✅ Correto' : '❌ Ponto de Atenção', q.e, correto ? 'Sua percepção está alinhada à lei.' : 'Este é um erro comum que gera grandes prejuízos.');
+        
+        qIdx++;
+        if(qIdx < 5) { setTimeout(showQ, 400); } 
+        else { setTimeout(endQuiz, 600); }
     }
 
-    function endQuiz() { abrirInfo('Fim do Teste', `Acertos: ${score} de 5.`, '🚨 Recomendação: Procure um estrategista para blindar seu patrimônio.'); }
+    function endQuiz() {
+        let msg = score >= 4 ? "Maturidade Alta." : "Necessita de Assessoria.";
+        abrirInfo('Resultado do Diagnóstico', `Você acertou ${score} de 5 questões.`, `🚨 ${msg} Clique no WhatsApp para uma análise personalizada.`);
+        qIdx = 0; score = 0; init();
+    }
+
+    // UTILS
     function abrirModal(id) { document.getElementById(id).style.display = 'flex'; }
     function fecharModal(id) { document.getElementById(id).style.display = 'none'; }
     function fecharModalExterno(e, id) { if(e.target.id === id) fecharModal(id); }
-    function abrirInfo(t, c, ex) { document.getElementById('info-titulo').innerText = t; document.getElementById('info-corpo').innerText = c; document.getElementById('info-extra').innerText = ex; abrirModal('modal-info'); }
+    function abrirInfo(t, c, ex) { 
+        document.getElementById('info-titulo').innerText = t; 
+        document.getElementById('info-corpo').innerText = c; 
+        document.getElementById('info-extra').innerText = ex; 
+        abrirModal('modal-info'); 
+    }
     
     window.onload = init;
     </script>
