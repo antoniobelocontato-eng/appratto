@@ -54,8 +54,8 @@
         .section-label { font-size: 12px; font-weight: 700; color: var(--gold-light); text-transform: uppercase; margin-bottom: 30px; display: block; border-left: 4px solid var(--gold-light); padding-left: 15px; }
 
         .card { background: #fff; padding: 30px; border-radius: 8px; border-bottom: 4px solid var(--gold-light); margin-bottom: 30px; box-shadow: var(--card-shadow); }
-        .obra-card { background: #f9f9f9; padding: 25px; border-left: 4px solid var(--accent-gold); margin-bottom: 30px; border-radius: 4px; text-align: center; border: 1px solid #eee; }
-        .capa-livro { width: 140px; height: auto; box-shadow: 0 8px 20px rgba(0,0,0,0.3); margin-bottom: 20px; border-radius: 2px; }
+        .obra-card { background: #f9f9f9; padding: 25px; border-left: 4px solid var(--gold-light); margin-bottom: 30px; border-radius: 4px; text-align: center; border: 1px solid #eee; }
+        .capa-livro { width: 130px; height: auto; box-shadow: 0 8px 20px rgba(0,0,0,0.3); margin-bottom: 15px; border-radius: 2px; }
 
         .btn-action { width: 100%; padding: 18px; background: var(--gold-gradient); color: #fff; border: none; font-weight: 700; text-transform: uppercase; cursor: pointer; border-radius: 6px; transition: 0.3s; display: block; text-align: center; text-decoration: none; }
         .btn-action:hover { transform: translateY(-2px); box-shadow: 0 6px 20px rgba(212, 175, 55, 0.4); }
@@ -67,7 +67,7 @@
         .modal-box { background: var(--off-white); max-width: 650px; width: 100%; max-height: 90vh; padding: 50px 40px; position: relative; border-radius: 12px; border-top: 8px solid var(--gold-light); overflow-y: auto; }
         .close-x { position: absolute; top: 15px; right: 20px; font-size: 35px; cursor: pointer; color: var(--bg-deep); opacity: 0.5; }
         
-        .perfil-img { width: 180px; height: 180px; border-radius: 50%; border: 4px solid var(--gold-light); object-fit: cover; object-position: top; margin-bottom: 20px; background: #eee; display: block; margin-left: auto; margin-right: auto; }
+        .perfil-img { width: 180px; height: 180px; border-radius: 50%; border: 4px solid var(--gold-light); object-fit: cover; object-position: top; margin-bottom: 20px; background: #eee; display: block; margin: 0 auto 20px; }
 
         .wpp-float { position: fixed; bottom: 30px; right: 30px; background: #25d366; width: 65px; height: 65px; border-radius: 50%; display: flex; align-items: center; justify-content: center; z-index: 9000; transition: 0.3s; box-shadow: 0 10px 25px rgba(37, 211, 102, 0.4); }
         .wpp-float svg { width: 35px; height: 35px; fill: #fff; }
@@ -99,7 +99,7 @@
                 <li><strong>Regularização Dominial:</strong> Usucapião judicial e extrajudicial para converter posse em propriedade real e valorizada.</li>
                 <li><strong>Soluções Sucessórias:</strong> Planejamento via Holdings e inventários ágeis para garantir a transmissão de bens sem conflitos.</li>
                 <li><strong>Direito Condominial:</strong> Assessoria em governança, cobrança estratégica de inadimplência e gestão de conflitos.</li>
-                <li><strong>Engenharia Contratual:</strong> Elaboração de instrumentos blindados para Locação (BTS), Permutas e Incorporações.</li>
+                <li><strong>Engenharia Contratual:</strong> Elaboração de contratos blindados para Locação (BTS), Permutas e Incorporações.</li>
                 <li><strong>Auditoria (Due Diligence):</strong> Investigação profunda para afastar riscos de fraudes e garantir compras seguras.</li>
                 <li><strong>Direito Urbanístico:</strong> Atuação em licenciamentos, TACs e reversão de multas ambientais.</li>
             </ul>
@@ -118,14 +118,14 @@
             <section>
                 <span class="section-label">Obras Publicadas</span>
                 <div class="obra-card">
-                    <img src="noticia.jpg" alt="Capa Livro Notícia" class="capa-livro">
+                    <img src="noticia.jpg" alt="Capa Notícia" class="capa-livro">
                     <h4 style="font-family:'Playfair Display';">O Que Está Por Trás da Notícia? (2024)</h4>
-                    <p style="font-size:13px; color:#444; text-align: justify; margin: 15px 0;">Análise profunda sobre os limites da liberdade de imprensa e a proteção dos direitos da personalidade no ambiente digital.</p>
+                    <p style="font-size:13px; color:#444; text-align: justify; margin: 15px 0;">Análise profunda sobre os limites da liberdade de imprensa e a proteção dos direitos da personalidade no ambiente digital contemporâneo.</p>
                     <a href="https://insigneacademica.com.br/editora-insigne/livros?busca=Antonio+Eduardo" class="btn-action" target="_blank" style="padding:12px; font-size:11px;">ADQUIRIR OBRA →</a>
                 </div>
 
                 <div class="obra-card">
-                    <img src="genero.jpg" alt="Capa Livro Gênero" class="capa-livro">
+                    <img src="genero.jpg" alt="Capa Gênero" class="capa-livro">
                     <h4 style="font-family:'Playfair Display';">Advocacia sob uma Análise de Gênero (2024)</h4>
                     <p style="font-size:13px; color:#444; text-align: justify; margin: 15px 0;">Estudo crítico sobre as barreiras estruturais e desafios enfrentados pelas mulheres advogadas na capital potiguar.</p>
                     <a href="https://insigneacademica.com.br/editora-insigne/livros?busca=Antonio+Eduardo" class="btn-action" target="_blank" style="padding:12px; font-size:11px;">ADQUIRIR OBRA →</a>
@@ -157,16 +157,22 @@
         <div class="modal-box">
             <span class="close-x" onclick="fecharModal('modal-perfil')">&times;</span>
             <div style="text-align:center;">
-                <img src="perfil.jpg" alt="Antônio Miranda de Souza" class="perfil-img" onerror="this.src='Perfil.jpeg.jpg';">
+                <img src="perfil.jpg" alt="Antônio Miranda de Souza" class="perfil-img" onerror="this.src='perfil.jpg';">
                 <h2 style="font-family:'Playfair Display'; font-size: 30px; margin-bottom: 10px;">Antônio Miranda de Souza</h2>
                 <p style="color:var(--gold-light); font-weight:700; text-transform:uppercase; font-size:12px; letter-spacing: 2px;">Estrategista Jurídico | Especialista</p>
                 <hr style="margin: 25px 0; border: 0; border-top: 1px solid #ddd;">
-                <p style="font-size:15px; text-align: justify; color: #444;">Bacharel em Direito com vivência estratégica no <strong>TJRN</strong>, <strong>PGE-RN</strong> e <strong>Sefaz-RN</strong>. Especialista em Processo Civil e Pós-graduando em Direito Negocial e Imobiliário.</p>
+                <p style="font-size:15px; text-align: justify; color: #444; margin-bottom:30px;">Bacharel em Direito com vivência estratégica no <strong>TJRN</strong>, <strong>PGE-RN</strong> e <strong>Sefaz-RN</strong>. Especialista em Processo Civil e Pós-graduando em Direito Negocial e Imobiliário.</p>
                 
-                <span class="section-label" style="margin-top:25px;">Acervo Literário</span>
-                <div class="obra-card" style="text-align: left;">
-                    <p style="font-size: 14px;"><strong>• O Que Está Por Trás da Notícia? (2024):</strong> Análise sobre liberdade de imprensa e direitos da personalidade.</p>
-                    <p style="font-size: 14px; margin-top: 10px;"><strong>• Advocacia sob uma Análise de Gênero (2024):</strong> Estudo sobre protagonismo feminino na advocacia potiguar.</p>
+                <span class="section-label">Acervo Literário</span>
+                
+                <div style="display: flex; gap: 20px; align-items: start; text-align: left; margin-bottom: 25px;">
+                    <img src="noticia.jpg" alt="Capa Notícia" style="width: 80px; border-radius: 2px; box-shadow: 0 4px 10px rgba(0,0,0,0.2);">
+                    <p style="font-size: 13px;"><strong>• O Que Está Por Trás da Notícia? (2024):</strong> Análise técnica sobre a colisão entre liberdade de imprensa e direitos individuais no ambiente digital.</p>
+                </div>
+
+                <div style="display: flex; gap: 20px; align-items: start; text-align: left;">
+                    <img src="genero.jpg" alt="Capa Gênero" style="width: 80px; border-radius: 2px; box-shadow: 0 4px 10px rgba(0,0,0,0.2);">
+                    <p style="font-size: 13px;"><strong>• Advocacia sob uma Análise de Gênero (2024):</strong> Estudo revelador sobre o protagonismo e os desafios sistêmicos na advocacia potiguar.</p>
                 </div>
             </div>
         </div>
@@ -205,7 +211,7 @@
 
     const bancoQuestoes = [
         { q: "O contrato de gaveta garante a propriedade?", o: ["Sim, tem valor legal.", "Não, apenas o registro transfere."], r: 1, e: "O registro na matrícula é o único ato jurídico que torna você o dono real perante a lei." },
-        { q: "Imóvel sem escritura pode ser regularizado?", o: ["Não, é perda total.", "Sim, via Usucapião Extrajudicial."], r: 1, e: "A Usucapião em cartório é o caminho mais rápido para 'limpar' a documentação." }
+        { q: "Imóvel sem escritura pode ser regularizado?", o: ["Não, é perda total.", "Sim, via Usucapião Extrajudicial."], r: 1, e: "A Usucapião em cartório é o caminho mais rápido para 'limpar' a documentação e valorizar o bem." }
     ];
 
     let qIdx = 0; let score = 0;
@@ -227,7 +233,7 @@
         qIdx++; if(qIdx < bancoQuestoes.length) { showQ(); } else { endQuiz(); }
     }
 
-    function endQuiz() { abrirInfo('Avaliação Concluída', `Sua pontuação: ${score}/${bancoQuestoes.length}.`, 'Considere uma consultoria para blindar seus ativos.'); qIdx = 0; score = 0; init(); }
+    function endQuiz() { abrirInfo('Avaliação Concluída', `Sua pontuação de maturidade: ${score}/${bancoQuestoes.length}.`, 'Considere uma consultoria para blindar seus ativos.'); qIdx = 0; score = 0; init(); }
     function abrirModal(id) { document.getElementById(id).style.display = 'flex'; }
     function fecharModal(id) { document.getElementById(id).style.display = 'none'; }
     function fecharModalExterno(e, id) { if(e.target.id === id) fecharModal(id); }
