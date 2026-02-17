@@ -32,37 +32,105 @@
 
         header { padding: 60px 0 40px; text-align: center; background: var(--white); border-bottom: 1px solid rgba(0,0,0,0.05); }
         .logo { font-family: 'Playfair Display', serif; font-size: clamp(26px, 7vw, 44px); font-weight: 700; background: var(--cinza-chique); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
-        .btn-perfil { display: inline-block; margin-top: 20px; padding: 12px 30px; border: 1px solid #ccc; text-decoration: none; color: var(--text-dark); font-size: 11px; font-weight: 700; text-transform: uppercase; cursor: pointer; transition: 0.3s; }
+        
+        /* Branding Dinâmico */
+        #frase-autoridade { font-size: 11px; color: var(--accent-gold); text-transform: uppercase; letter-spacing: 4px; margin: 15px 0; font-weight: 600; height: 15px; }
 
-        /* Grid */
+        /* Botão WhatsApp Flutuante */
+        .wpp-float { position: fixed; bottom: 20px; right: 20px; background: #25d366; color: white; width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 30px; box-shadow: 0 10px 25px rgba(0,0,0,0.2); z-index: 9999; text-decoration: none; transition: 0.3s; }
+        .wpp-float:hover { transform: scale(1.1); background: #128c7e; }
+
         .portal-grid { display: flex; flex-direction: column; gap: 40px; margin: 40px auto; }
         @media (min-width: 992px) { .portal-grid { display: grid; grid-template-columns: 2fr 1fr; gap: 60px; } }
 
-        .section-label { font-size: 11px; font-weight: 700; color: var(--accent-gold); text-transform: uppercase; margin-bottom: 25px; display: block; border-bottom: 1px solid rgba(0,0,0,0.1); padding-bottom: 10px; }
+        .section-label { font-size: 11px; font-weight: 700; color: var(--accent-gold); text-transform: uppercase; margin-bottom: 25px; display: block; letter-spacing: 2px; border-bottom: 1px solid rgba(0,0,0,0.1); padding-bottom: 10px; }
 
         /* Componentes */
-        .case-card { background: #fff; padding: 25px; border: 1px solid #eee; margin-bottom: 20px; border-top: 4px solid var(--alert-red); }
-        .juris-item { background: #fff; padding: 15px; border: 1px solid #eee; margin-bottom: 10px; cursor: pointer; }
+        .case-card { background: #fff; padding: 25px; border: 1px solid #eee; margin-bottom: 20px; border-top: 4px solid var(--alert-red); position: relative; }
         .sidebar-block { background: #111; color: #fff; padding: 30px 20px; margin-bottom: 25px; }
+        input, select, textarea { width: 100%; padding: 14px; margin-bottom: 12px; border: 1px solid #333; background: #1a1a1a; color: #fff; font-size: 16px; }
+        .btn-action { width: 100%; padding: 18px; background: var(--accent-gold); color: #fff; border: none; font-weight: 700; text-transform: uppercase; cursor: pointer; }
 
-        /* Modal Perfil Detalhado */
+        /* Modais */
         .modal-overlay { display: none; position: fixed; top:0; left:0; width:100%; height:100%; background: rgba(0,0,0,0.95); z-index: 5000; overflow-y: auto; padding: 20px; }
-        .modal-box { background: var(--white); max-width: 900px; margin: 0 auto; padding: 40px; position: relative; border-radius: 4px; }
+        .modal-box { background: var(--white); max-width: 850px; margin: 0 auto; padding: 40px; position: relative; border-radius: 4px; }
         .perfil-img { width: 140px; height: 140px; border-radius: 50%; border: 3px solid var(--accent-gold); object-fit: cover; margin-bottom: 20px; }
-        .livro-item { background: #f9f9f9; padding: 15px; border-left: 3px solid var(--accent-gold); margin-bottom: 10px; }
 
         footer { padding: 40px; text-align: center; font-size: 11px; }
     </style>
 </head>
 <body>
 
+    <a href="https://wa.me/SEUNUMERO?text=Olá%20Dr.%20Antonio%2C%20vi%20seu%20site%20e%20gostaria%20de%20uma%20análise%20estratégica%20do%20meu%20caso." class="wpp-float" target="_blank">
+        <span style="font-size: 24px;">💬</span>
+    </a>
+
     <header>
         <div class="container">
             <div class="logo">ANTONIO APPRATTO MIRANDA</div>
-            <p style="font-size: 11px; letter-spacing: 5px; margin-top: 10px;">Segurança Jurídica e Estratégia Imobiliária</p>
-            <div class="btn-perfil" onclick="document.getElementById('modal-perfil').style.display='block'">Perfil Técnico e Acadêmico</div>
+            <div id="frase-autoridade">SEGURANÇA JURÍDICA PATRIMONIAL</div>
+            <div style="cursor:pointer; font-size:11px; text-decoration:underline;" onclick="document.getElementById('modal-perfil').style.display='block'">Acessar Perfil Técnico e Acadêmico</div>
         </div>
     </header>
+
+    <main class="container portal-grid">
+        <section>
+            <span class="section-label">Na Vida Real: Inteligência Aplicada</span>
+            <div id="container-casos">
+                <div class="case-card">
+                    <h3 style="font-family:'Playfair Display'; color:var(--alert-red); margin-bottom:15px;">Fraude à Execução em Terrenos de Luxo</h3>
+                    <p style="font-size:14px;"><strong>O Início:</strong> Investidor comprou um terreno sem auditoria nos tribunais de origem do vendedor.</p>
+                    <div style="margin-top:10px; font-size:11px; font-weight:700; cursor:pointer; color:var(--accent-gold);" onclick="abrirModalInfo('O Desfecho: Perda Total', 'A venda foi anulada por processos trabalhistas ocultos. O comprador perdeu o bem e o capital.', '🚨 Auditoria nacional é o único seguro real.')">VER DESFECHO DO CASO →</div>
+                </div>
+            </div>
+
+            <span class="section-label" style="margin-top:40px;">Jurisprudência: Os 5 Temas Vitais</span>
+            <div id="container-juris">
+                <div style="background:#fff; padding:15px; margin-bottom:10px; cursor:pointer;" onclick="abrirModalInfo('STF: Retomada de Imóveis', 'Validação da retomada rápida em alienação fiduciária.', 'Garante celeridade na retomada patrimonial.')">1. Constitucionalidade da Retomada Extrajudicial (STF)</div>
+                <div style="background:#fff; padding:15px; margin-bottom:10px; cursor:pointer;" onclick="abrirModalInfo('STJ: Súmula 543', 'Devolução imediata de valores em distratos.', 'Protege a liquidez do comprador em atrasos de obra.')">2. Restituição Integral em Distratos (STJ)</div>
+                <div style="background:#fff; padding:15px; margin-bottom:10px; cursor:pointer;" onclick="abrirModalInfo('STJ: Bem de Família', 'Penhora permitida para fiadores comerciais.', 'Alerta máximo para garantidores de contratos.')">3. Penhora de Imóvel de Fiador (STJ)</div>
+                <div style="background:#fff; padding:15px; margin-bottom:10px; cursor:pointer;" onclick="abrirModalInfo('STF: Tema 492', 'Regras para cobrança em loteamentos fechados.', 'Evita taxas abusivas em associações sem registro.')">4. Taxas em Loteamentos (STF)</div>
+                <div style="background:#fff; padding:15px; margin-bottom:10px; cursor:pointer;" onclick="abrirModalInfo('STJ: Vícios Estruturais', 'Responsabilidade civil que pode chegar a 10 anos.', 'Amplia proteção contra erros de construção.')">5. Garantias Pós-Entrega (STJ)</div>
+            </div>
+        </section>
+
+        <aside>
+            <div class="sidebar-block" style="background:var(--accent-gold);">
+                <h3 style="font-family:'Playfair Display';">Pergunte ao Doutor</h3>
+                <p style="font-size:12px; margin-bottom:15px; opacity:0.9;">Deixe sua dúvida técnica. Respondemos semanalmente em nossas pílulas de inteligência.</p>
+                <form>
+                    <input type="text" placeholder="Sua pergunta rápida..." style="background:rgba(255,255,255,0.1); border-color:#fff;">
+                    <button class="btn-action" style="background:#111;">Enviar Pergunta</button>
+                </form>
+            </div>
+
+            <div class="sidebar-block">
+                <h3>Análise Estratégica:</h3>
+                <form>
+                    <input type="text" placeholder="Seu Nome" required>
+                    <input type="email" placeholder="E-mail" required>
+                    <textarea placeholder="Resumo do caso..." rows="3"></textarea>
+                    <button class="btn-action">Iniciar Consultoria</button>
+                </form>
+            </div>
+        </aside>
+    </main>
+
+    <section style="background:#e8e8df; padding:60px 20px; text-align:center;">
+        <div class="container">
+            <h2 style="font-family:'Playfair Display';">Newsletter de Inteligência</h2>
+            <p>Receba análises focadas no seu perfil:</p>
+            <form style="max-width:600px; margin:20px auto 0; display:flex; flex-direction:column; gap:10px;">
+                <select style="background:#fff; color:#000; border:1px solid #ccc;">
+                    <option>Sou Investidor Imobiliário</option>
+                    <option>Sou Corretor de Imóveis</option>
+                    <option>Tenho um Problema Jurídico</option>
+                </select>
+                <input type="email" placeholder="Seu melhor e-mail" style="background:#fff; color:#000; border:1px solid #ccc;">
+                <button class="btn-action">Assinar Conteúdo</button>
+            </form>
+        </div>
+    </section>
 
     <div id="modal-perfil" class="modal-overlay">
         <div class="modal-box">
@@ -70,76 +138,12 @@
             <img src="perfil.jpg" class="perfil-img" onerror="this.src='https://via.placeholder.com/140'">
             <h2 style="font-family:'Playfair Display';">Antonio Eduardo Miranda de Souza</h2>
             <p style="color:var(--accent-gold); font-weight:700; margin-bottom:20px;">ESTRATEGISTA JURÍDICO | PÓS-DOUTORANDO | INSIDER DO TJRN</p>
-            
-            <p>Com uma sólida formação acadêmica e uma trajetória pautada pela atuação em órgãos estratégicos do Rio Grande do Norte, Antonio une a profundidade científica à visão sistêmica de quem conhece os fluxos internos do <strong>TJRN</strong>, da <strong>SEFAZ-RN</strong> e da <strong>PGE-RN</strong>. Bacharel em Direito pela Liga de Ensino do RN, sua experiência é marcada pelo domínio de processos administrativos e judiciais complexos.</p>
-            
-            <h4 style="margin-top:25px; border-bottom:1px solid #eee; padding-bottom:5px;">Produção Científica & Livros</h4>
-            <div class="livro-item">
-                <strong>Livro: Advocacia sob uma Análise de Gênero (2024)</strong>
-                <p style="font-size:12px;">Estudo sobre as dificuldades da mulher advogada em Natal-RN. Ed. Insigne Acadêmica.</p>
-                <a href="#" style="font-size:11px; color:var(--accent-gold);">Adquirir Obra →</a>
+            <p style="font-size:14px; margin-bottom:20px;">Especialista com vasta vivência na **14ª Vara Criminal** e **2ª Vara da Fazenda Pública** (TJRN). Autor do livro *"Advocacia sob uma Análise de Gênero"* e artigos sobre liberdade de imprensa e mediação.</p>
+            <div style="background:#f9f9f9; padding:15px; border-left:3px solid var(--accent-gold);">
+                <strong>Obra em Destaque:</strong> Advocacia sob uma Análise de Gênero (Ed. Insigne Acadêmica, 2024).
             </div>
-            <div class="livro-item">
-                <strong>Artigo: Desafios da Liberdade de Imprensa no Brasil (2021)</strong>
-                <p style="font-size:12px;">Análise premiada sobre legislação brasileira e o papel vigente da notícia.</p>
-            </div>
-            
-            <h4 style="margin-top:25px; border-bottom:1px solid #eee; padding-bottom:5px;">Especialidades</h4>
-            <p style="font-size:14px; margin-top:10px;">Especialista em Processo Civil e Processo do Trabalho (UNI-RN). Pós-graduando em Direito Negocial e Imobiliário (EBRADI/ESA OAB). Proficiência avançada em sistemas PJe e SEI.</p>
         </div>
     </div>
-
-    <main class="container portal-grid">
-        <section>
-            <span class="section-label">Na Vida Real: Inteligência Aplicada</span>
-            <div id="container-casos">
-                <div class="case-card">
-                    <h3 style="font-family:'Playfair Display'; color:var(--alert-red); margin-bottom:15px;">Caso 1: A Penhora por Dívida Trabalhista Oculta</h3>
-                    <p style="font-size:14px;"><strong>O Início:</strong> Investidor comprou terreno de luxo com certidão de cartório "limpa".</p>
-                    <div class="btn-perfil" style="margin-top:10px; font-size:10px;" onclick="abrirModalInfo('O Desfecho: Fraude à Execução', 'O vendedor possuía processos trabalhistas em outro estado que ainda não haviam chegado ao cartório local. A justiça anulou a venda e o investidor perdeu o bem.', '🚨 Lição: A certidão do cartório é o fim da pesquisa, não o início. A Due Diligence deve ser nacional.')">Ver Desfecho →</div>
-                </div>
-                <div class="case-card">
-                    <h3 style="font-family:'Playfair Display'; color:var(--alert-red); margin-bottom:15px;">Caso 2: O Herdeiro "Surpresa" no Inventário</h3>
-                    <p style="font-size:14px;"><strong>O Início:</strong> Empresa adquiriu prédio comercial de herdeiro único após partilha amigável.</p>
-                    <div class="btn-perfil" style="margin-top:10px; font-size:10px;" onclick="abrirModalInfo('O Desfecho: Petição de Herança', 'Surgiu um filho extraconjugal com DNA positivo reivindicando a quota-parte. A venda foi declarada nula e o prejuízo foi milionário.', '🚨 Lição: Sucessões exigem blindagem contratual e retenção estratégica de capital.')">Ver Desfecho →</div>
-                </div>
-                <div class="case-card">
-                    <h3 style="font-family:'Playfair Display'; color:var(--alert-red); margin-bottom:15px;">Caso 3: O Retenção de 70% no Distrato</h3>
-                    <p style="font-size:14px;"><strong>O Início:</strong> Comprador solicitou rescisão por incapacidade financeira e a construtora negou a devolução justa.</p>
-                    <div class="btn-perfil" style="margin-top:10px; font-size:10px;" onclick="abrirModalInfo('O Desfecho: Cláusula Abusiva', 'Mesmo com a nova lei, a justiça entendeu que a retenção era confiscatória. O comprador recuperou 80% do valor pago após intervenção jurídica.', '🚨 Lição: Nunca assine um distrato sob pressão sem auditoria da planilha de cálculos.')">Ver Desfecho →</div>
-                </div>
-            </div>
-
-            <span class="section-label" style="margin-top:40px;">Jurisprudência em Foco (Top 5 Insights)</span>
-            <div class="juris-item" onclick="abrirModalInfo('STF: Retomada Extrajudicial', 'Validada a execução célere por bancos em alienação fiduciária.', 'Garante segurança para quem compra em leilão.')">
-                <strong>1. STF:</strong> Constitucionalidade da retomada rápida de imóveis.
-            </div>
-            <div class="juris-item" onclick="abrirModalInfo('STJ: Súmula 543', 'Restituição imediata de valores em caso de culpa da construtora.', 'Protege o fluxo de caixa do comprador.')">
-                <strong>2. STJ:</strong> Devolução integral em distratos por atraso de obra.
-            </div>
-            <div class="juris-item" onclick="abrirModalInfo('STJ: Bem de Família', 'O fiador comercial pode ter seu único imóvel penhorado.', 'Alerta máximo para garantidores de contratos.')">
-                <strong>3. STJ:</strong> Penhorabilidade do bem de família do fiador.
-            </div>
-            <div class="juris-item" onclick="abrirModalInfo('STF: Tema 492', 'Taxas só podem ser cobradas se houver adesão ou registro em matrícula.', 'Evita cobranças abusivas de associações.')">
-                <strong>4. STF:</strong> Cobrança de taxas em loteamentos fechados.
-            </div>
-            <div class="juris-item" onclick="abrirModalInfo('STJ: Vícios de Construção', 'O prazo de 5 anos é de garantia; o de reparação pode chegar a 10 anos.', 'Amplia o tempo de proteção contra defeitos graves.')">
-                <strong>5. STJ:</strong> Responsabilidade civil por defeitos estruturais.
-            </div>
-        </section>
-
-        <aside>
-            <div class="sidebar-block">
-                <h3>Iniciar Consultoria:</h3>
-                <form>
-                    <input type="text" placeholder="Seu Nome" required>
-                    <input type="email" placeholder="Seu E-mail" required>
-                    <textarea placeholder="Resumo do caso..." rows="3"></textarea>
-                    <button class="btn-action">Solicitar Análise</button>
-                </form>
-            </div>
-        </aside>
-    </main>
 
     <div id="modal-info" class="modal-overlay" onclick="this.style.display='none'">
         <div class="modal-box" onclick="event.stopPropagation()">
@@ -154,6 +158,19 @@
     </footer>
 
     <script>
+        // LÓGICA DE BRANDING DINÂMICO
+        const frases = [
+            "SEGURANÇA JURÍDICA PATRIMONIAL",
+            "MAIS DE 2 ANOS DE INSIDER NO TJRN",
+            "ESTRATEGISTA EM DIREITO IMOBILIÁRIO",
+            "PÓS-DOUTORANDO EM DIREITO"
+        ];
+        let i = 0;
+        setInterval(() => {
+            document.getElementById('frase-autoridade').innerText = frases[i];
+            i = (i + 1) % frases.length;
+        }, 3500);
+
         function abrirModalInfo(titulo, corpo, extra) {
             document.getElementById('info-titulo').innerText = titulo;
             document.getElementById('info-corpo').innerHTML = `<p>${corpo}</p>`;
