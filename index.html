@@ -17,13 +17,13 @@
     
     <style>
         :root {
-            --bg-deep: #382d2a;      /* Marrom solicitado */
+            --bg-deep: #382d2a;      /* Marrom Nobre */
             --gold-light: #D4AF37;   
             --gold-gradient: linear-gradient(135deg, #D4AF37 0%, #B8860B 100%);
             --off-white: #F9F7F2;    
             --text-main: #2C2C2C;    
             --card-shadow: 0 10px 30px rgba(0,0,0,0.08);
-            --wpp-green: #25d366;    /* Verde do print */
+            --wpp-green: #25d366;    
         }
 
         * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -32,58 +32,50 @@
 
         header { padding: 50px 0; text-align: center; background: var(--bg-deep); border-bottom: 2px solid var(--gold-light); }
         .logo-img { max-width: 380px; width: 90%; height: auto; display: block; margin: 0 auto; }
-        #frase-dinamica { font-size: 12px; color: var(--gold-light); text-transform: uppercase; letter-spacing: 5px; margin: 20px 0; font-weight: 700; height: 18px; }
+        #frase-dinamica { font-size: 11px; color: var(--gold-light); text-transform: uppercase; letter-spacing: 5px; margin: 20px 0; font-weight: 700; height: 18px; }
 
-        /* SEÇÃO QUEM SOMOS / PERFIL */
+        /* QUEM SOMOS */
         .bio-home { background: #fff; padding: 50px; border-radius: 8px; border-top: 6px solid var(--gold-light); margin-top: -30px; box-shadow: var(--card-shadow); text-align: center; }
         .perfil-img { width: 150px; height: 150px; border-radius: 50%; border: 4px solid var(--gold-light); object-fit: cover; margin-bottom: 20px; box-shadow: 0 5px 15px rgba(0,0,0,0.1); }
-        .bio-text { text-align: justify; color: #555; font-size: 15px; margin-bottom: 30px; }
         
-        .section-label { font-size: 11px; font-weight: 700; color: var(--gold-light); text-transform: uppercase; margin: 40px 0 20px; display: block; border-left: 4px solid var(--gold-light); padding-left: 15px; letter-spacing: 2px; }
+        .section-label { font-size: 11px; font-weight: 700; color: var(--gold-light); text-transform: uppercase; margin: 50px 0 25px; display: block; border-left: 4px solid var(--gold-light); padding-left: 15px; letter-spacing: 2px; }
 
-        /* ISCAS DE CONVERSÃO */
-        .isca-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; }
-        .isca-card { background: #fff; padding: 25px; border-radius: 8px; border: 1px solid #eee; transition: 0.3s; box-shadow: var(--card-shadow); display: flex; flex-direction: column; justify-content: space-between; }
-        .isca-card:hover { border-color: var(--gold-light); transform: translateY(-5px); }
-        .isca-card h4 { font-family: 'Playfair Display', serif; margin-bottom: 10px; color: var(--bg-deep); }
+        /* ACERVO LITERÁRIO */
+        .livros-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; margin-bottom: 40px; }
+        .livro-card { background: #fff; padding: 30px; border-radius: 8px; box-shadow: var(--card-shadow); text-align: center; border: 1px solid #eee; transition: 0.3s; }
+        .capa-livro { width: 140px; height: 200px; background: #eee; margin: 0 auto 20px; box-shadow: 0 8px 15px rgba(0,0,0,0.2); border-radius: 4px; object-fit: cover; }
+        .livro-card h4 { font-family: 'Playfair Display', serif; font-size: 20px; margin-bottom: 10px; color: var(--bg-deep); }
+        .livro-card p { font-size: 14px; color: #666; margin-bottom: 20px; text-align: justify; height: 80px; overflow: hidden; }
 
-        /* SIMULADOR JURÍDICO */
+        /* SIMULADOR */
         .simulador-box { background: #fff; padding: 40px; border-radius: 12px; box-shadow: var(--card-shadow); border: 2px solid var(--gold-light); margin: 60px 0; }
-        textarea { width: 100%; padding: 15px; border-radius: 6px; border: 1px solid #ddd; margin: 15px 0; font-family: inherit; resize: none; font-size: 15px; }
+        textarea { width: 100%; padding: 15px; border-radius: 6px; border: 1px solid #ddd; margin: 15px 0; font-family: inherit; resize: none; }
         .res-juridica { display: none; background: #fdfaf4; padding: 25px; border-left: 5px solid var(--bg-deep); margin-bottom: 20px; animation: fadeIn 0.5s ease; }
-        
-        /* CONTEÚDO TÉCNICO E VÍDEOS */
-        .video-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; margin-bottom: 40px; }
-        .video-placeholder { background: #000; aspect-ratio: 16/9; border-radius: 8px; display: flex; align-items: center; justify-content: center; color: #fff; font-size: 11px; text-transform: uppercase; }
-        .content-grid { display: grid; grid-template-columns: 1fr; gap: 30px; }
+
+        /* VÍDEOS */
+        .video-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 20px; margin-bottom: 50px; }
+        .video-card { background: #000; aspect-ratio: 16/9; border-radius: 8px; display: flex; align-items: center; justify-content: center; color: #fff; font-size: 11px; text-transform: uppercase; letter-spacing: 1px; cursor: pointer; }
+
+        /* BOTÕES */
+        .btn-gold { background: var(--gold-gradient); color: #fff; padding: 16px 25px; border: none; border-radius: 4px; font-weight: 700; text-transform: uppercase; cursor: pointer; text-decoration: none; display: inline-block; width: 100%; text-align: center; transition: 0.3s; border: none; }
+        .btn-wpp-action { background: var(--wpp-green); color: #fff; padding: 22px 25px; border: none; border-radius: 6px; font-weight: 700; text-transform: uppercase; cursor: pointer; text-decoration: none; display: none; width: 100%; text-align: center; transition: 0.3s; font-size: 14px; box-shadow: 0 4px 15px rgba(37, 211, 102, 0.3); }
+        .btn-wpp-action:hover { background: #1ebe57; }
+
+        /* CONTEÚDO TÉCNICO */
+        .content-grid { display: grid; grid-template-columns: 1fr; gap: 30px; margin-bottom: 60px; }
         @media (min-width: 992px) { .content-grid { grid-template-columns: 1fr 1fr; } }
         .card-info { background: #fff; padding: 20px; border-radius: 8px; margin-bottom: 15px; border-bottom: 3px solid var(--gold-light); box-shadow: var(--card-shadow); }
 
-        /* BOTÕES */
-        .btn-gold { background: var(--gold-gradient); color: #fff; padding: 16px 25px; border: none; border-radius: 4px; font-weight: 700; text-transform: uppercase; cursor: pointer; text-decoration: none; display: inline-block; width: 100%; text-align: center; transition: 0.3s; }
-        .btn-wpp-action { background: var(--wpp-green); color: #fff; padding: 22px 25px; border: none; border-radius: 6px; font-weight: 700; text-transform: uppercase; cursor: pointer; text-decoration: none; display: none; width: 100%; text-align: center; transition: 0.3s; font-size: 14px; box-shadow: 0 4px 15px rgba(37, 211, 102, 0.3); }
-        .btn-wpp-action:hover { transform: scale(1.01); background: #1ebe57; }
-        
-        .wpp-float { position: fixed; bottom: 30px; right: 30px; background: var(--wpp-green); width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center; z-index: 999; box-shadow: 0 5px 15px rgba(0,0,0,0.3); }
-        
-        footer { padding: 60px 0; text-align: center; background: var(--bg-deep); color: #fff; font-size: 11px; letter-spacing: 2px; border-top: 4px solid var(--gold-light); }
-
-        /* MODAIS */
-        .modal-overlay { display: none; position: fixed; top:0; left:0; width:100%; height:100%; background: rgba(56, 45, 42, 0.95); z-index: 9999; align-items: center; justify-content: center; backdrop-filter: blur(5px); }
-        .modal-box { background: #fff; max-width: 650px; width: 90%; padding: 40px; border-radius: 12px; position: relative; max-height: 90vh; overflow-y: auto; }
+        footer { padding: 60px 0; text-align: center; background: var(--bg-deep); color: #fff; font-size: 11px; border-top: 4px solid var(--gold-light); }
 
         @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
     </style>
 </head>
 <body>
 
-    <a href="https://wa.me/5584981911309" class="wpp-float" target="_blank">
-        <svg viewBox="0 0 448 512" width="30" fill="white"><path d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.7 17.7 68.9 27.1 106.1 27.1h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zm-157 341.6c-33.1 0-65.6-8.9-93.9-25.7l-6.7-4-69.8 18.3L72 359.2l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.6-186.6 184.6zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-5.5-2.8-23.2-8.5-44.2-27.1-16.4-14.6-27.4-32.7-30.6-38.1-3.2-5.4-.3-8.3 2.4-11.1 2.5-2.5 5.4-6.5 8.2-9.7 2.8-3.2 3.7-5.5 5.6-9.2 1.9-3.7 1-6.9-.5-9.7-1.5-2.8-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 39.1 59.7 94.8 83.8 13.2 5.8 23.5 9.2 31.5 11.8 13.3 4.2 25.4 3.6 35 2.2 10.7-1.6 32.8-13.4 37.4-26.4 4.6-13 4.6-24.1 3.2-26.4-1.3-2.5-5-3.9-10.5-6.6z"/></svg>
-    </a>
-
     <header>
         <div class="container">
-            <img src="logo.jpg" alt="Antônio Miranda de Souza" class="logo-img">
+            <img src="logo.jpg" alt="Logo" class="logo-img">
             <div id="frase-dinamica">SEGURANÇA JURÍDICA PATRIMONIAL</div>
         </div>
     </header>
@@ -91,128 +83,94 @@
     <main class="container">
         <section class="bio-home">
             <img src="perfil.jpg" alt="Antônio Miranda" class="perfil-img">
-            <h2 style="font-family:'Playfair Display'; font-size: 32px; color: var(--bg-deep); margin-bottom: 5px;">Quem Somos</h2>
-            <p style="color: var(--gold-light); font-weight:700; letter-spacing: 2px; text-transform: uppercase; font-size: 12px; margin-bottom: 25px;">Estrategista Jurídico | Inteligência Imobiliária</p>
-            
-            <div class="bio-text">
-                <p style="margin-bottom: 15px;">Bacharel em Direito com vivência estratégica no <strong>TJRN</strong>, <strong>PGE-RN</strong> e <strong>Sefaz-RN</strong>. Especialista em Processo Civil e Pós-graduando em Direito Negocial e Imobiliário.</p>
-                <p>Nossa atuação é pautada na desjudicialização e na engenharia contratual avançada para garantir que o seu patrimônio esteja blindado contra riscos sucessórios, fiscais e operacionais. Unimos o rigor acadêmico com a agilidade do mercado imobiliário potiguar.</p>
-            </div>
-            
-            <button onclick="abrirModalAutor()" class="btn-gold" style="width:auto; font-size:11px; padding:10px 25px;">Ver Acervo Literário e Publicações</button>
+            <h2 style="font-family:'Playfair Display'; font-size: 32px; color: var(--bg-deep);">Quem Somos</h2>
+            <p style="color: var(--gold-light); font-weight:700; letter-spacing: 2px; text-transform: uppercase; font-size: 12px; margin-bottom: 25px;">Antônio Miranda de Souza | Estrategista Jurídico</p>
+            <p style="text-align: justify; color: #555; font-size: 15px; max-width: 850px; margin: 0 auto;">
+                Bacharel em Direito com vivência estratégica no <strong>TJRN</strong>, <strong>PGE-RN</strong> e <strong>Sefaz-RN</strong>. Especialista em Processo Civil e Pós-graduando em Direito Negocial e Imobiliário. Nossa missão é a desjudicialização e a proteção de ativos através da engenharia contratual avançada.
+            </p>
         </section>
 
-        <span class="section-label">Onde está o seu risco hoje?</span>
-        <div class="isca-grid">
-            <div class="isca-card">
-                <div style="font-size:10px; color:var(--gold-light); font-weight:700; margin-bottom:10px; text-transform:uppercase;">Dores Comuns</div>
-                <h4>Entrega Atrasada?</h4>
-                <p style="font-size:13px; color:#666; margin-bottom:15px;">A obra na planta parou? Saiba como garantir multa reversa e suspender pagamentos.</p>
-                <a href="https://wa.me/5584981911309" class="btn-gold" style="font-size:10px; padding:10px;">Analisar Meus Direitos</a>
+        <span class="section-label">Acervo Literário e Publicações</span>
+        <div class="livros-grid">
+            <div class="livro-card">
+                <img src="capa_livro1.jpg" alt="Capa Livro 1" class="capa-livro">
+                <h4>O Que Está Por Trás da Notícia? (2024)</h4>
+                <p>Análise técnica profunda sobre os limites da liberdade de imprensa e a proteção dos direitos da personalidade no ambiente digital contemporâneo.</p>
+                <a href="https://insigneacademica.com.br/editora-insigne/livros?busca=Antonio+Eduardo" class="btn-gold" target="_blank" style="padding:12px; font-size:11px;">ADQUIRIR OBRA</a>
             </div>
-            <div class="isca-card">
-                <div style="font-size:10px; color:var(--gold-light); font-weight:700; margin-bottom:10px; text-transform:uppercase;">Prevenção</div>
-                <h4>Contrato de Gaveta?</h4>
-                <p style="font-size:13px; color:#666; margin-bottom:15px;">O risco de perder o imóvel por dívidas do antigo dono e como regularizar o registro.</p>
-                <a href="https://wa.me/5584981911309" class="btn-gold" style="font-size:10px; padding:10px;">Regularizar Agora</a>
-            </div>
-            <div class="isca-card">
-                <div style="font-size:10px; color:var(--gold-light); font-weight:700; margin-bottom:10px; text-transform:uppercase;">Agilidade</div>
-                <h4>Inventário Parado?</h4>
-                <p style="font-size:13px; color:#666; margin-bottom:15px;">A via extrajudicial para transferir bens em dias, sem depender da lentidão do fórum.</p>
-                <a href="https://wa.me/5584981911309" class="btn-gold" style="font-size:10px; padding:10px;">Resolver Rápido</a>
+            <div class="livro-card">
+                <img src="capa_livro2.jpg" alt="Capa Livro 2" class="capa-livro">
+                <h4>Advocacia sob uma Análise de Gênero (2024)</h4>
+                <p>Estudo crítico e sociológico sobre as barreiras estruturais e o protagonismo das mulheres advogadas na capital potiguar.</p>
+                <a href="https://insigneacademica.com.br/editora-insigne/livros?busca=Antonio+Eduardo" class="btn-gold" target="_blank" style="padding:12px; font-size:11px;">ADQUIRIR OBRA</a>
             </div>
         </div>
 
         <section class="simulador-box">
-            <span class="section-label">Simulador de Análise Técnica</span>
-            <h3>Descreva sua situação patrimonial:</h3>
-            <textarea id="texto-cliente" rows="4" placeholder="Ex: Comprei um imóvel mas o vendedor faleceu antes de assinar a escritura..."></textarea>
+            <span class="section-label" style="margin-top:0;">Simulador de Análise Técnica</span>
+            <h3 style="font-family:'Playfair Display'; margin-bottom:10px;">Descreva seu caso patrimonial:</h3>
+            <textarea id="texto-cliente" rows="4" placeholder="Ex: Fiz um contrato de gaveta e o vendedor faleceu antes da escritura..."></textarea>
             
             <div id="bloco-resposta" class="res-juridica">
                 <p id="resposta-juridica" style="font-style: italic; color: #444; font-size: 15px;"></p>
-                <p style="margin-top:15px; font-size:12px; font-weight:700; color:var(--gold-light); text-transform:uppercase;">⚠️ Análise técnica preliminar concluída</p>
+                <p style="margin-top:15px; font-size:12px; font-weight:700; color:var(--gold-light); text-transform:uppercase;">⚠️ Análise preliminar concluída</p>
             </div>
 
-            <button id="btn-analisar" class="btn-gold" onclick="gerarResposta()">Solicitar Análise Gratuita</button>
-            
+            <button id="btn-analisar" class="btn-gold" onclick="gerarResposta()">Solicitar Análise Técnica</button>
             <a id="btn-equipe" href="#" class="btn-wpp-action" target="_blank">
                 Entre em contato com nossa equipe para uma primeira reunião grátis
             </a>
         </section>
 
-        <span class="section-label">Pílulas de Inteligência (Vídeos)</span>
+        <span class="section-label">Pílulas de Inteligência Jurídica</span>
         <div class="video-grid">
-            <div class="video-placeholder">Vídeo: Como Blindar o Patrimônio Imobiliário</div>
-            <div class="video-placeholder">Vídeo: Por que a Escritura não garante a posse?</div>
-            <div class="video-placeholder">Vídeo: O Papel da Holding na Sucessão</div>
+            <div class="video-card">Vídeo: Blindagem de Imóveis</div>
+            <div class="video-card">Vídeo: O Perigo do Contrato de Gaveta</div>
+            <div class="video-card">Vídeo: Regularização em Cartório</div>
         </div>
 
         <div class="content-grid">
             <section>
-                <span class="section-label">5 Casos Reais de Sucesso</span>
+                <span class="section-label">5 Casos de Inteligência Real</span>
                 <div id="container-casos"></div>
             </section>
             <section>
-                <span class="section-label">5 Jurisprudências de Impacto</span>
+                <span class="section-label">5 Jurisprudências Estratégicas</span>
                 <div id="container-juris"></div>
             </section>
         </div>
-
     </main>
 
-    <div id="modal-autor" class="modal-overlay" onclick="fecharModalExterno(event)">
-        <div class="modal-box" style="text-align:center;">
-            <h3 style="font-family:'Playfair Display'; font-size: 24px; margin-bottom:20px; color: var(--bg-deep);">Produção Intelectual</h3>
-            <div style="text-align:left; font-size:14px; line-height:1.8; color: #444;">
-                <p style="margin-bottom: 15px;"><strong>• O Que Está Por Trás da Notícia? (2024):</strong> Análise técnica sobre liberdade de imprensa e proteção da personalidade no ambiente digital.</p>
-                <p><strong>• Advocacia sob uma Análise de Gênero (2024):</strong> Estudo sociológico e jurídico sobre o protagonismo feminino na advocacia potiguar.</p>
-                <hr style="margin: 20px 0; opacity: 0.1;">
-                <p style="font-size: 12px; color: #888;">Especialista em Processo Civil e Pós-graduando em Direito Negocial e Imobiliário.</p>
-            </div>
-            <button class="btn-gold" style="margin-top:25px; width:auto; font-size:11px;" onclick="fecharModal()">Voltar ao Site</button>
-        </div>
-    </div>
-
-    <div id="modal-info" class="modal-overlay" onclick="fecharModalExterno(event)">
-        <div class="modal-box">
-            <h3 id="info-titulo" style="font-family:'Playfair Display'; color:var(--gold-light); margin-bottom:15px;"></h3>
-            <div id="info-corpo" style="font-size:14px; text-align:justify; color:#444;"></div>
-            <button class="btn-gold" style="margin-top:20px;" onclick="fecharModal()">Fechar</button>
-        </div>
-    </div>
-
     <footer>
-        <div class="container">
-            <p><strong>ANTÔNIO MIRANDA DE SOUZA</strong></p>
-            <p style="margin-top: 10px; opacity: 0.6; font-weight: 300;">NATAL/RN | ESTRATÉGIA IMOBILIÁRIA © 2026</p>
-        </div>
+        <p>ANTÔNIO MIRANDA DE SOUZA | NATAL/RN | ESTRATÉGIA IMOBILIÁRIA © 2026</p>
     </footer>
 
+    <script src="//code.jivosite.com/widget/SEU_TOKEN_AQUI" async></script>
+
     <script>
-        // BANCO DE DADOS CONSOLIDADO
+        // BANCO DE DADOS
         const casos = [
-            { t: "1. O Risco do Imóvel 'Limpo'", r: "Vendedor com passivo em outro estado pode anular a venda.", d: "O comprador perdeu o bem por falta de auditoria nacional profunda.", l: "Lição: Due Diligence é indispensável." },
-            { t: "2. Herdeiro Inesperado", r: "Venda feita por herdeiros sem partilha finalizada.", d: "Aparecimento de novo herdeiro gerou nulidade da escritura pública.", l: "Lição: Sucessão precisa de planejamento." },
-            { t: "3. Abuso em Distratos", r: "Retenção de 70% pela incorporadora em desistência.", d: "Justiça reduziu para 20% com base no CDC e proteção ao investidor.", l: "Lição: Cláusulas abusivas caem." },
-            { t: "4. Fraude à Execução", r: "Imóvel vendido após citação em processo judicial.", d: "Venda anulada para pagar credores, gerando prejuízo ao comprador.", l: "Lição: Análise de passivo é vital." },
-            { t: "5. Matrícula com Erro", r: "Descrição de área divergente da realidade física.", d: "Impediu o financiamento bancário e travou a venda por meses.", l: "Lição: Regularização técnica prévia." }
+            { t: "1. O Risco do Imóvel 'Limpo'", d: "O comprador perdeu o bem por falta de auditoria nacional ampla.", l: "Foco: Due Diligence Nacional." },
+            { t: "2. Herdeiro Inesperado", d: "Aparecimento de novo herdeiro anulou a escritura pública.", l: "Foco: Planejamento Sucessório." },
+            { t: "3. Abuso em Distratos", d: "Justiça reduziu retenção de 70% para 20% com base no CDC.", l: "Foco: Defesa do Investidor." },
+            { t: "4. Fraude à Execução", d: "Venda anulada para pagar credores antigos do vendedor.", l: "Foco: Análise de Passivo." },
+            { t: "5. Matrícula Divergente", d: "Erro na metragem travou o financiamento por meses.", l: "Foco: Regularização Técnica." }
         ];
 
         const juris = [
-            { t: "Leilão Extrajudicial (STF)", d: "Bancos podem retomar imóvel em atraso sem intervenção do juiz.", e: "Cuidado com os prazos da alienação fiduciária." },
-            { t: "Súmula 543 STJ", d: "Atraso na obra gera devolução integral e imediata dos valores.", e: "Proteção contra parcelamento de reembolsos." },
-            { t: "Impenhorabilidade", d: "Bem de família é protegido mesmo com dívidas altas, salvo raras exceções.", e: "Segurança para a moradia única." },
-            { t: "Usucapião em Cartório", d: "Provimento 65 CNJ: Regularização de posse sem processo judicial.", e: "Velocidade na valorização do ativo." },
-            { t: "Corretagem Transparente", d: "Válida transferência da taxa ao comprador se houver informação clara.", e: "Transparência contratual obrigatória." }
+            { t: "Leilão Extrajudicial (STF)", d: "Validada a retomada de bens sem juiz (Lei 9.514/97)." },
+            { t: "Súmula 543 STJ", d: "Atraso na obra gera devolução integral e imediata dos valores." },
+            { t: "Bem de Família", d: "Impenhorabilidade da residência única contra credores comuns." },
+            { t: "Usucapião Extrajudicial", d: "Regularização de propriedade direto no cartório de registro." },
+            { t: "Taxa de Corretagem", d: "Válida transferência ao comprador se houver informação clara." }
         ];
 
         function init() {
             document.getElementById('container-casos').innerHTML = casos.map(c => `
                 <div class="card-info">
                     <h4>${c.t}</h4>
-                    <p style="font-size:12px; color:#666; margin-bottom:10px;">${c.r}</p>
-                    <button onclick="abrirInfo('${c.t}', '${c.d}<br><br><b>${c.l}</b>')" style="border:none; background:none; color:var(--gold-light); cursor:pointer; font-weight:700; font-size:11px;">Ver Detalhes Técnicos →</button>
+                    <p style="font-size:12px; color:#666;">${c.d}</p>
+                    <p style="font-size:11px; font-weight:700; color:var(--gold-light); margin-top:10px;">${c.l}</p>
                 </div>
             `).join('');
 
@@ -220,27 +178,21 @@
                 <div class="card-info">
                     <h4>${j.t}</h4>
                     <p style="font-size:12px; color:#444;">${j.d}</p>
-                    <p style="font-size:11px; font-weight:700; color:var(--bg-deep); margin-top:10px;">Impacto: ${j.e}</p>
                 </div>
             `).join('');
         }
 
         function gerarResposta() {
             const txt = document.getElementById('texto-cliente').value;
-            if(txt.length < 15) return alert("Por favor, descreva o caso para a análise.");
-            document.getElementById('resposta-juridica').innerHTML = "<i>Ab initio</i>, os fatos denotam vulnerabilidade sinalagmática que pode ferir o princípio da continuidade registral. É imperativa a análise da <b>Due Diligence</b> para mitigar riscos de evicção ou nulidade patrimonial sob a égide do Código Civil.";
+            if(txt.length < 15) return alert("Por favor, descreva seu caso.");
+            document.getElementById('resposta-juridica').innerHTML = "<i>Ab initio</i>, os fatos denotam vulnerabilidade sinalagmática que pode ferir o princípio da continuidade registral. É imperativa a análise da <b>Due Diligence</b> para mitigar riscos de evicção ou nulidade patrimonial.";
             document.getElementById('bloco-resposta').style.display = 'block';
             document.getElementById('btn-analisar').style.display = 'none';
             const btnEq = document.getElementById('btn-equipe');
             btnEq.style.display = 'block';
-            btnEq.href = `https://wa.me/5584981911309?text=Olá+Antônio,+estou+vindo+do+site.+Solicito+a+reunião+grátis+sobre:+${encodeURIComponent(txt)}`;
+            btnEq.href = `https://wa.me/5584981911309?text=Desejo+uma+reunião+grátis+sobre:+${encodeURIComponent(txt)}`;
             document.getElementById('bloco-resposta').scrollIntoView({ behavior: 'smooth' });
         }
-
-        function abrirInfo(t, c) { document.getElementById('info-titulo').innerText = t; document.getElementById('info-corpo').innerHTML = c; document.getElementById('modal-info').style.display = 'flex'; }
-        function abrirModalAutor() { document.getElementById('modal-autor').style.display = 'flex'; }
-        function fecharModal() { document.querySelectorAll('.modal-overlay').forEach(m => m.style.display = 'none'); }
-        function fecharModalExterno(e) { if(e.target.className === 'modal-overlay') fecharModal(); }
 
         const frases = ["ESTRATÉGIA IMOBILIÁRIA", "SEGURANÇA JURÍDICA", "BLINDAGEM PATRIMONIAL"];
         let fIdx = 0; setInterval(() => { document.getElementById('frase-dinamica').innerText = frases[fIdx]; fIdx = (fIdx + 1) % frases.length; }, 3500);
