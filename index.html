@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Eduardo Miranda Souza | Inteligência e Estratégia Imobiliária</title>
+    <title>Antônio Miranda de Souza | Inteligência e Estratégia Imobiliária</title>
     
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-3V0T0RHH8L"></script>
     <script>
@@ -17,8 +17,8 @@
     
     <style>
         :root {
-            /* Paleta extraída da Logo */
-            --bg-deep: #1a1a1b;      /* Chumbo da logo */
+            /* Paleta extraída da Logo e Imagem */
+            --bg-deep: #2b2b2b;      /* Cor exata do fundo da imagem enviada */
             --gold-light: #D4AF37;   /* Dourado Nobre */
             --gold-gradient: linear-gradient(135deg, #D4AF37 0%, #B8860B 100%);
             --off-white: #F9F7F2;    /* Fundo Cru/Bege suave */
@@ -30,7 +30,7 @@
         body { font-family: 'Outfit', sans-serif; background: var(--off-white); color: var(--text-main); line-height: 1.6; }
         .container { max-width: 1100px; margin: 0 auto; padding: 0 25px; }
 
-        /* Header Blindado */
+        /* Header Blindado com cor de fundo sincronizada */
         header { padding: 50px 0; text-align: center; background: var(--bg-deep); border-bottom: 2px solid var(--gold-light); }
         .logo-img { max-width: 380px; width: 90%; height: auto; display: block; margin: 0 auto; }
         
@@ -49,10 +49,10 @@
         /* Seção Quiz */
         .quiz-section { background: var(--bg-deep); color: #fff; padding: 50px; border-radius: 8px; margin: 50px 0; }
         .quiz-section h3 { font-family: 'Playfair Display', serif; color: var(--gold-light); font-size: 26px; margin-bottom: 10px; }
-        .progress-bar { height: 6px; background: #333; margin: 25px 0; border-radius: 10px; overflow: hidden; }
+        .progress-bar { height: 6px; background: #444; margin: 25px 0; border-radius: 10px; overflow: hidden; }
         #progress-fill { height: 100%; background: var(--gold-gradient); width: 0%; transition: 0.6s cubic-bezier(0.4, 0, 0.2, 1); }
-        .option-btn { display: block; width: 100%; padding: 18px; margin-bottom: 15px; background: #252526; border: 1px solid #444; color: #fff; text-align: left; cursor: pointer; transition: 0.3s; font-size: 15px; border-radius: 6px; }
-        .option-btn:hover { border-color: var(--gold-light); background: #2d2d2e; }
+        .option-btn { display: block; width: 100%; padding: 18px; margin-bottom: 15px; background: #333; border: 1px solid #444; color: #fff; text-align: left; cursor: pointer; transition: 0.3s; font-size: 15px; border-radius: 6px; }
+        .option-btn:hover { border-color: var(--gold-light); background: #3d3d3d; }
 
         /* Grid de Casos e Juris */
         .portal-grid { display: flex; flex-direction: column; gap: 40px; margin: 50px auto; }
@@ -72,10 +72,9 @@
         input:focus { border-color: var(--gold-light); outline: none; background: #fff; }
 
         /* Modais */
-        .modal-overlay { display: none; position: fixed; top:0; left:0; width:100%; height:100%; background: rgba(26, 26, 27, 0.95); z-index: 9999; padding: 20px; align-items: center; justify-content: center; backdrop-filter: blur(5px); }
+        .modal-overlay { display: none; position: fixed; top:0; left:0; width:100%; height:100%; background: rgba(43, 43, 43, 0.95); z-index: 9999; padding: 20px; align-items: center; justify-content: center; backdrop-filter: blur(5px); }
         .modal-box { background: var(--off-white); max-width: 600px; width: 100%; max-height: 90vh; padding: 50px 40px; position: relative; border-radius: 12px; border-top: 8px solid var(--gold-light); overflow-y: auto; }
         .close-x { position: absolute; top: 15px; right: 20px; font-size: 35px; cursor: pointer; color: var(--bg-deep); opacity: 0.5; }
-        .close-x:hover { opacity: 1; }
 
         /* WhatsApp flutuante */
         .wpp-float { position: fixed; bottom: 30px; right: 30px; background: #25d366; width: 65px; height: 65px; border-radius: 50%; display: flex; align-items: center; justify-content: center; z-index: 9000; transition: 0.3s; box-shadow: 0 10px 25px rgba(37, 211, 102, 0.4); }
@@ -93,7 +92,7 @@
 
     <header>
         <div class="container">
-            <img src="logo.jpg" alt="Eduardo Miranda Souza" class="logo-img">
+            <img src="logo.jpg" alt="Antônio Miranda de Souza" class="logo-img">
             <div id="frase-dinamica">SEGURANÇA JURÍDICA PATRIMONIAL</div>
             <div style="cursor:pointer; font-size:11px; text-decoration:underline; margin-top:15px; font-weight:700; color:#fff;" onclick="abrirModal('modal-perfil')">Informações Técnicas e Literárias</div>
         </div>
@@ -104,13 +103,13 @@
             <h2>Protegendo o que você construiu e estruturando o que você ainda vai conquistar.</h2>
             <p style="font-size: 16px; color: #555; margin-bottom: 30px; text-align: justify;">Unimos inteligência jurídica avançada e visão estratégica de mercado para blindar seu patrimônio e viabilizar empreendimentos imobiliários com segurança máxima.</p>
             
-            <span class="section-label">Nossas Especialidades</span>
+            <span class="section-label">Especialidades</span>
             <ul class="bio-list">
-                <li><strong>Regularização Dominial:</strong> Usucapião judicial e extrajudicial para converter posse em propriedade real e valorizada.</li>
-                <li><strong>Soluções Sucessórias:</strong> Planejamento via Holdings e inventários ágeis para garantir a transmissão de bens sem conflitos.</li>
-                <li><strong>Direito Condominial:</strong> Assessoria em governança, cobrança estratégica de inadimplência e gestão de conflitos.</li>
-                <li><strong>Engenharia Contratual:</strong> Elaboração de contratos blindados para Locação (BTS), Permutas e Incorporações.</li>
-                <li><strong>Auditoria (Due Diligence):</strong> Investigação profunda para afastar riscos de fraudes e garantir compras seguras.</li>
+                <li><strong>Regularização Dominial:</strong> Usucapião para converter posse em propriedade real e valorizada.</li>
+                <li><strong>Soluções Sucessórias:</strong> Planejamento via Holdings e inventários ágeis para transmissão de bens.</li>
+                <li><strong>Direito Condominial:</strong> Assessoria em governança e cobrança estratégica de inadimplência.</li>
+                <li><strong>Engenharia Contratual:</strong> Elaboração de contratos blindados para Locação (BTS) e Incorporações.</li>
+                <li><strong>Auditoria (Due Diligence):</strong> Investigação profunda para garantir compras imobiliárias seguras.</li>
                 <li><strong>Direito Urbanístico:</strong> Atuação em licenciamentos e Termos de Ajustamento de Conduta (TAC).</li>
             </ul>
         </section>
@@ -135,7 +134,7 @@
 
             <aside>
                 <div class="sidebar-block">
-                    <h3 style="font-family:'Playfair Display'; color:var(--gold-light); margin-bottom:20px;">Análise Estratégica</h3>
+                    <h3 style="font-family:'Playfair Display'; color:var(--gold-light); margin-bottom:10px;">Análise Estratégica</h3>
                     <p style="font-size: 13px; color: #666; margin-bottom: 20px;">Descreva seu caso para uma análise técnica preliminar.</p>
                     <form onsubmit="event.preventDefault(); alert('Solicitação enviada. Entraremos em contato via WhatsApp.');">
                         <input type="text" placeholder="Seu Nome" required>
@@ -152,13 +151,10 @@
         <div class="modal-box">
             <span class="close-x" onclick="fecharModal('modal-perfil')">&times;</span>
             <div style="text-align:center;">
-                <h2 style="font-family:'Playfair Display'; font-size: 30px; margin-bottom: 10px;">Eduardo Miranda Souza</h2>
+                <h2 style="font-family:'Playfair Display'; font-size: 30px; margin-bottom: 10px;">Antônio Miranda de Souza</h2>
                 <p style="color:var(--gold-light); font-weight:700; text-transform:uppercase; font-size:12px; letter-spacing: 2px;">Estrategista Jurídico | Especialista</p>
                 <hr style="margin: 25px 0; border: 0; border-top: 1px solid #ddd;">
                 <p style="font-size:15px; text-align: justify; color: #444;">Bacharel em Direito com vivência estratégica no <strong>TJRN</strong>, <strong>PGE-RN</strong> e <strong>Sefaz-RN</strong>. Especialista em Processo Civil e Pós-graduando em Direito Negocial e Imobiliário.</p>
-                <div class="social-links" style="margin-top: 30px;">
-                    <a href="https://www.instagram.com/antonioadvogado_/" target="_blank">Instagram Profissional</a>
-                </div>
             </div>
         </div>
     </div>
@@ -174,7 +170,7 @@
 
     <footer>
         <div class="container">
-            <p><strong>EDUARDO MIRANDA SOUZA</strong></p>
+            <p><strong>ANTÔNIO MIRANDA DE SOUZA</strong></p>
             <p style="margin-top: 10px; opacity: 0.5;">NATAL/RN | ESTRATÉGIA IMOBILIÁRIA © 2026</p>
         </div>
     </footer>
@@ -184,19 +180,19 @@
     let fIdx = 0; setInterval(() => { document.getElementById('frase-dinamica').innerText = frases[fIdx]; fIdx = (fIdx + 1) % frases.length; }, 3500);
 
     const bancoCasos = [
-        { t: "1. O Risco do Imóvel 'Limpo'", r: "A compra de um imóvel aparentemente sem dívidas pode ser anulada por processos do antigo dono em outros estados.", f: "Auditoria focada apenas em certidões locais.", d: "O comprador perdeu o imóvel para pagar credores do vendedor.", l: "Lição: Due Diligence nacional é a única proteção real." },
-        { t: "2. O Herdeiro Inesperado", r: "Ao comprar de um herdeiro único, um novo filho pode surgir após a venda e pleitear o bem.", f: "Reconhecimento de paternidade pós-venda.", d: "A venda foi desfeita para garantir a cota do novo herdeiro.", l: "Lição: Prazos sucessórios exigem análise preventiva de risco." },
+        { t: "1. O Risco do Imóvel 'Limpo'", r: "A compra de um imóvel aparentemente sem dívidas pode ser anulada por processos do antigo dono.", f: "Auditoria focada apenas em certidões locais.", d: "O comprador perdeu o imóvel para pagar credores do vendedor.", l: "Lição: Due Diligence nacional é a única proteção real." },
+        { t: "2. O Herdeiro Inesperado", r: "Ao comprar de um herdeiro único, um novo filho pode surgir após a venda.", f: "Reconhecimento de paternidade pós-venda.", d: "A venda foi desfeita para garantir a cota do novo herdeiro.", l: "Lição: Prazos sucessórios exigem análise de risco." },
         { t: "3. Abuso em Distratos", r: "Construtoras aplicam multas abusivas em desistências de imóveis na planta.", f: "Tentativa de retenção de 70% do valor pago.", d: "Justiça reduziu a multa para 20%, protegendo o investidor.", l: "Lição: Cláusulas abusivas caem com engenharia contratual." }
     ];
 
     const bancoJuris = [
         { t: "Retomada Extrajudicial (STF)", r: "Lei 9.514/97.", desc: "Bancos podem retomar imóveis financiados em atraso via Cartório, sem juiz.", c: "O STF validou o leilão direto após notificação no Registro de Imóveis.", e: "Risco: Atenção absoluta aos prazos de purgação da mora." },
-        { t: "Súmula 543 (STJ)", r: "Direito do Comprador.", desc: "Em atraso da obra, o comprador recebe 100% do dinheiro de volta imediatamente.", c: "Justiça proíbe qualquer parcelamento do reembolso pela construtora.", e: "Benefício: Liquidez garantida em casos de descumprimento contratual." }
+        { t: "Súmula 543 (STJ)", r: "Direito do Comprador.", desc: "Em atraso da obra, o comprador recebe 100% do dinheiro de volta imediatamente.", c: "Justiça proíbe qualquer parcelamento do reembolso pela construtora.", e: "Benefício: Liquidez garantida em casos de descumprimento." }
     ];
 
     const bancoQuestoes = [
         { q: "O contrato de gaveta garante a propriedade?", o: ["Sim, tem valor legal.", "Não, apenas o registro transfere."], r: 1, e: "O registro na matrícula é o único ato jurídico que torna você o dono real perante a lei." },
-        { q: "Imóvel sem escritura pode ser regularizado?", o: ["Não, é perda total.", "Sim, via Usucapião Extrajudicial."], r: 1, e: "A Usucapião em cartório é o caminho mais rápido para 'limpar' a documentação e valorizar o bem." }
+        { q: "Imóvel sem escritura pode ser regularizado?", o: ["Não, é perda total.", "Sim, via Usucapião Extrajudicial."], r: 1, e: "A Usucapião em cartório é o caminho mais rápido para regularizar a documentação." }
     ];
 
     let qIdx = 0; let score = 0;
@@ -214,11 +210,11 @@
 
     function check(i) {
         if(i === bancoQuestoes[qIdx].r) score++;
-        abrirInfo(i === bancoQuestoes[qIdx].r ? '✅ Resposta Correta' : '❌ Ponto de Atenção', bancoQuestoes[qIdx].e, 'Continue a avaliação.');
+        abrirInfo(i === bancoQuestoes[qIdx].r ? '✅ Correto' : '❌ Atenção', bancoQuestoes[qIdx].e, 'Prossiga.');
         qIdx++; if(qIdx < bancoQuestoes.length) { showQ(); } else { endQuiz(); }
     }
 
-    function endQuiz() { abrirInfo('Avaliação Concluída', `Sua pontuação de maturidade: ${score}/${bancoQuestoes.length}.`, 'Considere uma consultoria para blindar seus ativos.'); qIdx = 0; score = 0; init(); }
+    function endQuiz() { abrirInfo('Fim do Teste', `Sua pontuação: ${score}/${bancoQuestoes.length}.`, 'Estratégia é a chave da segurança patrimonial.'); qIdx = 0; score = 0; init(); }
     function abrirModal(id) { document.getElementById(id).style.display = 'flex'; }
     function fecharModal(id) { document.getElementById(id).style.display = 'none'; }
     function fecharModalExterno(e, id) { if(e.target.id === id) fecharModal(id); }
