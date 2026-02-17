@@ -3,14 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Antonio Appratto Miranda | Inteligência Imobiliária</title>
+    <meta name="description" content="Antonio Eduardo Miranda de Souza - Inteligência Jurídica, Segurança Patrimonial e Estratégia Imobiliária.">
+    <title>Antonio Appratto Miranda | Inteligência e Estratégia Imobiliária</title>
     
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-3V0T0RHH8L"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
-      gtag('config', 'G-3V0T0RHH8L');
+      gtag('config', 'G-3V0T0RHH8L', { 'send_page_view': true, 'cookie_flags': 'SameSite=None;Secure' });
     </script>
 
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&family=Playfair+Display:ital,wght@0,400;1,700&display=swap" rel="stylesheet">
@@ -18,110 +19,216 @@
     <style>
         :root {
             --bege-base: #F7F7F2;
+            --cinza-chique: linear-gradient(135deg, #8e8e8e 0%, #2c2c2c 100%);
             --text-dark: #1a1a1a;
+            --text-soft: #555555;
             --accent-gold: #c5a059;
+            --white: #ffffff;
             --alert-red: #8b0000;
         }
 
         * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: 'Outfit', sans-serif; background: var(--bege-base); color: var(--text-dark); line-height: 1.6; }
+        body { font-family: 'Outfit', sans-serif; background: var(--bege-base); color: var(--text-dark); line-height: 1.6; overflow-x: hidden; }
         .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
 
-        /* ÍNDICE DE SEGURANÇA PATRIMONIAL REFINADO */
-        .risk-box { background: #111; color: #fff; padding: clamp(20px, 5vw, 40px); margin: 40px auto; border-radius: 4px; max-width: 800px; }
-        .risk-box h3 { font-family: 'Playfair Display', serif; color: var(--accent-gold); font-size: 26px; margin-bottom: 20px; text-align: center; }
+        header { padding: 60px 0 40px; text-align: center; background: var(--white); border-bottom: 1px solid rgba(0,0,0,0.05); }
+        .logo { font-family: 'Playfair Display', serif; font-size: clamp(26px, 7vw, 44px); font-weight: 700; background: var(--cinza-chique); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .btn-perfil { display: inline-block; margin-top: 20px; padding: 12px 30px; border: 1px solid #ccc; text-decoration: none; color: var(--text-dark); font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; cursor: pointer; transition: 0.3s; }
+        .btn-perfil:hover { background: #000; color: #fff; }
+
+        .portal-grid { display: flex; flex-direction: column; gap: 40px; margin: 40px auto; }
+        @media (min-width: 992px) { .portal-grid { display: grid; grid-template-columns: 2fr 1fr; gap: 60px; } }
+
+        .section-label { font-size: 11px; font-weight: 700; color: var(--accent-gold); text-transform: uppercase; margin-bottom: 25px; display: block; letter-spacing: 2px; border-bottom: 1px solid rgba(0,0,0,0.1); padding-bottom: 10px; }
+
+        /* QUIZ DE SEGURANÇA PATRIMONIAL */
+        .risk-box { background: #111; color: #fff; padding: 30px; border-radius: 4px; margin-bottom: 40px; }
+        .risk-box h3 { font-family: 'Playfair Display', serif; color: var(--accent-gold); margin-bottom: 20px; text-align: center; }
+        .risk-item { margin-bottom: 20px; display: flex; align-items: flex-start; gap: 12px; }
+        .risk-item input { width: 16px; height: 16px; margin-top: 4px; accent-color: var(--accent-gold); cursor: pointer; }
+        .risk-info label { font-weight: 600; font-size: 15px; display: block; cursor: pointer; }
+        .risk-info p { font-size: 12px; color: #999; margin-top: 2px; }
+        .btn-analisar { width: 100%; padding: 18px; background: var(--accent-gold); color: #fff; border: none; font-weight: 700; text-transform: uppercase; cursor: pointer; margin-top: 10px; }
+
+        /* CASOS REAIS */
+        .case-card { background: #fff; padding: 25px; border: 1px solid #eee; margin-bottom: 20px; border-top: 4px solid var(--alert-red); }
+        .btn-view { display: inline-block; margin-top: 15px; padding: 10px 20px; background: var(--text-dark); color: #fff; text-decoration: none; font-size: 11px; font-weight: 700; text-transform: uppercase; cursor: pointer; }
+
+        /* JURISPRUDÊNCIA */
+        .juris-item { background: #fff; padding: 20px; border: 1px solid #eee; margin-bottom: 10px; cursor: pointer; transition: 0.3s; }
+        .juris-item:hover { border-left: 5px solid var(--accent-gold); background: #fafafa; }
+
+        /* MODAIS */
+        .modal-overlay { display: none; position: fixed; top:0; left:0; width:100%; height:100%; background: rgba(0,0,0,0.9); z-index: 5000; padding: 20px; align-items: center; justify-content: center; overflow-y: auto; }
+        .modal-box { background: var(--white); max-width: 700px; width: 100%; padding: clamp(20px, 5vw, 40px); border-radius: 4px; position: relative; }
+        .close-btn { position: absolute; top: 15px; right: 20px; font-size: 30px; cursor: pointer; color: #999; }
         
-        .risk-item { margin-bottom: 25px; display: flex; align-items: flex-start; gap: 15px; }
-        .risk-item input[type="checkbox"] { width: 18px; height: 18px; margin-top: 5px; cursor: pointer; accent-color: var(--accent-gold); }
-        .risk-info { flex: 1; }
-        .risk-info label { font-weight: 600; font-size: 16px; display: block; cursor: pointer; }
-        .risk-info p { font-size: 13px; color: #999; margin-top: 4px; line-height: 1.4; }
+        .perfil-header { display: flex; flex-direction: column; align-items: center; text-align: center; gap: 20px; margin-bottom: 30px; }
+        @media (min-width: 600px) { .perfil-header { flex-direction: row; text-align: left; } }
+        .perfil-img { width: 150px; height: 150px; border-radius: 50%; border: 3px solid var(--accent-gold); object-fit: cover; }
+        .livro-card { border-left: 3px solid var(--accent-gold); padding-left: 15px; margin-bottom: 15px; background: #f9f9f9; padding: 15px; }
 
-        .btn-analisar { width: 100%; padding: 20px; background: var(--accent-gold); color: #fff; border: none; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; cursor: pointer; transition: 0.3s; }
-        .btn-analisar:hover { background: #b38d45; }
+        /* SIDEBAR */
+        .sidebar-block { background: #111; color: #fff; padding: 30px 20px; margin-bottom: 25px; }
+        input, textarea { width: 100%; padding: 14px; margin-bottom: 10px; border: 1px solid #333; background: #1a1a1a; color: #fff; font-size: 16px; }
+        .btn-action { width: 100%; padding: 18px; background: var(--accent-gold); color: #fff; border: none; font-weight: 700; text-transform: uppercase; cursor: pointer; }
 
-        /* MODAL DE DIAGNÓSTICO */
-        .modal-diag { display: none; position: fixed; top:0; left:0; width:100%; height:100%; background: rgba(0,0,0,0.9); z-index: 5000; align-items: center; justify-content: center; padding: 20px; }
-        .modal-diag-content { background: #fff; max-width: 550px; width: 100%; padding: 40px; border-radius: 4px; position: relative; border-top: 8px solid var(--alert-red); }
-        .close-diag { position: absolute; top: 15px; right: 20px; font-size: 30px; cursor: pointer; color: #999; }
-        
-        .diag-text h4 { color: var(--alert-red); margin-bottom: 15px; font-family: 'Playfair Display'; font-size: 22px; }
-        .diag-text p { margin-bottom: 15px; font-size: 15px; color: #444; }
-        .btn-contato { display: inline-block; background: #000; color: #fff; padding: 12px 25px; text-decoration: none; font-weight: 700; text-transform: uppercase; font-size: 11px; margin-top: 10px; }
-
-        footer { padding: 40px; text-align: center; font-size: 12px; }
+        footer { padding: 60px 20px; text-align: center; font-size: 11px; color: #888; background: #fff; }
     </style>
 </head>
 <body>
 
-    <div class="container">
-        <div class="risk-box">
-            <h3>Índice de Segurança Patrimonial</h3>
-            <p style="text-align: center; font-size: 14px; margin-bottom: 30px; opacity: 0.7;">Marque as situações que se aplicam ao seu imóvel atual ou pretendido:</p>
+    <header>
+        <div class="container">
+            <div class="logo">ANTONIO APPRATTO MIRANDA</div>
+            <p style="font-size: 11px; text-transform: uppercase; letter-spacing: 5px; margin-top: 10px;">Inteligência Jurídica e Estratégia Imobiliária</p>
+            <div class="btn-perfil" onclick="document.getElementById('modal-perfil').style.display='flex'">Perfil Técnico e Acadêmico</div>
+        </div>
+    </header>
 
-            <div class="risk-item">
-                <input type="checkbox" id="risk1">
-                <div class="risk-info">
-                    <label for="risk1">Compra sem Due Diligence completa</label>
-                    <p>Você não fez uma investigação profunda sobre o passado do vendedor ou do imóvel antes de fechar o negócio.</p>
+    <main class="container portal-grid">
+        <section>
+            <div class="risk-box">
+                <h3>Índice de Segurança Patrimonial</h3>
+                <div class="risk-item">
+                    <input type="checkbox" id="r1">
+                    <div class="risk-info">
+                        <label for="r1">Compra sem Due Diligence completa</label>
+                        <p>Investigação técnica sobre o passado do vendedor e do imóvel.</p>
+                    </div>
                 </div>
+                <div class="risk-item">
+                    <input type="checkbox" id="r2">
+                    <div class="risk-info">
+                        <label for="r2">Imóvel com pendência de inventário</label>
+                        <p>Situações de herança ainda não registradas ou resolvidas.</p>
+                    </div>
+                </div>
+                <div class="risk-item">
+                    <input type="checkbox" id="r3">
+                    <div class="risk-info">
+                        <label for="r3">Contrato assinado sem assessoria jurídica</label>
+                        <p>Revisão de cláusulas por especialista independente.</p>
+                    </div>
+                </div>
+                <button class="btn-analisar" onclick="gerarDiagnostico()">Analisar Meu Risco</button>
             </div>
 
-            <div class="risk-item">
-                <input type="checkbox" id="risk2">
-                <div class="risk-info">
-                    <label for="risk2">Imóvel com pendência de inventário/sucessão</label>
-                    <p>O imóvel faz parte de uma herança que ainda não foi totalmente resolvida ou registrada no cartório.</p>
-                </div>
+            <span class="section-label">Na Vida Real: Inteligência Aplicada</span>
+            <div id="container-casos-reais"></div>
+
+            <span class="section-label">Jurisprudência em Foco</span>
+            <div id="container-juris"></div>
+        </section>
+
+        <aside>
+            <div class="sidebar-block">
+                <h3>Solicitar Análise Estratégica:</h3>
+                <form>
+                    <input type="text" placeholder="Nome Completo" required>
+                    <input type="email" placeholder="E-mail Profissional" required>
+                    <textarea placeholder="Resumo do caso..." rows="3"></textarea>
+                    <button class="btn-action">Iniciar Consultoria</button>
+                </form>
             </div>
 
-            <div class="risk-item">
-                <input type="checkbox" id="risk3">
-                <div class="risk-info">
-                    <label for="risk3">Contrato assinado sem assessoria jurídica</label>
-                    <p>O contrato foi feito diretamente com o vendedor ou imobiliária, sem a revisão de um advogado especialista.</p>
+            <span class="section-label">Pílulas de Inteligência</span>
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px;">
+                <div style="position:relative; padding-bottom:177%; height:0; background:#000;"><iframe style="position:absolute; top:0; left:0; width:100%; height:100%;" src="https://www.youtube.com/embed/P6j6-C0_19o" frameborder="0"></iframe></div>
+                <div style="position:relative; padding-bottom:177%; height:0; background:#000;"><iframe style="position:absolute; top:0; left:0; width:100%; height:100%;" src="https://www.youtube.com/embed/zWunXN0D4xY" frameborder="0"></iframe></div>
+            </div>
+        </aside>
+    </main>
+
+    <div id="modal-perfil" class="modal-overlay" onclick="fecharModal(event, 'modal-perfil')">
+        <div class="modal-box" onclick="event.stopPropagation()">
+            <span class="close-btn" onclick="document.getElementById('modal-perfil').style.display='none'">&times;</span>
+            <div class="perfil-header">
+                <img src="perfil.jpg" alt="Antonio Appratto" class="perfil-img" onerror="this.src='https://via.placeholder.com/150?text=Foto'">
+                <div>
+                    <h2 style="font-family:'Playfair Display'; font-size: 24px;">Antonio Eduardo Miranda de Souza</h2>
+                    <p style="color: var(--accent-gold); font-size: 13px; font-weight: 700; text-transform: uppercase;">Estrategista Jurídico | Pós-Doutorando | Autor</p>
                 </div>
             </div>
-
-            <button class="btn-analisar" onclick="gerarDiagnostico()">Analisar Meu Risco Patrimonial</button>
+            <p style="font-size: 14px; margin-bottom: 20px;">Especialista em Direito Imobiliário com vasta experiência no <strong>TJRN</strong> e na <strong>Sefaz-RN</strong>. Autor do livro <em>"ADVOCACIA SOB UMA ANÁLISE DE GÊNERO"</em> e de diversos artigos premiados na área de Direito Processual e Sucessório.</p>
+            <span class="section-label">Obras Publicadas</span>
+            <div class="livro-card">
+                <strong>Livro: Advocacia sob uma Análise de Gênero</strong>
+                <p style="font-size: 12px; color: #666;">Ed. Insigne Acadêmica, 2024. Natal/RN.</p>
+                <a href="#" style="font-size: 11px; color: var(--accent-gold); font-weight: 700;">ADQUIRIR OBRA →</a>
+            </div>
         </div>
     </div>
 
-    <div id="modal-diagnostico" class="modal-diag" onclick="fecharModalDiag(event)">
-        <div class="modal-diag-content" onclick="event.stopPropagation()">
-            <span class="close-diag" onclick="document.getElementById('modal-diagnostico').style.display='none'">&times;</span>
-            <div class="diag-text">
-                <h4>Atenção: Risco Detectado</h4>
-                <div id="diag-resultado"></div>
-                <p><strong>A boa notícia:</strong> Quase todos esses problemas podem ser resolvidos com a estratégia jurídica certa antes que se tornem uma perda total.</p>
-                <a href="#contato" class="btn-contato" onclick="document.getElementById('modal-diagnostico').style.display='none'">Solicitar Análise Preliminar</a>
-            </div>
+    <div id="modal-diag" class="modal-overlay" onclick="fecharModal(event, 'modal-diag')">
+        <div class="modal-box" onclick="event.stopPropagation()" style="border-top: 8px solid var(--alert-red);">
+            <span class="close-btn" onclick="document.getElementById('modal-diag').style.display='none'">&times;</span>
+            <h3 style="font-family:'Playfair Display'; color: var(--alert-red); margin-bottom: 15px;">Diagnóstico de Risco</h3>
+            <div id="diag-resultado" style="font-size: 15px; color: #444;"></div>
+            <div style="margin-top: 20px; padding: 15px; background: #fdf2f2; font-size: 13px;"><strong>Recomendação:</strong> Procure uma análise estratégica antes de qualquer pagamento ou assinatura.</div>
         </div>
     </div>
+
+    <div id="modal-info" class="modal-overlay" onclick="fecharModal(event, 'modal-info')">
+        <div class="modal-box" onclick="event.stopPropagation()">
+            <span class="close-btn" onclick="document.getElementById('modal-info').style.display='none'">&times;</span>
+            <h3 id="info-titulo" style="font-family:'Playfair Display'; margin-bottom: 15px;"></h3>
+            <div id="info-corpo" style="font-size: 15px; color: #444;"></div>
+            <div id="info-extra" style="margin-top: 20px; padding: 15px; background: #fafafa; border-left: 4px solid var(--accent-gold); font-size: 14px;"></div>
+        </div>
+    </div>
+
+    <footer>
+        <p><strong>ANTONIO APPRATTO MIRANDA</strong> | PÓS-DOUTORADO EM DIREITO IMOBILIÁRIO</p>
+        <p>Natal/RN | Digital &copy; 2026</p>
+    </footer>
 
     <script>
+    const bancoCasos = [
+        { t: "O Fantasma das Dívidas Condominiais", f: "Investidor comprou em leilão judicial por valor baixo.", d: "Descobriu dívidas de 10 anos não citadas no edital. Teve que pagar para não perder o bem.", l: "Auditoria pré-lance é o único seguro contra passivos ocultos." }
+    ];
+
+    const bancoJuris = [
+        { t: "STF: Retomada Extrajudicial", r: "Constitucionalidade da retomada rápida por bancos.", c: "Bancos podem retomar imóveis financiados sem processo judicial em caso de atraso.", e: "O tempo de reação do devedor diminuiu; a segurança do arrematante aumentou." }
+    ];
+
+    function atualizarDados() {
+        document.getElementById('container-casos-reais').innerHTML = bancoCasos.map(c => `
+            <div class="case-card">
+                <h4 style="margin-bottom:10px;">${c.t}</h4>
+                <p style="font-size:14px;"><strong>O Início:</strong> ${c.f}</p>
+                <div class="btn-view" onclick="abrirModalInfo('${c.t}', '${c.d}', '🚨 Lição: ${c.l}')">Ver o Desfecho →</div>
+            </div>
+        `).join('');
+
+        document.getElementById('container-juris').innerHTML = bancoJuris.map(j => `
+            <div class="juris-item" onclick="abrirModalInfo('${j.t}', '${j.c}', '💎 Impacto: ${j.e}')">
+                <p class="juris-title" style="font-weight:700;">${j.t}</p>
+                <p style="font-size:13px; color:#666;">${j.r}</p>
+            </div>
+        `).join('');
+    }
+
     function gerarDiagnostico() {
-        const r1 = document.getElementById('risk1').checked;
-        const r2 = document.getElementById('risk2').checked;
-        const r3 = document.getElementById('risk3').checked;
         let html = "";
-
-        if(!r1 && !r2 && !r3) {
-            html = "<p>Nenhum ponto de alerta imediato selecionado, mas lembre-se: a segurança total no mercado imobiliário exige vigilância constante.</p>";
-        } else {
-            if(r1) html += "<p>• <strong>Sem Investigação (Due Diligence):</strong> Você pode estar herdando dívidas trabalhistas ou fiscais do antigo dono sem saber. Isso pode fazer você perder o imóvel anos depois.</p>";
-            if(r2) html += "<p>• <strong>Inventário Pendente:</strong> Um herdeiro 'esquecido' pode aparecer e anular sua compra, obrigando você a desocupar o imóvel mesmo tendo pago por ele.</p>";
-            if(r3) html += "<p>• <strong>Falta de Assessoria:</strong> Contratos genéricos costumam esconder armadilhas que favorecem apenas um lado. Você pode estar abrindo mão de direitos fundamentais.</p>";
-        }
-
+        if(document.getElementById('r1').checked) html += "<p>• <strong>Sem Due Diligence:</strong> Você pode estar herdando dívidas ocultas do antigo dono que anulam sua compra.</p>";
+        if(document.getElementById('r2').checked) html += "<p>• <strong>Herança Pendente:</strong> Um herdeiro 'esquecido' pode aparecer e exigir a anulação do negócio.</p>";
+        if(document.getElementById('r3').checked) html += "<p>• <strong>Sem Assessoria:</strong> Você pode estar aceitando cláusulas que retiram sua garantia de ressarcimento.</p>";
+        if(html === "") html = "<p>Nenhum risco imediato marcado, mas a vigilância preventiva é fundamental.</p>";
         document.getElementById('diag-resultado').innerHTML = html;
-        document.getElementById('modal-diagnostico').style.display = 'flex';
+        document.getElementById('modal-diag').style.display = 'flex';
     }
 
-    function fecharModalDiag(e) {
-        if(e.target.id === 'modal-diagnostico') document.getElementById('modal-diagnostico').style.display = 'none';
+    function abrirModalInfo(t, c, e) {
+        document.getElementById('info-titulo').innerText = t;
+        document.getElementById('info-corpo').innerText = c;
+        document.getElementById('info-extra').innerText = e;
+        document.getElementById('modal-info').style.display = 'flex';
     }
+
+    function fecharModal(e, id) { if(e.target.id === id) document.getElementById(id).style.display = 'none'; }
+
+    window.onload = atualizarDados;
     </script>
-
 </body>
 </html>
