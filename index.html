@@ -22,15 +22,17 @@
             --text-dark: #1a1a1a;
             --accent-gold: #c5a059;
             --white: #ffffff;
-            --logo-bg: #2b2b2b; /* Cor de fundo extraída da logo */
+            --logo-bg: #2b2b2b; /* Cor de fundo extraída da logo para a listra infinita */
         }
 
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body { font-family: 'Outfit', sans-serif; background: var(--bege-base); color: var(--text-dark); line-height: 1.6; }
         .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
 
-        header { padding: 40px 0; text-align: center; background: var(--logo-bg); border-bottom: 1px solid rgba(0,0,0,0.05); }
-        .logo-img { max-width: 300px; width: 80%; height: auto; display: block; margin: 0 auto; }
+        /* Estilização do cabeçalho com a logo e a listra de ponta a ponta */
+        header { padding: 40px 0; text-align: center; background: var(--logo-bg); border-bottom: 1px solid rgba(0,0,0,0.1); }
+        .logo-img { max-width: 350px; width: 85%; height: auto; display: block; margin: 0 auto; }
+        
         #frase-dinamica { font-size: 11px; color: var(--accent-gold); text-transform: uppercase; letter-spacing: 4px; margin: 15px 0; font-weight: 700; height: 15px; }
 
         .bio-home { background: #fff; padding: 40px; border-radius: 4px; border-left: 5px solid var(--accent-gold); margin-bottom: 40px; box-shadow: 0 5px 15px rgba(0,0,0,0.05); }
@@ -81,9 +83,11 @@
 
     <header>
         <div class="container">
-            <img src="logo.png" alt="Antônio Appratto Miranda" class="logo-img">
+            <img src="logo.jpg" alt="Antônio Appratto Miranda" class="logo-img">
+            
             <div id="frase-dinamica">ESTRATEGISTA JURÍDICO | ESPECIALISTA</div>
-            <div style="cursor:pointer; font-size:11px; text-decoration:underline; margin-top:10px; font-weight:700; color:#fff;" onclick="abrirModal('modal-perfil')">Informações Técnicas e Literárias</div>
+            
+            <div style="cursor:pointer; font-size:11px; text-decoration:underline; margin-top:10px; font-weight:700; color:#ffffff;" onclick="abrirModal('modal-perfil')">Informações Técnicas e Literárias</div>
         </div>
     </header>
 
