@@ -3,8 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Antonio Appratto Miranda | Inteligência Jurídica Imobiliária</title>
+    <meta name="description" content="Antonio Appratto Miranda - Inteligência Jurídica, Segurança Patrimonial e Estratégia Imobiliária.">
+    <title>Antonio Appratto Miranda | Inteligência e Estratégia Imobiliária</title>
+    
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&family=Playfair+Display:ital,wght@0,400;1,700&display=swap" rel="stylesheet">
+    
     <style>
         :root {
             --bege-base: #F7F7F2;
@@ -13,42 +16,64 @@
             --text-soft: #555555;
             --accent-gold: #c5a059;
             --white: #ffffff;
+            --transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
         }
 
+        /* Reset & Base Blindada */
         * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: 'Outfit', sans-serif; background: var(--bege-base); color: var(--text-dark); line-height: 1.6; }
-        .container { max-width: 1100px; margin: 0 auto; padding: 0 20px; }
+        html { scroll-behavior: smooth; }
+        body { font-family: 'Outfit', sans-serif; background: var(--bege-base); color: var(--text-dark); line-height: 1.6; overflow-x: hidden; }
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 25px; }
 
-        header { padding: 80px 0 40px; text-align: center; background: white; border-bottom: 1px solid #eee; }
-        .logo { font-family: 'Playfair Display', serif; font-size: 38px; font-weight: 700; background: var(--cinza-chique); -webkit-background-clip: text; -webkit-text-fill-color: transparent; letter-spacing: -1px; }
-        .missao { font-size: 12px; color: var(--text-soft); text-transform: uppercase; letter-spacing: 5px; margin: 20px 0; font-weight: 300; }
-        .btn-bio { display: inline-block; padding: 14px 35px; border: 1px solid #ddd; text-decoration: none; color: var(--text-dark); border-radius: 50px; font-size: 11px; font-weight: 600; transition: 0.3s; text-transform: uppercase; }
-        .btn-bio:hover { background: #1a1a1a; color: #fff; }
+        /* Header de Alto Padrão */
+        header { padding: 100px 0 60px; text-align: center; background: var(--white); border-bottom: 1px solid rgba(0,0,0,0.05); }
+        .logo { font-family: 'Playfair Display', serif; font-size: 48px; font-weight: 700; background: var(--cinza-chique); -webkit-background-clip: text; -webkit-text-fill-color: transparent; letter-spacing: -1.5px; }
+        .missao { font-size: 13px; color: var(--text-soft); text-transform: uppercase; letter-spacing: 6px; margin: 25px 0; font-weight: 300; }
+        .btn-bio { display: inline-block; padding: 16px 45px; border: 1px solid #ccc; text-decoration: none; color: var(--text-dark); font-size: 11px; font-weight: 700; transition: var(--transition); text-transform: uppercase; letter-spacing: 1px; }
+        .btn-bio:hover { background: var(--text-dark); color: var(--white); border-color: var(--text-dark); letter-spacing: 2px; }
 
-        .portal-grid { display: grid; grid-template-columns: 2fr 1fr; gap: 50px; margin-top: 50px; }
-        .section-label { font-size: 11px; font-weight: 700; color: var(--accent-gold); text-transform: uppercase; margin-bottom: 20px; display: block; letter-spacing: 1px; }
+        /* Grid de Inteligência */
+        .portal-grid { display: grid; grid-template-columns: 2fr 1fr; gap: 60px; margin: 60px auto; }
+        .section-label { font-size: 11px; font-weight: 700; color: var(--accent-gold); text-transform: uppercase; margin-bottom: 25px; display: block; letter-spacing: 2px; border-bottom: 1px solid rgba(0,0,0,0.1); padding-bottom: 10px; }
         
-        .news-box { background: white; padding: 35px; border-radius: 2px; box-shadow: 0 10px 30px rgba(0,0,0,0.02); border: 1px solid #f0f0f0; margin-bottom: 30px; }
-        .news-item { padding: 20px 0; border-bottom: 1px solid #f5f5f5; }
+        /* Notícias (Cards Jurídicos) */
+        .news-box { background: var(--white); padding: 40px; border: 1px solid rgba(0,0,0,0.05); box-shadow: 0 10px 30px rgba(0,0,0,0.02); margin-bottom: 40px; }
+        .news-item { padding: 25px 0; border-bottom: 1px solid #f5f5f5; transition: var(--transition); }
+        .news-item:hover { padding-left: 10px; border-left: 2px solid var(--accent-gold); }
         .news-item:last-child { border: none; }
-        .news-item h3 { font-family: 'Playfair Display', serif; font-size: 19px; margin-bottom: 8px; font-weight: 600; color: #333; }
+        .news-item h3 { font-family: 'Playfair Display', serif; font-size: 21px; font-weight: 600; cursor: pointer; }
 
-        .faq-card { background: white; padding: 25px; border-left: 3px solid var(--accent-gold); margin-bottom: 15px; box-shadow: 0 4px 12px rgba(0,0,0,0.02); }
-        .faq-card h4 { font-size: 16px; margin-bottom: 8px; font-weight: 600; }
-        .faq-card p { font-size: 14px; color: var(--text-soft); }
+        /* FAQ - Resolvendo a Dor do Cliente */
+        .faq-card { background: var(--white); padding: 30px; border-left: 4px solid var(--accent-gold); margin-bottom: 20px; transition: var(--transition); }
+        .faq-card:hover { transform: translateY(-5px); box-shadow: 0 15px 35px rgba(0,0,0,0.05); }
+        .faq-card h4 { font-size: 18px; margin-bottom: 10px; font-weight: 600; }
+        .faq-card p { font-size: 15px; color: var(--text-soft); }
 
-        .sidebar-form { background: #1a1a1a; color: white; padding: 30px; border-radius: 2px; margin-bottom: 25px; }
-        .sidebar-form h3 { font-family: 'Playfair Display', serif; font-size: 18px; margin-bottom: 20px; font-style: italic; }
-        input, select, textarea { width: 100%; padding: 12px; margin-bottom: 10px; border: 1px solid #333; background: #222; color: #fff; border-radius: 4px; }
-        .btn-send { width: 100%; padding: 16px; background: var(--bege-base); color: #1a1a1a; border: none; cursor: pointer; font-weight: 700; text-transform: uppercase; }
+        /* Sidebar - Máquina de Leads */
+        .sidebar-block { background: #111; color: var(--white); padding: 40px 30px; margin-bottom: 30px; }
+        .sidebar-block h3 { font-family: 'Playfair Display', serif; font-size: 22px; margin-bottom: 25px; font-style: italic; font-weight: 400; }
+        input, select, textarea { width: 100%; padding: 15px; margin-bottom: 15px; border: 1px solid #333; background: #1a1a1a; color: var(--white); font-family: inherit; }
+        .btn-action { width: 100%; padding: 20px; background: var(--accent-gold); color: var(--white); border: none; cursor: pointer; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; transition: var(--transition); }
+        .btn-action:hover { background: #b38d45; transform: scale(1.02); }
 
-        .stf-videos { margin-top: 40px; padding-top: 20px; border-top: 1px solid #ddd; }
-        .video-wrapper { position: relative; padding-bottom: 56.25%; height: 0; margin-bottom: 15px; border-radius: 4px; overflow: hidden; }
+        /* Vídeos de Autoridade */
+        .video-wrapper { position: relative; padding-bottom: 56.25%; height: 0; margin-bottom: 20px; overflow: hidden; border: 1px solid rgba(0,0,0,0.1); }
         .video-wrapper iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
 
-        footer { padding: 80px 0; text-align: center; font-size: 11px; color: #999; border-top: 1px solid #eee; margin-top: 50px; }
+        /* Newsletter de Investidores */
+        .newsletter { background: #e8e8df; padding: 80px 0; text-align: center; margin-top: 40px; }
+        .newsletter h2 { font-family: 'Playfair Display', serif; font-size: 32px; margin-bottom: 15px; }
+        .newsletter p { color: var(--text-soft); margin-bottom: 30px; }
+        .news-form { display: flex; max-width: 600px; margin: 0 auto; gap: 10px; }
+        .news-form input { margin-bottom: 0; background: var(--white); color: var(--text-dark); border: 1px solid #ccc; }
 
-        @media (max-width: 900px) { .portal-grid { grid-template-columns: 1fr; } }
+        footer { padding: 100px 0; text-align: center; font-size: 12px; color: #888; background: var(--white); border-top: 1px solid rgba(0,0,0,0.05); }
+
+        @media (max-width: 900px) { 
+            .portal-grid { grid-template-columns: 1fr; }
+            .news-form { flex-direction: column; }
+            .logo { font-size: 32px; }
+        }
     </style>
 </head>
 <body>
@@ -57,101 +82,100 @@
         <div class="container">
             <div class="logo">ANTONIO APPRATTO MIRANDA</div>
             <p class="missao">Segurança Jurídica Patrimonial e Estratégia Jurídica Imobiliária</p>
-            <a href="https://wa.me/5584900000000" class="btn-bio">Saber mais sobre mim</a>
+            <a href="#perfil" class="btn-bio">Acessar Perfil Técnico e Acadêmico</a>
         </div>
     </header>
 
     <main class="container portal-grid">
         
         <section>
-            <span class="section-label">Julgados Juris Brasil (Notícias Direito Imobiliário)</span>
+            <span class="section-label">Inteligência Jurisprudencial (STF | STJ | JusBrasil)</span>
             <div class="news-box">
-                <div class="news-item">
-                    <h3>1. STF e a Execução Extrajudicial: A validade da retomada do imóvel financiado sem intervenção judicial.</h3>
-                </div>
-                <div class="news-item">
-                    <h3>2. Impenhorabilidade do Bem de Família: O limite da proteção do fiador em contratos comerciais.</h3>
-                </div>
-                <div class="news-item">
-                    <h3>3. Súmula 543 STJ: Critérios para a devolução de valores em distratos de promessa de compra e venda.</h3>
-                </div>
-                <div class="news-item">
-                    <h3>4. Repercussão Geral: O dever de pagar taxas associativas em loteamentos de acesso controlado.</h3>
-                </div>
-                <div class="news-item">
-                    <h3>5. STJ e Vícios Ocultos: A responsabilidade da construtora por defeitos estruturais após a entrega das chaves.</h3>
-                </div>
+                <div class="news-item"><h3>Alienação Fiduciária: A constitucionalidade da retomada extrajudicial de imóveis financiado.</h3></div>
+                <div class="news-item"><h3>A Penhora do Bem de Família do Fiador: Segurança Jurídica vs. Proteção do Patrimônio Mínimo.</h3></div>
+                <div class="news-item"><h3>Distrato Imobiliário: A jurisprudência do STJ sobre a retenção justa de valores pagos.</h3></div>
+                <div class="news-item"><h3>Taxas em Condomínios de Fato: O dever de pagar frente à vedação ao enriquecimento sem causa.</h3></div>
+                <div class="news-item"><h3>Responsabilidade por Vícios Construtivos: Prazos prescricionais e garantias pós-entrega.</h3></div>
             </div>
 
-            <span class="section-label">Dúvidas Frequentes do Setor Imobiliário</span>
+            <span class="section-label">Dúvidas Frequentes & Casuística Imobiliária</span>
             <div class="faq-grid">
                 <div class="faq-card">
-                    <h4>1. Por que o "Contrato de Gaveta" coloca seu patrimônio em risco?</h4>
-                    <p>Sem o registro na matrícula, o imóvel juridicamente ainda pertence ao vendedor, podendo ser penhorado por dívidas dele.</p>
+                    <h4>"Doutor, comprei um imóvel com 'Contrato de Gaveta'. Quais os riscos?"</h4>
+                    <p>O risco é a fragilidade da propriedade. No Direito Imobiliário, a regra é clara: quem não registra, não é dono. Sua posse pode ser atingida por dívidas de terceiros.</p>
                 </div>
                 <div class="faq-card">
-                    <h4>2. O que o advogado analisa na "Due Diligence" de compra e venda?</h4>
-                    <p>Investigamos certidões cíveis, criminais, trabalhistas e fiscais do vendedor para garantir que você não herde dívidas.</p>
+                    <h4>"Por que realizar uma Due Diligence antes de qualquer negócio?"</h4>
+                    <p>A Due Diligence é o seguro do seu investimento. Investigamos o passado do imóvel e do vendedor para garantir um futuro sem processos ou nulidades.</p>
                 </div>
                 <div class="faq-card">
-                    <h4>3. Como regularizar um imóvel que não possui escritura pública?</h4>
-                    <p>Através de procedimentos extrajudiciais como Usucapião ou Adjudicação Compulsória, resolvendo tudo diretamente no Cartório.</p>
+                    <h4>"É possível regularizar um imóvel diretamente no Cartório?"</h4>
+                    <p>Sim. Procedimentos como Usucapião e Adjudicação Compulsória Extrajudicial trazem a celeridade que o Judiciário muitas vezes não consegue entregar.</p>
                 </div>
                 <div class="faq-card">
-                    <h4>4. Em caso de atraso na obra, quais são os direitos do comprador?</h4>
-                    <p>O comprador tem direito à rescisão com devolução total de valores ou indenização por lucros cessantes conforme a Lei do Distrato.</p>
+                    <h4>"Meu imóvel financiado foi para leilão. Ainda há tempo?"</h4>
+                    <p>Sim, mas cada hora conta. A análise da purgação da mora e de possíveis nulidades no procedimento de leilão pode salvar seu patrimônio.</p>
                 </div>
                 <div class="faq-card">
-                    <h4>5. Qual a diferença real entre Escritura e Registro de Imóveis?</h4>
-                    <p>A Escritura é o contrato feito no Tabelionato; o Registro é o que te torna dono perante a sociedade na Matrícula do Imóvel.</p>
+                    <h4>"Quero rescindir um contrato de compra e venda. O que recebo de volta?"</h4>
+                    <p>A Lei do Distrato e o entendimento do STJ protegem o comprador contra retenções abusivas. Analisamos o equilíbrio econômico da sua rescisão.</p>
                 </div>
             </div>
         </section>
 
         <aside>
-            <div class="sidebar-form">
-                <h3>Como a nossa equipe pode ajudar no seu caso? nos faça uma pergunta:</h3>
+            <div class="sidebar-block">
+                <h3>Como nossa equipe pode ajudar no seu caso? nos faça uma pergunta:</h3>
                 <form>
-                    <input type="text" placeholder="Seu Nome Completo" required>
-                    <input type="email" placeholder="E-mail para resposta" required>
-                    <input type="tel" placeholder="WhatsApp" required>
-                    <textarea placeholder="Descreva brevemente sua situação jurídica..." rows="3"></textarea>
-                    <button class="btn-send">Enviar para Análise Técnica</button>
+                    <input type="text" placeholder="Nome Completo" required>
+                    <input type="email" placeholder="E-mail Profissional" required>
+                    <input type="tel" placeholder="WhatsApp / Telefone" required>
+                    <textarea placeholder="Resumo do caso..." rows="3"></textarea>
+                    <button class="btn-action">Solicitar Análise Preliminar</button>
                 </form>
             </div>
 
-            <div class="sidebar-form" style="background: var(--white); color: #1a1a1a; border: 1px solid #ddd;">
-                <h3 style="font-style: normal; font-size: 16px;">Converse com um Corretor Parceiro</h3>
+            <div class="sidebar-block" style="background: white; border: 1px solid #ddd; color: #111;">
+                <h3 style="font-style: normal; font-size: 16px;">Hub de Corretores Parceiros</h3>
                 <form>
-                    <input type="text" placeholder="Sua Cidade" style="background:#f9f9f9; border:1px solid #eee; color:#000;">
+                    <input type="text" placeholder="Cidade e Estado" style="background:#f9f9f9; border:1px solid #eee; color:#000;">
                     <select style="background:#f9f9f9; border:1px solid #eee; color:#000;">
-                        <option>Selecione o Estado</option>
-                        <option>RN</option>
-                        <option>SP</option>
+                        <option>Área de Atuação</option>
+                        <option>Vendas Urbanas</option>
+                        <option>Imóveis de Luxo</option>
+                        <option>Loteamentos</option>
                     </select>
-                    <button class="btn-send" style="background:#1a1a1a; color:#fff;">Conectar Agora</button>
+                    <button class="btn-action" style="background:#111; color:#fff;">Conectar com Estrategista</button>
                 </form>
             </div>
 
-            <div class="stf-videos">
-                <span class="section-label">Vídeos Relevantes | STF</span>
-                <div class="video-wrapper">
-                    <iframe src="https://www.youtube.com/embed/P6j6-C0_19o" frameborder="0" allowfullscreen></iframe>
-                </div>
-                <div class="video-wrapper">
-                    <iframe src="https://www.youtube.com/embed/zWunXN0D4xY" frameborder="0" allowfullscreen></iframe>
-                </div>
-                <div class="video-wrapper">
-                    <iframe src="https://www.youtube.com/embed/8yU9t6Qj0D0" frameborder="0" allowfullscreen></iframe>
-                </div>
+            <div style="margin-top: 40px;">
+                <span class="section-label">Análises de Tribunais Superiores</span>
+                <div class="video-wrapper"><iframe src="https://www.youtube.com/embed/P6j6-C0_19o" frameborder="0" allowfullscreen></iframe></div>
+                <div class="video-wrapper"><iframe src="https://www.youtube.com/embed/zWunXN0D4xY" frameborder="0" allowfullscreen></iframe></div>
+                <div class="video-wrapper"><iframe src="https://www.youtube.com/embed/8yU9t6Qj0D0" frameborder="0" allowfullscreen></iframe></div>
             </div>
         </aside>
     </main>
 
+    <section class="newsletter">
+        <div class="container">
+            <h2>Newsletter de Inteligência Imobiliária</h2>
+            <p>Receba mensalmente análises exclusivas sobre riscos e oportunidades no mercado jurídico-patrimonial.</p>
+            <form class="news-form">
+                <input type="email" placeholder="Seu melhor e-mail" required>
+                <button class="btn-action" style="max-width: 200px;">Inscrever-me</button>
+            </form>
+            <p style="font-size: 10px; margin-top: 15px; opacity: 0.6;">Ao se inscrever, você autoriza o recebimento de conteúdo estritamente informativo.</p>
+        </div>
+    </section>
+
     <footer>
-        <p><strong>ANTONIO APPRATTO MIRANDA - ASSESSORIA JURÍDICA IMOBILIÁRIA</strong></p>
-        <p>Este portal possui caráter estritamente informativo e educativo.</p>
-        <p>Natal/RN | &copy; 2026. Todos os direitos reservados.</p>
+        <div class="container">
+            <p><strong>ANTONIO APPRATTO MIRANDA - PÓS-DOUTORADO EM DIREITO IMOBILIÁRIO & NEGOCIAL</strong></p>
+            <p>Assessoria Jurídica de Alta Performance | Respeito Integral ao Código de Ética da OAB.</p>
+            <p>Natal/RN | Digital &copy; 2026</p>
+        </div>
     </footer>
 
 </body>
