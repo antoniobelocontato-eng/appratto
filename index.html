@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Antonio Eduardo Miranda | Inteligência e Estratégia Imobiliária</title>
+    <title>Antônio Appratto Miranda | Inteligência e Estratégia Imobiliária</title>
     
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-3V0T0RHH8L"></script>
     <script>
@@ -21,6 +21,7 @@
             --cinza-chique: linear-gradient(135deg, #8e8e8e 0%, #2c2c2c 100%);
             --text-dark: #1a1a1a;
             --accent-gold: #c5a059;
+            --accent-silver: #C0C0C0;
             --alert-red: #8b0000;
             --white: #ffffff;
         }
@@ -30,13 +31,14 @@
         .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
 
         header { padding: 60px 0 40px; text-align: center; background: var(--white); border-bottom: 1px solid rgba(0,0,0,0.05); }
-        .logo { font-family: 'Playfair Display', serif; font-size: clamp(26px, 7vw, 44px); font-weight: 700; background: var(--cinza-chique); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .logo { font-family: 'Playfair Display', serif; font-size: clamp(26px, 7vw, 44px); font-weight: 700; background: var(--cinza-chique); -webkit-background-clip: text; -webkit-text-fill-color: transparent; letter-spacing: 2px; }
         #frase-dinamica { font-size: 11px; color: var(--accent-gold); text-transform: uppercase; letter-spacing: 4px; margin: 15px 0; font-weight: 700; height: 15px; }
 
         .quiz-section { background: #111; color: #fff; padding: clamp(25px, 5vw, 45px); border-radius: 4px; margin: 40px 0; border-top: 5px solid var(--accent-gold); }
         .progress-bar { height: 4px; background: #333; margin-bottom: 25px; }
         #progress-fill { height: 100%; background: var(--accent-gold); width: 0%; transition: 0.5s; }
         .option-btn { display: block; width: 100%; padding: 16px; margin-bottom: 12px; background: #1a1a1a; border: 1px solid #333; color: #fff; text-align: left; cursor: pointer; transition: 0.3s; font-size: 14px; border-radius: 4px; }
+        .option-btn:hover { border-color: var(--accent-gold); background: #222; }
 
         .portal-grid { display: flex; flex-direction: column; gap: 40px; margin: 40px auto; }
         @media (min-width: 992px) { .portal-grid { display: grid; grid-template-columns: 2fr 1fr; gap: 60px; } }
@@ -44,7 +46,7 @@
 
         .card { background: #fff; padding: 30px; border: 1px solid #eee; margin-bottom: 25px; border-top: 4px solid var(--alert-red); border-radius: 4px; }
         .obra-card { background: #f9f9f9; padding: 25px; border-left: 4px solid var(--accent-gold); margin-bottom: 30px; border-radius: 4px; text-align: center; }
-        .capa-livro { width: 140px; height: auto; box-shadow: 0 8px 20px rgba(0,0,0,0.3); margin-bottom: 20px; border-radius: 2px; display: inline-block; }
+        .capa-livro { width: 140px; height: auto; box-shadow: 0 8px 20px rgba(0,0,0,0.3); margin-bottom: 20px; border-radius: 2px; }
         
         .juris-item { background: #fff; padding: 20px; border: 1px solid #eee; margin-bottom: 10px; cursor: pointer; transition: 0.3s; border-radius: 4px; }
         .juris-item:hover { border-left: 5px solid var(--accent-gold); background: #fafafa; }
@@ -52,13 +54,12 @@
         .sidebar-block { background: #111; color: #fff; padding: 30px; margin-bottom: 25px; border-top: 4px solid var(--accent-gold); border-radius: 4px; }
         .btn-action { width: 100%; padding: 18px; background: var(--accent-gold); color: #fff; border: none; font-weight: 700; text-transform: uppercase; cursor: pointer; border-radius: 4px; transition: 0.3s; display: block; text-align: center; text-decoration: none; margin-bottom: 10px; }
         .btn-share { background: #25d366 !important; font-size: 12px !important; padding: 12px !important; }
-        input, select, textarea { width: 100%; padding: 15px; background: #1a1a1a; border: 1px solid #333; color: #fff; font-size: 14px; border-radius: 4px; margin-bottom: 12px; }
 
         .modal-overlay { display: none; position: fixed; top:0; left:0; width:100%; height:100%; background: rgba(0,0,0,0.9); z-index: 9999; padding: 20px; align-items: center; justify-content: center; }
-        .modal-box { background: var(--white); max-width: 650px; width: 100%; max-height: 85vh; padding: 50px 30px 40px; position: relative; border-radius: 8px; border-top: 8px solid var(--accent-gold); overflow-y: auto; box-shadow: 0 20px 50px rgba(0,0,0,0.5); }
-        .close-x { position: absolute; top: 10px; right: 20px; font-size: 40px; cursor: pointer; color: #333; font-weight: bold; z-index: 10000; line-height: 1; }
+        .modal-box { background: var(--white); max-width: 650px; width: 100%; max-height: 85vh; padding: 50px 30px 40px; position: relative; border-radius: 8px; border-top: 8px solid var(--accent-gold); overflow-y: auto; }
+        .close-x { position: absolute; top: 10px; right: 20px; font-size: 40px; cursor: pointer; color: #333; font-weight: bold; z-index: 10000; }
 
-        .perfil-img { width: 180px; height: 180px; border-radius: 50%; border: 4px solid var(--accent-gold); object-fit: cover; object-position: top; margin-bottom: 20px; background: #eee; }
+        .perfil-img { width: 180px; height: 180px; border-radius: 50%; border: 4px solid var(--accent-gold); object-fit: cover; object-position: top; margin-bottom: 20px; }
         .social-links { display: flex; gap: 15px; justify-content: center; margin-top: 15px; }
         .social-links a { font-size: 13px; color: var(--accent-gold); text-decoration: underline; font-weight: 600; }
         
@@ -72,16 +73,16 @@
 
     <header>
         <div class="container">
-            <div class="logo">ANTONIO EDUARDO MIRANDA DE SOUZA</div>
+            <div class="logo">ANTÔNIO APPRATTO MIRANDA</div>
             <div id="frase-dinamica">ESTRATEGISTA JURÍDICO | ESPECIALISTA</div>
-            <div style="cursor:pointer; font-size:11px; text-decoration:underline; margin-top:10px; font-weight:700;" onclick="abrirModal('modal-perfil')">Informações Técnicas e Literárias</div>
+            <div style="cursor:pointer; font-size:11px; text-decoration:underline; margin-top:10px; font-weight:700;" onclick="abrirModal('modal-perfil')">Dossiê Técnico e Literário</div>
         </div>
     </header>
 
     <main class="container">
         <section class="quiz-section">
             <div style="text-align:center; margin-bottom:30px;">
-                <h3 style="font-family:'Playfair Display'; color:var(--accent-gold); font-size:26px;">Teste de Maturidade Patrimonial</h3>
+                <h3 style="font-family:'Playfair Display'; color:var(--accent-gold); font-size:26px;">Maturidade Patrimonial</h3>
                 <p style="font-size:13px; opacity:0.8;">Avalie seus riscos reais em questões estratégicas.</p>
             </div>
             <div class="progress-bar"><div id="progress-fill"></div></div>
@@ -90,18 +91,18 @@
 
         <div class="portal-grid">
             <section>
-                <span class="section-label">Vitrine Literária</span>
+                <span class="section-label">Obras Publicadas</span>
                 <div class="obra-card">
                     <img src="noticia.jpg" alt="Capa Notícia" class="capa-livro">
-                    <h4 style="font-family:'Playfair Display';">O Que Está Por Trás da Notícia? (2024)</h4>
-                    <p style="font-size:13px; color:#444; text-align: justify; margin: 15px 0;">Análise profunda dos dilemas entre a liberdade de imprensa e os direitos individuais na era digital.</p>
+                    <h4 style="font-family:'Playfair Display';">O Que Está Por Trás da Notícia?</h4>
+                    <p style="font-size:13px; color:#444; text-align: justify; margin: 15px 0;">Análise profunda dos dilemas entre liberdade de imprensa e direitos individuais na era digital.</p>
                     <a href="https://insigneacademica.com.br/editora-insigne/livros?busca=Antonio+Eduardo" class="btn-action" target="_blank" style="padding:12px; font-size:11px;">ADQUIRIR OBRA →</a>
                 </div>
 
                 <div class="obra-card">
                     <img src="genero.jpg" alt="Capa Gênero" class="capa-livro">
-                    <h4 style="font-family:'Playfair Display';">Advocacia sob uma Análise de Gênero (2024)</h4>
-                    <p style="font-size:13px; color:#444; text-align: justify; margin: 15px 0;">Estudo revelador sobre barreiras estruturais enfrentadas pelas mulheres na advocacia em Natal-RN.</p>
+                    <h4 style="font-family:'Playfair Display';">Advocacia sob uma Análise de Gênero</h4>
+                    <p style="font-size:13px; color:#444; text-align: justify; margin: 15px 0;">Estudo revelador sobre barreiras estruturais enfrentadas pelas mulheres na advocacia potiguar.</p>
                     <a href="https://insigneacademica.com.br/editora-insigne/livros?busca=Antonio+Eduardo" class="btn-action" target="_blank" style="padding:12px; font-size:11px;">ADQUIRIR OBRA →</a>
                 </div>
 
@@ -123,7 +124,7 @@
                     </form>
                     <button class="btn-action btn-share" onclick="compartilharSite()">📲 Compartilhar Site</button>
                 </div>
-
+                
                 <div class="sidebar-block" style="background:#fff; color:#111; border:1px solid #ddd;">
                     <h3 style="font-family:'Playfair Display'; color:#111; margin-bottom:15px;">Localizar um Corretor</h3>
                     <select style="background:#f9f9f9; color:#000; border:1px solid #eee;">
@@ -141,32 +142,15 @@
     <div id="modal-perfil" class="modal-overlay" onclick="fecharModalExterno(event, 'modal-perfil')">
         <div class="modal-box">
             <span class="close-x" onclick="fecharModal('modal-perfil')">&times;</span>
-            <div style="display:flex; flex-direction:column; align-items:center; text-align:center;">
-                <img src="perfil.jpg" id="img-perfil" alt="Antonio Eduardo Miranda" class="perfil-img" onerror="this.onerror=null; this.src='Perfil.jpeg.jpg';">
-                <h2 style="font-family:'Playfair Display'; font-size: 28px;">Antonio Eduardo Miranda de Souza</h2>
-                <p style="color:var(--accent-gold); font-weight:700; font-size:12px; text-transform:uppercase;">Estrategista Jurídico | Especialista | Autor Científico</p>
+            <div style="text-align:center;">
+                <img src="perfil.jpg" alt="Antônio Appratto Miranda" class="perfil-img" onerror="this.src='Perfil.jpeg.jpg';">
+                <h2 style="font-family:'Playfair Display'; font-size: 28px;">Antônio Appratto Miranda</h2>
+                <p style="color:var(--accent-gold); font-weight:700; font-size:12px; text-transform:uppercase;">Estrategista Jurídico | Especialista</p>
                 <div class="social-links">
                     <a href="https://www.instagram.com/antonioadvogado_/" target="_blank">Instagram</a>
                     <a href="https://www.linkedin.com/in/antonioeduardo--/" target="_blank">LinkedIn</a>
                 </div>
-            </div>
-            <div style="margin-top:30px;">
-                <span class="section-label">Informações Técnicas</span>
-                <p style="font-size:14px; text-align: justify;">Bacharel em Direito com vivência estratégica de 2 anos no <strong>TJRN</strong> (Residente). Experiência na <strong>PGE-RN</strong> e <strong>Sefaz-RN</strong>. Especialista em Processo Civil e Pós-graduando em Direito Negocial e Imobiliário.</p>
-                
-                <span class="section-label" style="margin-top:25px;">Dossiê Literário</span>
-                <div class="obra-card">
-                    <img src="noticia.jpg" alt="Capa Livro Notícia" class="capa-livro">
-                    <h4 style="font-family:'Playfair Display';">O Que Está Por Trás da Notícia? (2024)</h4>
-                    <p style="font-size:12px; color:#555; text-align: justify; margin-top:10px;">Análise abrangente e profunda dos dilemas enfrentados pela liberdade de imprensa no Brasil contemporâneo.</p>
-                    <a href="https://insigneacademica.com.br/editora-insigne/livros?busca=Antonio+Eduardo" class="btn-action" target="_blank" style="padding:10px; font-size:11px;">ADQUIRIR OBRA →</a>
-                </div>
-                <div class="obra-card">
-                    <img src="genero.jpg" alt="Capa Livro Gênero" class="capa-livro">
-                    <h4 style="font-family:'Playfair Display';">Advocacia sob uma Análise de Gênero (2024)</h4>
-                    <p style="font-size:12px; color:#555; text-align: justify; margin-top:10px;">Obra reveladora sobre os desafios únicos e barreiras estruturais enfrentadas pelas mulheres na advocacia potiguar.</p>
-                    <a href="https://insigneacademica.com.br/editora-insigne/livros?busca=Antonio+Eduardo" class="btn-action" target="_blank" style="padding:10px; font-size:11px;">ADQUIRIR OBRA →</a>
-                </div>
+                <p style="font-size:14px; text-align: justify; margin-top:20px;">Bacharel em Direito com vivência estratégica de 2 anos no <strong>TJRN</strong>. Experiência na <strong>PGE-RN</strong> e <strong>Sefaz-RN</strong>. Especialista em Processo Civil e Pós-graduando em Direito Negocial e Imobiliário.</p>
             </div>
         </div>
     </div>
@@ -180,108 +164,26 @@
         </div>
     </div>
 
-    <footer><p><strong>ANTONIO EDUARDO MIRANDA DE SOUZA</strong> | Natal/RN | 2026</p></footer>
+    <footer><p><strong>ANTÔNIO APPRATTO MIRANDA</strong> | Natal/RN | 2026</p></footer>
 
     <script>
-    const frases = ["SEGURANÇA JURÍDICA PATRIMONIAL", "ESTRATÉGIA IMOBILIÁRIA", "ESPECIALISTA EM PROCESSO CIVIL"];
-    let fIdx = 0; setInterval(() => { document.getElementById('frase-dinamica').innerText = frases[fIdx]; fIdx = (fIdx + 1) % frases.length; }, 3500);
-
     const bancoCasos = [
-        { 
-            t: "1. Penhora de Imóvel 'Limpo'", 
-            r: "A compra de um imóvel que parece livre de dívidas pode ser anulada meses depois se o vendedor tiver processos trabalhistas ocultos.",
-            f: "Ocorre quando dívidas em outros estados não aparecem na certidão local.", 
-            d: "A justiça anulou a venda para pagar credores trabalhistas. O comprador perdeu o bem.", 
-            l: "Auditorias nacionais são o único seguro real." 
-        },
-        { 
-            t: "2. O Herdeiro Surpresa", 
-            r: "Ao comprar de herdeiro único, existe o risco de um novo filho provar paternidade e anular a venda original.",
-            f: "Filho desconhecido provou paternidade via DNA após o fechamento do negócio.", 
-            d: "A partilha foi desfeita e a venda do imóvel anulada para garantir o quinhão do novo herdeiro.", 
-            l: "Prazos sucessórios e histórico familiar exigem auditoria estratégica." 
-        },
-        { 
-            t: "3. Retenção de 70% em Distrato", 
-            r: "Construtoras frequentemente aplicam multas abusivas para quem desiste de imóveis na planta.",
-            f: "A empresa tentou reter quase todo o valor pago pelo cliente em distrato.", 
-            d: "Após análise técnica das cláusulas, a justiça reduziu a multa para 20%, protegendo o patrimônio do comprador.", 
-            l: "Cláusulas abusivas podem ser anuladas com estratégia jurídica." 
-        },
-        { 
-            t: "4. Dívida de Condomínio Propter Rem", 
-            r: "Dívidas de condomínio acompanham o imóvel. Quem compra o bem, herda a dívida acumulada.",
-            f: "Investidor arrematou imóvel em leilão sem auditar débitos condominiais de 10 anos.", 
-            d: "Ele foi obrigado a pagar R$ 100 mil em taxas acumuladas, zerando o lucro do investimento.", 
-            l: "Auditoria de editais é obrigatória antes de qualquer lance." 
-        },
-        { 
-            t: "5. Fraude por Procuração Falsa", 
-            r: "Criminosos usam documentos forjados para vender casas de terceiros sem o dono saber.",
-            f: "Grupilha forjou procuração em outro estado e vendeu uma casa de alto padrão.", 
-            d: "O verdadeiro dono retomou o bem e o comprador ficou no prejuízo total.", 
-            l: "Sempre verifique a validade de mandatos diretamente no cartório de origem." 
-        }
+        { t: "1. Penhora de Imóvel 'Limpo'", r: "A compra de um imóvel aparentemente sem dívidas pode ser anulada meses depois se o vendedor tiver processos trabalhistas ocultos.", f: "Ocorre quando dívidas em outros estados não aparecem localmente.", d: "A justiça anulou a venda. O comprador perdeu o bem.", l: "Auditorias nacionais são vitais." }
     ];
 
     const bancoJuris = [
-        { 
-            t: "1. Retomada Extrajudicial (STF)", 
-            desc: "Bancos podem retomar imóveis financiados com parcelas atrasadas de forma rápida, sem precisar de um processo demorado na justiça.",
-            r: "Lei 9.514/97.", 
-            c: "O STF decidiu que o banco pode fazer o leilão do bem diretamente via Cartório após notificar o devedor.", 
-            e: "Isso exige atenção total aos prazos e defesas estratégicas imediatas em caso de crise financeira." 
-        },
-        { 
-            t: "2. Súmula 543 (STJ)", 
-            desc: "Garante que, se a construtora atrasar a entrega das chaves, o comprador deve receber todo o seu dinheiro de volta de uma vez só.",
-            r: "Restituição integral.", 
-            c: "Se a culpa pelo distrato for da empresa (atraso na obra), a devolução deve ser de 100% e imediata.", 
-            e: "É uma proteção essencial para quem investe na planta e não recebe o produto prometido." 
-        },
-        { 
-            t: "3. Penhora de Fiador (STF)", 
-            desc: "Pessoas que aceitam ser fiadoras em contratos comerciais correm o risco de perder a própria casa para pagar a dívida do inquilino.",
-            r: "Bem de família.", 
-            c: "Mesmo que seja o único imóvel da família do fiador, o STF autoriza que ele vá a leilão em locações comerciais.", 
-            e: "Isso mostra a importância da blindagem preventiva e do cuidado extremo ao oferecer garantias pessoais." 
-        },
-        { 
-            t: "4. Taxas em Loteamentos (STF)", 
-            desc: "Loteamentos fechados só podem cobrar taxas de manutenção de moradores que concordaram expressamente em participar da associação.",
-            r: "Tema 492.", 
-            c: "A cobrança só é válida se a pessoa aderiu formalmente à associação ou se a obrigação já constava na matrícula do imóvel antes de 2017.", 
-            e: "Protege proprietários contra cobranças inesperadas de serviços que eles não contrataram voluntariamente." 
-        },
-        { 
-            t: "5. Vícios de Construção (STJ)", 
-            desc: "Se o seu imóvel apresentar problemas estruturais graves (rachaduras, infiltrações), você tem um longo prazo para exigir reparos.",
-            r: "Prazo Decenal.", 
-            c: "O proprietário tem até 10 anos para processar a construtora por defeitos graves que comprometam a segurança do bem.", 
-            e: "É um direito de garantia de longo prazo que protege o valor e a habitabilidade do seu patrimônio." 
-        }
+        { t: "1. Retomada Extrajudicial (STF)", desc: "Bancos podem retomar imóveis financiados com parcelas atrasadas rapidamente via Cartório.", r: "Lei 9.514/97.", c: "O STF validou a retomada direta.", e: "Exige defesa estratégica imediata." }
     ];
 
     const bancoQuestoes = [
-        { q: "Quem não registra na matrícula é dono?", o: ["Sim, contrato basta.", "Não, exige registro."], r: 1, e: "O registro na matrícula é o único ato que transfere a propriedade legal." },
-        { q: "Dívidas de condomínio seguem o imóvel?", o: ["Não.", "Sim (Propter Rem)."], r: 1, e: "Ao comprar, você herda as dívidas acumuladas do bem." }
+        { q: "Quem não registra na matrícula é dono?", o: ["Sim.", "Não, exige registro."], r: 1, e: "O registro na matrícula é o único ato que transfere a propriedade legal." }
     ];
 
     let qIdx = 0; let score = 0;
     function init() {
         showQ();
-        document.getElementById('container-casos').innerHTML = bancoCasos.map(c => `
-            <div class="card">
-                <h4>${c.t}</h4>
-                <p style="font-size:13px; margin:10px 0; color:#444;">${c.r}</p>
-                <button class="btn-action" style="padding:10px; font-size:11px;" onclick="abrirInfo('${c.t.replace(/'/g, "\\'")}', '${c.f.replace(/'/g, "\\'")}<br><br>${c.d.replace(/'/g, "\\'")}', '🚨 Lição: ${c.l.replace(/'/g, "\\'")}')">Ver Desfecho →</button>
-            </div>`).join('');
-        
-        document.getElementById('container-juris').innerHTML = bancoJuris.map(j => `
-            <div class="juris-item" onclick="abrirInfo('${j.t.replace(/'/g, "\\'")}', '${j.desc.replace(/'/g, "\\'")}<br><br><strong>Base:</strong> ${j.c.replace(/'/g, "\\'")}', 'Impacto: ${j.e.replace(/'/g, "\\'")}')">
-                <p style="font-weight:700;">${j.t}</p>
-                <p style="font-size:12px; color:#666; margin-top:5px;">${j.r}</p>
-            </div>`).join('');
+        document.getElementById('container-casos').innerHTML = bancoCasos.map(c => `<div class="card"><h4>${c.t}</h4><p style="font-size:13px; margin:10px 0; color:#444;">${c.r}</p><button class="btn-action" style="padding:10px; font-size:11px;" onclick="abrirInfo('${c.t}', '${c.f}<br><br>${c.d}', '🚨 Lição: ${c.l}')">Ver Desfecho →</button></div>`).join('');
+        document.getElementById('container-juris').innerHTML = bancoJuris.map(j => `<div class="juris-item" onclick="abrirInfo('${j.t}', '${j.desc}<br><br>Base: ${j.c}', 'Impacto: ${j.e}')"><p style="font-weight:700;">${j.t}</p><p style="font-size:12px; color:#666;">${j.r}</p></div>`).join('');
     }
 
     function showQ() {
@@ -301,8 +203,7 @@
     function fecharModal(id) { document.getElementById(id).style.display = 'none'; }
     function fecharModalExterno(e, id) { if(e.target.id === id) fecharModal(id); }
     function abrirInfo(t, c, ex) { document.getElementById('info-titulo').innerText = t; document.getElementById('info-corpo').innerHTML = c; document.getElementById('info-extra').innerText = ex; abrirModal('modal-info'); }
-    function compartilharSite() { const msg = encodeURIComponent("Conheça o portal do Dr. Antonio Eduardo Miranda.\n🌐 " + window.location.href); window.open("https://wa.me/?text=" + msg, "_blank"); }
-    
+    function compartilharSite() { const msg = encodeURIComponent("Conheça o portal do Dr. Antônio Appratto Miranda.\n🌐 " + window.location.href); window.open("https://wa.me/?text=" + msg, "_blank"); }
     window.onload = init;
     </script>
 </body>
