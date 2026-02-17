@@ -40,21 +40,27 @@
         
         .section-label { font-size: 11px; font-weight: 700; color: var(--gold-light); text-transform: uppercase; margin: 50px 0 25px; display: block; border-left: 4px solid var(--gold-light); padding-left: 15px; letter-spacing: 2px; }
 
-        /* LIVROS */
-        .livros-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; margin-bottom: 40px; }
+        /* ACERVO LITERÁRIO */
+        .livros-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
         .livro-card { background: #fff; padding: 30px; border-radius: 8px; box-shadow: var(--card-shadow); text-align: center; border: 1px solid #eee; }
-        .capa-container { width: 140px; height: 200px; background: #ddd; margin: 0 auto 20px; display: flex; align-items: center; justify-content: center; border-radius: 4px; border: 1px solid #ccc; font-weight: 700; color: #666; font-size: 12px; }
+        .capa-box { width: 150px; height: 210px; background: var(--bg-deep); margin: 0 auto 20px; border-radius: 4px; display: flex; align-items: center; justify-content: center; color: var(--gold-light); padding: 15px; font-family: 'Playfair Display'; font-size: 12px; border: 2px solid var(--gold-light); box-shadow: 5px 5px 15px rgba(0,0,0,0.2); }
 
-        /* SIMULADOR */
+        /* SIMULADOR E CAPTAÇÃO */
         .simulador-box { background: #fff; padding: 40px; border-radius: 12px; box-shadow: var(--card-shadow); border: 2px solid var(--gold-light); margin: 60px 0; }
         textarea, input { width: 100%; padding: 15px; border-radius: 6px; border: 1px solid #ddd; margin: 10px 0; font-family: inherit; font-size: 15px; }
+        .res-juridica { display: none; background: #fdfaf4; padding: 25px; border-left: 5px solid var(--bg-deep); margin-bottom: 20px; }
 
         /* BOTÕES */
         .btn-gold { background: var(--gold-gradient); color: #fff; padding: 16px 25px; border: none; border-radius: 4px; font-weight: 700; text-transform: uppercase; cursor: pointer; text-decoration: none; display: inline-block; width: 100%; text-align: center; transition: 0.3s; }
-        .btn-wpp-action { background: var(--wpp-green); color: #fff; padding: 22px 25px; border: none; border-radius: 6px; font-weight: 700; text-transform: uppercase; cursor: pointer; text-decoration: none; display: none; width: 100%; text-align: center; transition: 0.3s; margin-top: 15px; }
+        .btn-wpp-action { background: var(--wpp-green); color: #fff; padding: 22px 25px; border: none; border-radius: 6px; font-weight: 700; text-transform: uppercase; cursor: pointer; text-decoration: none; display: none; width: 100%; text-align: center; font-size: 14px; box-shadow: 0 4px 15px rgba(37, 211, 102, 0.3); }
 
         /* INDICAÇÃO */
-        .indica-box { background: #fdfaf4; padding: 30px; border-radius: 8px; text-align: center; border: 1px dashed var(--gold-light); margin-top: 40px; }
+        .indica-section { background: var(--bg-deep); color: #fff; padding: 40px; border-radius: 8px; text-align: center; margin: 40px 0; }
+
+        /* CONTEÚDO TÉCNICO */
+        .content-grid { display: grid; grid-template-columns: 1fr; gap: 30px; margin-bottom: 60px; }
+        @media (min-width: 992px) { .content-grid { grid-template-columns: 1fr 1fr; } }
+        .card-info { background: #fff; padding: 20px; border-radius: 8px; margin-bottom: 15px; border-bottom: 3px solid var(--gold-light); box-shadow: var(--card-shadow); }
 
         footer { padding: 60px 0; text-align: center; background: var(--bg-deep); color: #fff; font-size: 11px; border-top: 4px solid var(--gold-light); }
     </style>
@@ -63,7 +69,7 @@
 
     <header>
         <div class="container">
-            <img src="logo.jpg" alt="Antônio Miranda" class="logo-img">
+            <img src="logo.jpg" alt="Logo" class="logo-img">
             <div id="frase-dinamica">SEGURANÇA JURÍDICA PATRIMONIAL</div>
         </div>
     </header>
@@ -71,92 +77,140 @@
     <main class="container">
         <section class="bio-home">
             <img src="perfil.jpg" alt="Antônio Miranda" class="perfil-img">
-            <h2 style="font-family:'Playfair Display'; font-size: 32px; color: var(--bg-deep);">Antônio Miranda de Souza</h2>
-            <p style="color: var(--gold-light); font-weight:700; letter-spacing: 2px; text-transform: uppercase; font-size: 12px; margin-bottom: 25px;">Estrategista Jurídico | Escritor</p>
+            <h2 style="font-family:'Playfair Display'; font-size: 32px; color: var(--bg-deep);">Quem Somos</h2>
+            <p style="color: var(--gold-light); font-weight:700; letter-spacing: 2px; text-transform: uppercase; font-size: 12px; margin-bottom: 25px;">Antônio Miranda de Souza | Inteligência Imobiliária</p>
             <p style="text-align: justify; color: #555; font-size: 15px; max-width: 850px; margin: 0 auto;">
-                Bacharel em Direito com vivência estratégica no TJRN, PGE-RN e Sefaz-RN. Especialista em Processo Civil e Pós-graduando em Direito Negocial e Imobiliário. Focado em blindagem patrimonial e desjudicialização.
+                Bacharel em Direito com vivência estratégica no <strong>TJRN</strong>, <strong>PGE-RN</strong> e <strong>Sefaz-RN</strong>. Especialista em Processo Civil e Pós-graduando em Direito Negocial e Imobiliário. Atuação pautada na desjudicialização e na engenharia contratual avançada para garantir que o seu patrimônio esteja blindado contra riscos sucessórios e fiscais.
             </p>
         </section>
 
-        <span class="section-label">Acervo Literário</span>
+        <span class="section-label">Acervo Literário e Publicações</span>
         <div class="livros-grid">
             <div class="livro-card">
-                <div class="capa-container">CAPA: O QUE ESTÁ POR TRÁS DA NOTÍCIA</div>
+                <div class="capa-box">O QUE ESTÁ POR TRÁS DA NOTÍCIA?</div>
                 <h4 style="font-family:'Playfair Display';">O Que Está Por Trás da Notícia? (2024)</h4>
-                <p style="font-size:13px; color:#666; margin-bottom:15px;">Análise técnica sobre liberdade de imprensa e direitos da personalidade.</p>
-                <a href="https://insigneacademica.com.br/editora-insigne/livros?busca=Antonio+Eduardo" class="btn-gold" target="_blank" style="font-size:11px;">COMPRAR OBRA</a>
+                <p style="font-size:13px; color:#666; margin: 15px 0;">Análise técnica sobre liberdade de imprensa e proteção da personalidade no ambiente digital.</p>
+                <a href="https://insigneacademica.com.br/editora-insigne/livros?busca=Antonio+Eduardo" class="btn-gold" target="_blank" style="font-size:11px;">ADQUIRIR OBRA</a>
             </div>
             <div class="livro-card">
-                <div class="capa-container">CAPA: ADVOCACIA SOB UMA ANÁLISE DE GÊNERO</div>
+                <div class="capa-box">ADVOCACIA SOB UMA ANÁLISE DE GÊNERO</div>
                 <h4 style="font-family:'Playfair Display';">Advocacia sob uma Análise de Gênero (2024)</h4>
-                <p style="font-size:13px; color:#666; margin-bottom:15px;">Estudo sobre os desafios das advogadas em Natal/RN.</p>
-                <a href="https://insigneacademica.com.br/editora-insigne/livros?busca=Antonio+Eduardo" class="btn-gold" target="_blank" style="font-size:11px;">COMPRAR OBRA</a>
+                <p style="font-size:13px; color:#666; margin: 15px 0;">Estudo sociológico e jurídico sobre o protagonismo feminino na advocacia potiguar.</p>
+                <a href="https://insigneacademica.com.br/editora-insigne/livros?busca=Antonio+Eduardo" class="btn-gold" target="_blank" style="font-size:11px;">ADQUIRIR OBRA</a>
             </div>
         </div>
 
         <section class="simulador-box">
             <span class="section-label" style="margin-top:0;">Simulador de Análise Técnica</span>
-            <h3 style="font-family:'Playfair Display';">Descreva o seu caso:</h3>
-            <textarea id="texto-cliente" rows="4" placeholder="Ex: Fiz um contrato de gaveta..."></textarea>
+            <h3 style="font-family:'Playfair Display'; margin-bottom:10px;">Descreva o seu caso patrimonial:</h3>
+            <textarea id="texto-cliente" rows="4" placeholder="Ex: Comprei um imóvel mas o vendedor faleceu antes da escritura..."></textarea>
             
-            <div id="bloco-resposta" style="display:none; padding:20px; background:#f9f9f9; border-left:4px solid var(--bg-deep); margin-bottom:20px;">
-                <p id="resposta-juridica" style="font-style:italic; font-size:15px;"></p>
+            <div id="contato-fields">
+                <input type="text" id="cliente-nome" placeholder="Seu Nome Completo">
+                <input type="tel" id="cliente-tel" placeholder="Seu WhatsApp (com DDD)">
             </div>
 
-            <div id="campos-contato">
-                <input type="text" id="nome-contato" placeholder="Seu Nome Completo">
-                <input type="tel" id="zap-contato" placeholder="Seu WhatsApp com DDD">
+            <div id="bloco-resposta" class="res-juridica">
+                <p id="resposta-juridica" style="font-style: italic; color: #444; font-size: 15px;"></p>
+                <p style="margin-top:15px; font-size:12px; font-weight:700; color:var(--gold-light); text-transform:uppercase;">⚠️ Análise técnica preliminar concluída</p>
             </div>
 
-            <button id="btn-analisar" class="btn-gold" onclick="gerarResposta()">Solicitar Análise e Contato</button>
-            <a id="btn-equipe" href="#" class="btn-wpp-action" target="_blank">Entre em contato com nossa equipe para uma primeira reunião grátis</a>
+            <button id="btn-analisar" class="btn-gold" onclick="gerarResposta()">Solicitar Análise Técnica</button>
+            <a id="btn-equipe" href="#" class="btn-wpp-action" target="_blank">
+                Agendar Reunião Gratuita com a Equipe
+            </a>
         </section>
 
-        <section class="indica-box">
-            <h4 style="font-family:'Playfair Display'; color:var(--bg-deep); margin-bottom:10px;">Conhece alguém que precisa dessa segurança?</h4>
-            <p style="font-size:14px; color:#666; margin-bottom:20px;">Ajude um amigo a blindar o patrimônio dele.</p>
-            <button onclick="copiarLink()" class="btn-gold" style="width:auto; padding:10px 30px; font-size:12px;">Copiado Link para Indicação</button>
-            <a id="share-wpp" href="#" target="_blank" class="btn-gold" style="width:auto; padding:10px 30px; font-size:12px; background:var(--wpp-green); margin-left:10px;">Indicar via WhatsApp</a>
+        <section class="indica-section">
+            <h3 style="font-family:'Playfair Display'; color:var(--gold-light); margin-bottom:15px;">Conhece alguém que precisa proteger o patrimônio?</h3>
+            <p style="margin-bottom:25px; font-size:14px;">Indique este portal e ajude a evitar prejuízos imobiliários.</p>
+            <div style="display:flex; gap:10px; justify-content:center; flex-wrap:wrap;">
+                <button onclick="copiarLink()" class="btn-gold" style="width:auto; font-size:12px; padding:12px 25px; background:#fff; color:var(--bg-deep);">COPIAR LINK</button>
+                <a id="share-wpp" href="#" class="btn-gold" style="width:auto; font-size:12px; padding:12px 25px; background:var(--wpp-green);">INDICAR NO WHATSAPP</a>
+            </div>
         </section>
+
+        <div class="content-grid">
+            <section>
+                <span class="section-label">5 Casos Reais de Sucesso</span>
+                <div id="container-casos"></div>
+            </section>
+            <section>
+                <span class="section-label">5 Jurisprudências de Impacto</span>
+                <div id="container-juris"></div>
+            </section>
+        </div>
     </main>
 
     <footer>
-        <p>ANTÔNIO MIRANDA DE SOUZA | NATAL/RN | 2026</p>
+        <p><strong>ANTÔNIO MIRANDA DE SOUZA</strong> | NATAL/RN | ESTRATÉGIA IMOBILIÁRIA © 2026</p>
     </footer>
 
     <script src="//code.jivosite.com/widget/SEU_TOKEN_AQUI" async></script>
 
     <script>
+        const casos = [
+            { t: "1. O Risco do Imóvel 'Limpo'", d: "O comprador perdeu o bem por falta de auditoria nacional profunda.", l: "Lição: Due Diligence é indispensável." },
+            { t: "2. Herdeiro Inesperado", d: "Aparecimento de novo herdeiro gerou nulidade da escritura pública.", l: "Lição: Sucessão precisa de planejamento." },
+            { t: "3. Abuso em Distratos", d: "Justiça reduziu retenção de 70% para 20% com base no CDC.", l: "Lição: Cláusulas abusivas caem." },
+            { t: "4. Fraude à Execução", d: "Venda anulada para pagar credores antigos do vendedor.", l: "Lição: Análise de passivo é vital." },
+            { t: "5. Matrícula com Erro", d: "Descrição divergente travou o financiamento por meses.", l: "Lição: Regularização técnica prévia." }
+        ];
+
+        const juris = [
+            { t: "Leilão Extrajudicial (STF)", d: "Bancos podem retomar imóvel em atraso sem intervenção do juiz." },
+            { t: "Súmula 543 STJ", d: "Atraso na obra gera devolução integral e imediata dos valores." },
+            { t: "Impenhorabilidade", d: "Bem de família é protegido mesmo com dívidas altas (moradia única)." },
+            { t: "Usucapião em Cartório", d: "Regularização de posse rápida sem necessidade de processo judicial." },
+            { t: "Taxa de Corretagem", d: "Válida transferência ao comprador se houver informação clara." }
+        ];
+
+        function init() {
+            document.getElementById('container-casos').innerHTML = casos.map(c => `
+                <div class="card-info">
+                    <h4>${c.t}</h4>
+                    <p style="font-size:12px; color:#666; margin-bottom:5px;">${c.d}</p>
+                    <p style="font-size:11px; font-weight:700; color:var(--gold-light);">${c.l}</p>
+                </div>
+            `).join('');
+
+            document.getElementById('container-juris').innerHTML = juris.map(j => `
+                <div class="card-info">
+                    <h4>${j.t}</h4>
+                    <p style="font-size:12px; color:#444;">${j.d}</p>
+                </div>
+            `).join('');
+
+            document.getElementById('share-wpp').href = `https://wa.me/?text=Olá!+Conheci+o+portal+do+Antônio+Miranda+sobre+segurança+imobiliária+e+acho+que+pode+te+ajudar:+${encodeURIComponent(window.location.href)}`;
+        }
+
         function gerarResposta() {
             const txt = document.getElementById('texto-cliente').value;
-            const nome = document.getElementById('nome-contato').value;
-            const zap = document.getElementById('zap-contato').value;
+            const nome = document.getElementById('cliente-nome').value;
+            const tel = document.getElementById('cliente-tel').value;
 
-            if(txt.length < 10 || nome === "" || zap === "") {
-                alert("Por favor, preencha todos os campos para a análise técnica.");
-                return;
-            }
+            if(!txt || !nome || !tel) return alert("Por favor, preencha todos os campos.");
 
-            document.getElementById('resposta-juridica').innerHTML = "<i>Ab initio</i>, verificamos a necessidade de uma análise pormenorizada sob a ótica da segurança registral e sinalagmática...";
+            document.getElementById('resposta-juridica').innerHTML = "<i>Ab initio</i>, os fatos denotam vulnerabilidade sinalagmática que pode ferir o princípio da continuidade registral. É imperativa a análise da <b>Due Diligence</b> para mitigar riscos de evicção.";
             document.getElementById('bloco-resposta').style.display = 'block';
             document.getElementById('btn-analisar').style.display = 'none';
-            document.getElementById('campos-contato').style.display = 'none';
+            document.getElementById('contato-fields').style.display = 'none';
             
             const btnEq = document.getElementById('btn-equipe');
             btnEq.style.display = 'block';
-            btnEq.href = `https://wa.me/5584981911309?text=Olá,+meu+nome+é+${nome}.+Solicito+reunião+sobre:+${encodeURIComponent(txt)}`;
+            btnEq.href = `https://wa.me/5584981911309?text=Olá,+meu+nome+é+${nome}.+Solicito+análise+técnica+sobre:+${encodeURIComponent(txt)}`;
+            document.getElementById('bloco-resposta').scrollIntoView({ behavior: 'smooth' });
         }
 
         function copiarLink() {
             navigator.clipboard.writeText(window.location.href);
-            alert("Link de indicação copiado!");
+            alert("Link copiado! Agora você pode enviar para seus amigos.");
         }
-
-        const linkShare = "https://wa.me/?text=Olá!+Conheci+o+trabalho+do+Dr.+Antônio+Miranda+em+estratégia+imobiliária+e+acho+que+pode+te+ajudar:+"+encodeURIComponent(window.location.href);
-        document.getElementById('share-wpp').href = linkShare;
 
         const frases = ["ESTRATÉGIA IMOBILIÁRIA", "SEGURANÇA JURÍDICA", "BLINDAGEM PATRIMONIAL"];
         let fIdx = 0; setInterval(() => { document.getElementById('frase-dinamica').innerText = frases[fIdx]; fIdx = (fIdx + 1) % frases.length; }, 3500);
+
+        window.onload = init;
     </script>
 </body>
 </html>
