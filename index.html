@@ -17,7 +17,7 @@
     
     <style>
         :root {
-            --bg-deep: #382d2a;      /* Marrom Nobre extraído do print */
+            --bg-deep: #382d2a;      /* Marrom Nobre extraído do print enviado */
             --gold-light: #D4AF37;   
             --gold-gradient: linear-gradient(135deg, #D4AF37 0%, #B8860B 100%);
             --off-white: #F9F7F2;    
@@ -97,7 +97,7 @@
         <section class="bio-home">
             <img src="perfil.jpg" alt="Antônio Eduardo Miranda de Souza" class="perfil-img">
             <h2 style="font-family:'Playfair Display'; font-size: 42px; color: var(--bg-deep); margin-bottom: 5px;">Quem Somos</h2>
-            <p style="color: var(--gold-light); font-weight:700; letter-spacing: 3px; text-transform: uppercase; font-size: 13px; margin-bottom: 25px;">Antônio Eduardo Miranda de Souza | Especialista e Estrategista</p>
+            <p style="color: var(--gold-light); font-weight:700; letter-spacing: 3px; text-transform: uppercase; font-size: 13px; margin-bottom: 25px;">Antônio Eduardo Miranda de Souza | Estrategista Imobiliário</p>
             
             <div class="social-links">
                 <a href="https://www.instagram.com/antoniomiranda.adv/" class="social-icon" target="_blank">INSTAGRAM</a>
@@ -105,8 +105,8 @@
             </div>
 
             <div class="bio-text">
-                <p style="margin-bottom: 20px;">Bacharel em Direito pela Liga de Ensino do RN e Especialista em Processo Civil pela mesma instituição. Com sólida experiência prática nos principais órgãos do judiciário potiguar, atuou como <strong>Residente Judicial no TJRN</strong> por 2 anos e exerceu funções estratégicas na <strong>PGE-RN/Sefaz-RN</strong> (Dívida Ativa) e na <strong>Secretaria de Segurança Pública</strong>. Atualmente, aprofunda sua expertise em Direito Negocial e Imobiliário pela EBRADI ESA OAB.</p>
-                <p>Nossa missão une a inteligência técnica dos tribunais com a agilidade estratégica necessária para blindar ativos patrimoniais através de soluções extrajudiciais e engenharia contratual avançada em temas como:</p>
+                <p style="margin-bottom: 20px;">Bacharel em Direito pela Liga de Ensino do RN e Especialista em Processo Civil. Com uma trajetória construída nos bastidores do judiciário, atuou como <strong>Residente Judicial no TJRN</strong> por 2 anos e exerceu funções estratégicas na <strong>Dívida Ativa da PGE-RN</strong> e na <strong>Secretaria de Segurança Pública</strong>. Atualmente, foca sua atuação estratégica em Direito Negocial e Imobiliário pela EBRADI ESA OAB.</p>
+                <p>Nossa missão é utilizar a inteligência técnica para blindar ativos patrimoniais, garantindo segurança em negócios complexos através de soluções extrajudiciais e engenharia contratual avançada:</p>
             </div>
 
             <div class="expertise-list">
@@ -137,8 +137,8 @@
 
         <section class="simulador-box">
             <span class="section-label" style="margin-top:0;">Simulador de Análise Técnica</span>
-            <h3 style="font-family:'Playfair Display'; font-size: 30px;">Qual a sua dúvida patrimonial?</h3>
-            <textarea id="texto-cliente" rows="5" placeholder="Descreva sua situação (Ex: Realizei uma permuta imobiliária, mas o contrato não possui garantias contra evicção...)"></textarea>
+            <h3 style="font-family:'Playfair Display'; font-size: 28px;">Qual a sua dúvida patrimonial?</h3>
+            <textarea id="texto-cliente" rows="5" placeholder="Descreva brevemente sua situação (Ex: Comprei um imóvel mas o vendedor faleceu antes da escritura...)"></textarea>
             
             <div id="contato-fields">
                 <input type="text" id="cliente-nome" placeholder="Seu Nome Completo">
@@ -146,12 +146,12 @@
             </div>
 
             <div id="bloco-resposta" style="display:none; padding:35px; background:#fdfaf4; border-left:8px solid var(--bg-deep); margin-bottom:30px;">
-                <p id="resposta-juridica" style="font-style: italic; color: #444; font-size: 17px; line-height: 1.8;"></p>
-                <p style="margin-top:20px; font-size:12px; font-weight:700; color:var(--gold-light); text-transform:uppercase;">⚠️ Análise técnica preliminar concluída</p>
+                <p id="resposta-juridica" style="color: #444; font-size: 17px; line-height: 1.8;"></p>
+                <p style="margin-top:20px; font-size:13px; font-weight:700; color:var(--gold-light); text-transform:uppercase;">⚠️ Orientação técnica preliminar</p>
             </div>
 
             <button id="btn-analisar" class="btn-gold" onclick="gerarResposta()">Solicitar Análise Técnica</button>
-            <a id="btn-equipe" href="#" class="btn-wpp-action" target="_blank">Enviar Resumo à Equipe</a>
+            <a id="btn-equipe" href="#" class="btn-wpp-action" target="_blank">Entre em contato com nossa equipe para saber mais</a>
         </section>
 
         <div class="content-grid">
@@ -175,18 +175,18 @@
     <script>
         const casos = [
             { t: "1. O Risco do Imóvel 'Limpo'", d: "O comprador perdeu o bem por falta de auditoria nacional profunda, pois havia penhoras ocultas em outros estados.", l: "Lição: Due Diligence em âmbito nacional é indispensável." },
-            { t: "2. Herdeiro Inesperado", d: "Aparecimento de novo herdeiro gerou nulidade da escritura pública realizada sem a anuência de todos os sucessores.", l: "Lição: Sucessão exige planejamento preventivo e transparência." },
-            { t: "3. Abuso em Distratos", d: "A incorporadora tentou reter 70% do valor pago; a justiça reduziu para 20% com base no CDC e jurisprudência consolidada.", l: "Lição: Cláusulas contratuais abusivas são nulas de pleno direito." },
+            { t: "2. Herdeiro Inesperado", d: "Aparecimento de novo herdeiro gerou nulidade da escritura pública realizada sem a anuência de todos os sucessores.", l: "Lição: Sucessão exige planejamento preventivo." },
+            { t: "3. Abuso em Distratos", d: "A incorporadora tentou reter 70% do valor pago; a justiça reduziu para 20% com base no CDC e jurisprudência consolidada.", l: "Lição: Cláusulas contratuais abusivas são nulas." },
             { t: "4. Fraude à Execução", d: "Venda anulada para pagar credores antigos do vendedor por ter ocorrido após a citação válida em processo executório.", l: "Lição: Análise minuciosa de passivos judiciais é vital." },
-            { t: "5. Matrícula Divergente", d: "Erro na metragem descrita na matrícula travou o financiamento bancário e a desocupação do imóvel por meses.", l: "Lição: Regularização técnica prévia valoriza o ativo." }
+            { t: "5. Matrícula Divergente", d: "Erro na metragem descrita na matrícula travou o financiamento bancário e a ocupação do imóvel por meses.", l: "Lição: Regularização técnica valoriza o ativo." }
         ];
 
         const juris = [
             { t: "Leilão Extrajudicial (STF)", d: "Validada a retomada de bens sem juiz para alienação fiduciária em garantia (Lei 9.514/97)." },
             { t: "Súmula 543 STJ", d: "Em caso de atraso na obra, o comprador tem direito à devolução integral e imediata dos valores pagos." },
-            { t: "Bem de Família", d: "Impenhorabilidade absoluta da residência única contra credores comuns, protegendo a dignidade da moradia." },
+            { t: "Bem de Família", d: "Impenhorabilidade da residência única contra credores comuns, protegendo a dignidade da moradia." },
             { t: "Usucapião Extrajudicial", d: "Possibilidade de regularização direta em cartório, acelerando a conversão da posse em propriedade plena." },
-            { t: "Taxa de Corretagem", d: "É válida a transferência do encargo ao comprador desde que informada de forma clara e destacada previamente." }
+            { t: "Taxa de Corretagem", d: "É válida a transferência do encargo ao comprador desde que informada de forma clara previa." }
         ];
 
         function init() {
@@ -213,9 +213,9 @@
 
             if(!txt || !nome || !tel) return alert("Por favor, preencha todos os campos para a análise estratégica.");
 
-            const juridiques = "<i>Ab initio</i>, os fatos denotam vulnerabilidade sinalagmática que pode ferir o princípio da continuidade registral e a segurança jurídica do negócio. Sob a égide do Direito Imobiliário e Negocial, é imperativa a análise da <b>Due Diligence</b> técnica para mitigar riscos de evicção patrimonial irreversível.";
+            const respostaOrientada = "A situação que você descreveu possui pontos de atenção importantes que podem colocar seu patrimônio em risco se não forem tratados com a estratégia correta. Analisando as normas do Direito Imobiliário, é fundamental realizar uma <b>Due Diligence</b> técnica para proteger seu investimento contra nulidades ou perdas inesperadas. Para que você tenha segurança absoluta, nossa equipe precisa analisar os detalhes do seu caso e direcionar o melhor caminho jurídico.";
             
-            document.getElementById('resposta-juridica').innerHTML = juridiques;
+            document.getElementById('resposta-juridica').innerHTML = respostaOrientada;
             document.getElementById('bloco-resposta').style.display = 'block';
             document.getElementById('btn-analisar').style.display = 'none';
             document.getElementById('contato-fields').style.display = 'none';
