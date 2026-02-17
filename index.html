@@ -3,7 +3,6 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Antonio Appratto Miranda - Inteligência Jurídica, Segurança Patrimonial e Estratégia Imobiliária.">
     <title>Antonio Appratto Miranda | Inteligência e Estratégia Imobiliária</title>
     
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-3V0T0RHH8L"></script>
@@ -11,7 +10,7 @@
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
-      gtag('config', 'G-3V0T0RHH8L', { 'send_page_view': true, 'cookie_flags': 'SameSite=None;Secure' });
+      gtag('config', 'G-3V0T0RHH8L', { 'send_page_view': true });
     </script>
 
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&family=Playfair+Display:ital,wght@0,400;1,700&display=swap" rel="stylesheet">
@@ -25,49 +24,44 @@
             --accent-gold: #c5a059;
             --white: #ffffff;
             --alert-red: #8b0000;
-            --transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
         }
 
         * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: 'Outfit', sans-serif; background: var(--bege-base); color: var(--text-dark); line-height: 1.6; overflow-x: hidden; }
+        body { font-family: 'Outfit', sans-serif; background: var(--bege-base); color: var(--text-dark); line-height: 1.6; }
         .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
 
-        /* Header Premium Responsivo */
-        header { padding: clamp(60px, 10vw, 100px) 0 clamp(40px, 5vw, 60px); text-align: center; background: var(--white); border-bottom: 1px solid rgba(0,0,0,0.05); }
-        .logo { font-family: 'Playfair Display', serif; font-size: clamp(26px, 7vw, 48px); font-weight: 700; background: var(--cinza-chique); -webkit-background-clip: text; -webkit-text-fill-color: transparent; letter-spacing: -1px; }
-        .missao { font-size: clamp(10px, 3vw, 13px); color: var(--text-soft); text-transform: uppercase; letter-spacing: clamp(3px, 1vw, 6px); margin: 20px 0; font-weight: 300; padding: 0 10px; }
-        .btn-bio { display: inline-block; padding: 15px 35px; border: 1px solid #ccc; text-decoration: none; color: var(--text-dark); font-size: 11px; font-weight: 700; transition: var(--transition); text-transform: uppercase; letter-spacing: 1px; }
-        .btn-bio:hover { background: var(--text-dark); color: var(--white); }
+        header { padding: 60px 0 40px; text-align: center; background: var(--white); border-bottom: 1px solid rgba(0,0,0,0.05); }
+        .logo { font-family: 'Playfair Display', serif; font-size: clamp(28px, 8vw, 48px); font-weight: 700; background: var(--cinza-chique); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .missao { font-size: 12px; color: var(--text-soft); text-transform: uppercase; letter-spacing: 5px; margin-top: 10px; font-weight: 300; }
 
-        /* Grid Layout Moderno */
         .portal-grid { display: flex; flex-direction: column; gap: 40px; margin: 40px auto; }
         @media (min-width: 992px) { .portal-grid { display: grid; grid-template-columns: 2fr 1fr; gap: 60px; } }
 
-        .section-label { font-size: 11px; font-weight: 700; color: var(--accent-gold); text-transform: uppercase; margin-bottom: 25px; display: block; letter-spacing: 2px; border-bottom: 1px solid rgba(0,0,0,0.1); padding-bottom: 10px; }
-        
-        /* Casos Reais Dinâmicos */
-        .case-study { background: var(--white); padding: 30px; border: 1px solid #eee; margin-bottom: 25px; border-top: 4px solid var(--alert-red); position: relative; box-shadow: 0 10px 30px rgba(0,0,0,0.02); }
-        .case-study::after { content: "Fato Real Anonimizado"; position: absolute; top: 10px; right: 15px; font-size: 9px; color: #ccc; text-transform: uppercase; }
-        .case-header { font-family: 'Playfair Display', serif; font-size: clamp(20px, 5vw, 24px); margin-bottom: 15px; color: var(--alert-red); padding-right: 50px; }
-        .case-step { margin-bottom: 15px; }
-        .case-step strong { display: block; color: var(--accent-gold); text-transform: uppercase; font-size: 10px; margin-bottom: 3px; }
-        .case-conclusion { background: #fdf2f2; padding: 20px; border-radius: 4px; margin-top: 15px; }
-        .case-conclusion h5 { color: var(--alert-red); margin-bottom: 5px; font-weight: 700; }
+        .section-label { font-size: 11px; font-weight: 700; color: var(--accent-gold); text-transform: uppercase; margin-bottom: 20px; display: block; letter-spacing: 2px; border-bottom: 1px solid rgba(0,0,0,0.1); padding-bottom: 10px; }
 
-        /* Sidebar e Forms */
-        .sidebar-block { background: #111; color: var(--white); padding: clamp(25px, 5vw, 40px) 25px; margin-bottom: 25px; }
-        .sidebar-block h3 { font-family: 'Playfair Display', serif; font-size: 20px; margin-bottom: 20px; font-style: italic; }
-        input, select, textarea { width: 100%; padding: 14px; margin-bottom: 12px; border: 1px solid #333; background: #1a1a1a; color: var(--white); font-size: 16px; }
-        .btn-action { width: 100%; padding: 18px; background: var(--accent-gold); color: var(--white); border: none; font-weight: 700; text-transform: uppercase; cursor: pointer; transition: var(--transition); }
-        .btn-action:hover { background: #b38d45; transform: translateY(-2px); }
+        /* SUGESTÃO 1: ÍNDICE DE SEGURANÇA PATRIMONIAL */
+        .risk-checker { background: #1a1a1a; color: #fff; padding: 30px; margin-bottom: 40px; border-radius: 2px; }
+        .risk-checker h3 { font-family: 'Playfair Display', serif; font-size: 22px; color: var(--accent-gold); margin-bottom: 15px; }
+        .risk-option { display: block; margin-bottom: 10px; font-size: 14px; cursor: pointer; }
+        .btn-check { background: var(--accent-gold); color: white; border: none; padding: 10px 20px; font-weight: 700; cursor: pointer; text-transform: uppercase; font-size: 12px; margin-top: 10px; }
 
-        /* Newsletter */
-        .newsletter { background: #e8e8df; padding: 80px 20px; text-align: center; }
-        .newsletter h2 { font-family: 'Playfair Display', serif; font-size: clamp(24px, 6vw, 32px); margin-bottom: 15px; }
-        .news-form { display: flex; flex-direction: column; max-width: 600px; margin: 0 auto; gap: 10px; }
-        @media (min-width: 600px) { .news-form { flex-direction: row; } }
+        /* CASOS REAIS DINÂMICOS */
+        .case-study { background: #fff; padding: 25px; border: 1px solid #eee; margin-bottom: 25px; border-top: 4px solid var(--alert-red); position: relative; }
+        .case-header { font-family: 'Playfair Display', serif; font-size: clamp(20px, 5vw, 22px); margin-bottom: 15px; color: var(--alert-red); }
+        .case-conclusion { background: #fdf2f2; padding: 15px; border-radius: 4px; margin-top: 15px; font-size: 14px; }
 
-        footer { padding: 80px 20px; text-align: center; font-size: 11px; background: var(--white); color: #888; border-top: 1px solid #eee; }
+        /* SIDEBAR & FORMS */
+        .sidebar-block { background: #111; color: var(--white); padding: 30px 20px; margin-bottom: 25px; }
+        input, select, textarea { width: 100%; padding: 14px; margin-bottom: 12px; border: 1px solid #333; background: #1a1a1a; color: #fff; font-size: 16px; }
+        .btn-action { width: 100%; padding: 18px; background: var(--accent-gold); color: var(--white); border: none; font-weight: 700; text-transform: uppercase; cursor: pointer; }
+
+        /* SUGESTÃO 3: VÍDEOS VERTICAIS (SHORTS STYLE) */
+        .shorts-container { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; margin-top: 10px; }
+        .video-vertical { position: relative; padding-bottom: 177.77%; height: 0; overflow: hidden; background: #000; border-radius: 8px; }
+        .video-vertical iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
+
+        .newsletter { background: #e8e8df; padding: 60px 20px; text-align: center; }
+        footer { padding: 60px 20px; text-align: center; font-size: 11px; background: var(--white); border-top: 1px solid #eee; }
     </style>
 </head>
 <body>
@@ -76,80 +70,80 @@
         <div class="container">
             <div class="logo">ANTONIO APPRATTO MIRANDA</div>
             <p class="missao">Segurança Jurídica Patrimonial e Estratégia Jurídica Imobiliária</p>
-            <a href="#perfil" class="btn-bio">Perfil Técnico e Acadêmico</a>
         </div>
     </header>
 
     <main class="container portal-grid">
         
         <section>
+            <div class="risk-checker">
+                <h3>Índice de Segurança Patrimonial</h3>
+                <p style="font-size: 14px; margin-bottom: 15px; opacity: 0.8;">Seu investimento imobiliário está blindado? Selecione as condições do seu negócio:</p>
+                <label class="risk-option"><input type="checkbox"> Imóvel adquirido sem Due Diligence profunda.</label>
+                <label class="risk-option"><input type="checkbox"> Contrato assinado apenas entre as partes (Gaveta).</label>
+                <label class="risk-option"><input type="checkbox"> Vendedor possui pendências trabalhistas ou fiscais.</label>
+                <button class="btn-check" onclick="alert('Alerta de Risco Detectado: Recomendamos uma Análise Preliminar Imediata.')">Calcular Risco</button>
+            </div>
+
             <span class="section-label">Na Vida Real: Inteligência Aplicada</span>
             <div id="container-casos-reais">
                 </div>
 
-            <span class="section-label">Inteligência Jurisprudencial (STF | STJ)</span>
-            <div style="background:white; padding:30px; border:1px solid #eee;">
-                <p style="margin-bottom:15px; border-bottom:1px solid #f5f5f5; padding-bottom:10px;"><strong>STF:</strong> Constitucionalidade da retomada extrajudicial de imóveis.</p>
-                <p style="margin-bottom:15px; border-bottom:1px solid #f5f5f5; padding-bottom:10px;"><strong>STJ:</strong> Súmula 543 e a devolução imediata em distratos imobiliários.</p>
-                <p><strong>STJ:</strong> Impenhorabilidade do bem de família frente ao fiador comercial.</p>
+            <span class="section-label">Julgados Juris Brasil</span>
+            <div style="background:white; padding:30px; border:1px solid #eee; margin-bottom:40px;">
+                <p style="margin-bottom:15px; border-bottom:1px solid #f5f5f5; padding-bottom:10px;"><strong>STF:</strong> Constitucionalidade da retomada extrajudicial de imóveis financiado.</p>
+                <p><strong>STJ:</strong> Súmula 543 e a devolução imediata em distratos imobiliários.</p>
             </div>
         </section>
 
         <aside>
             <div class="sidebar-block">
-                <h3>Solicitar Análise Preliminar:</h3>
+                <h3>Solicitar Análise Estratégica:</h3>
                 <form>
                     <input type="text" placeholder="Nome Completo" required>
                     <input type="email" placeholder="E-mail" required>
-                    <textarea placeholder="Resumo do caso..." rows="3"></textarea>
-                    <button class="btn-action">Enviar para Consultoria</button>
+                    <textarea placeholder="Resumo do seu caso..." rows="3"></textarea>
+                    <button class="btn-action">Iniciar Consultoria</button>
                 </form>
             </div>
 
-            <div class="sidebar-block" style="background: white; border: 1px solid #ddd; color: #111;">
-                <h3 style="font-style: normal; font-size: 16px;">Hub de Corretores Parceiros</h3>
-                <form>
-                    <input type="text" placeholder="Cidade de Atuação" style="background:#f9f9f9; color:#000; border:1px solid #eee;">
-                    <button class="btn-action" style="background:#111; color:#fff;">Conectar Estrategista</button>
-                </form>
+            <span class="section-label">Pílulas de Inteligência</span>
+            <div class="shorts-container">
+                <div class="video-vertical">
+                    <iframe src="https://www.youtube.com/embed/P6j6-C0_19o" frameborder="0" allowfullscreen></iframe>
+                </div>
+                <div class="video-vertical">
+                    <iframe src="https://www.youtube.com/embed/zWunXN0D4xY" frameborder="0" allowfullscreen></iframe>
+                </div>
             </div>
+            <p style="font-size: 10px; color: var(--text-soft); margin-top: 10px; text-align: center;">Análises rápidas para decisões seguras.</p>
         </aside>
     </main>
 
     <section class="newsletter">
         <div class="container">
-            <h2>Newsletter de Inteligência Imobiliária</h2>
-            <p>Evite erros patrimoniais. Receba análises de risco mensais.</p>
-            <form class="news-form" style="margin-top:30px;">
-                <input type="email" placeholder="Seu melhor e-mail" style="background:white; color:black; border:1px solid #ccc; margin:0;">
-                <button class="btn-action" style="max-width:200px;">Inscrever-me</button>
+            <h2>Newsletter de Inteligência</h2>
+            <p>Evite erros patrimoniais graves. Receba análises de risco mensais.</p>
+            <form style="max-width:500px; margin:20px auto 0; display:flex; flex-direction:column; gap:10px;">
+                <input type="email" placeholder="Seu melhor e-mail" style="background:white; color:black;">
+                <button class="btn-action">Inscrever-me</button>
             </form>
         </div>
     </section>
 
     <footer>
-        <div class="container">
-            <p><strong>ANTONIO APPRATTO MIRANDA</strong> | PÓS-DOUTORADO EM DIREITO</p>
-            <p>Assessoria Jurídica de Alta Performance | Natal/RN &copy; 2026</p>
-        </div>
+        <p><strong>ANTONIO APPRATTO MIRANDA</strong> | PÓS-DOUTORADO EM DIREITO IMOBILIÁRIO</p>
+        <p>Natal/RN | Digital &copy; 2026</p>
     </footer>
 
     <script>
+    // LÓGICA DE ATUALIZAÇÃO AUTOMÁTICA DOS CASOS
     const bancoDeCasos = [
         {
             semana: 1,
             casos: [
-                { t: "O Fantasma das Dívidas Condominiais", f: "Compra em leilão com preço 50% abaixo do mercado.", p: "O edital omitiu dívidas de condomínio de 10 anos. O novo dono herdou o passivo.", l: "Dívidas 'propter rem' seguem o imóvel. Assessoria técnica analisa o processo antes do lance." },
-                { t: "A Retomada Relâmpago", f: "Empresário atrasou 3 parcelas confiando em negociação futura.", p: "O banco consolidou a propriedade em 30 dias e leiloou o imóvel sem aviso.", l: "Na alienação fiduciária, o tempo é vital. A defesa contra nulidades deve ser imediata." },
-                { t: "O Vício Oculto na Planta", f: "Compra de luxo. Após 2 anos, surgiram rachaduras estruturais.", p: "A construtora alegou fim da garantia de acabamento para negar o reparo.", l: "Defeitos estruturais possuem garantias distintas. A lei protege o comprador por até 10 anos." }
-            ]
-        },
-        {
-            semana: 2,
-            casos: [
-                { t: "A Venda por quem não é dono", f: "Compra de terreno com procuração pública aparentemente válida.", p: "O dono havia falecido e a procuração era falsa. Herdeiros anularam a venda.", l: "Verificações de balcão falham. É preciso auditar a higidez da cadeia dominial na origem." },
-                { t: "O Condomínio de Fato", f: "Investidor comprou lote em loteamento aberto com guarita.", p: "Recusou pagar taxas associativas e teve o lote penhorado por enriquecimento sem causa.", l: "O Tema 492 do STF mudou as regras. Analisar o estatuto antes da compra é vital." },
-                { t: "Herança e Anulação", f: "Compra de prédio comercial de herdeiro único após inventário.", p: "Surgiu um novo herdeiro por DNA pós-morte reivindicando sua quota-parte.", l: "Sucessões exigem retenção estratégica de valores até a prescrição de novas reivindicações." }
+                { t: "O Fantasma das Dívidas Condominiais", f: "Compra em leilão com preço 50% abaixo do mercado.", p: "O edital omitiu dívidas de condomínio de 10 anos.", l: "Dívidas seguem o imóvel. A assessoria analisa o processo antes do lance." },
+                { t: "A Retomada Relâmpago", f: "Empresário atrasou 3 parcelas confiando em negociação futura.", p: "O banco consolidou a propriedade e leiloou sem aviso prévio.", l: "Na alienação fiduciária, o tempo é vital. A defesa deve ser imediata." }
             ]
         }
     ];
@@ -160,13 +154,12 @@
         const semanaDoAno = Math.ceil((((agora - inicioAno) / 86400000) + inicioAno.getDay() + 1) / 7);
         const indexLote = (semanaDoAno % bancoDeCasos.length);
         const loteAtual = bancoDeCasos[indexLote].casos;
-        
         document.getElementById('container-casos-reais').innerHTML = loteAtual.map(c => `
             <div class="case-study">
                 <h3 class="case-header">${c.t}</h3>
                 <div class="case-step"><strong>O Fato:</strong><p>${c.f}</p></div>
                 <div class="case-step"><strong>O Problema:</strong><p>${c.p}</p></div>
-                <div class="case-conclusion"><h5>🚨 Lição Estratégica:</h5><p>${c.l}</p></div>
+                <div class="case-conclusion"><h5>🚨 Análise Técnica:</h5><p>${c.l}</p></div>
             </div>
         `).join('');
     }
