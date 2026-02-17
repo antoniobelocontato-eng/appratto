@@ -29,38 +29,43 @@
         body { font-family: 'Outfit', sans-serif; background: var(--bege-base); color: var(--text-dark); line-height: 1.6; }
         .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
 
-        /* Header e Branding Dinâmico */
+        /* Header */
         header { padding: 60px 0 40px; text-align: center; background: var(--white); border-bottom: 1px solid rgba(0,0,0,0.05); }
         .logo { font-family: 'Playfair Display', serif; font-size: clamp(26px, 7vw, 44px); font-weight: 700; background: var(--cinza-chique); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
         #frase-dinamica { font-size: 11px; color: var(--accent-gold); text-transform: uppercase; letter-spacing: 4px; margin: 15px 0; font-weight: 700; height: 15px; }
-        .btn-perfil { display: inline-block; padding: 12px 30px; border: 1px solid #ccc; text-decoration: none; color: var(--text-dark); font-size: 11px; font-weight: 700; text-transform: uppercase; cursor: pointer; }
+        .btn-perfil { display: inline-block; padding: 12px 30px; border: 1px solid #ccc; text-decoration: none; color: var(--text-dark); font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; cursor: pointer; }
 
         /* Master Quiz */
-        .quiz-section { background: #111; color: #fff; padding: clamp(20px, 5vw, 40px); border-radius: 4px; margin: 40px 0; border-top: 5px solid var(--accent-gold); }
-        .progress-bar { height: 4px; background: #333; margin-bottom: 20px; border-radius: 2px; }
+        .quiz-section { background: #111; color: #fff; padding: clamp(25px, 5vw, 45px); border-radius: 4px; margin: 40px 0; border-top: 5px solid var(--accent-gold); }
+        .progress-bar { height: 4px; background: #333; margin-bottom: 25px; }
         #progress-fill { height: 100%; background: var(--accent-gold); width: 0%; transition: 0.5s; }
-        .option-btn { display: block; width: 100%; padding: 15px; margin-bottom: 10px; background: #1a1a1a; border: 1px solid #333; color: #fff; text-align: left; cursor: pointer; transition: 0.3s; }
-        .option-btn:hover { border-color: var(--accent-gold); background: #222; }
+        .option-btn { display: block; width: 100%; padding: 16px; margin-bottom: 12px; background: #1a1a1a; border: 1px solid #333; color: #fff; text-align: left; cursor: pointer; transition: 0.3s; font-size: 14px; }
+        .option-btn:hover { border-color: var(--accent-gold); }
 
         /* Grid */
         .portal-grid { display: flex; flex-direction: column; gap: 40px; margin: 40px auto; }
         @media (min-width: 992px) { .portal-grid { display: grid; grid-template-columns: 2fr 1fr; gap: 60px; } }
         .section-label { font-size: 11px; font-weight: 700; color: var(--accent-gold); text-transform: uppercase; margin-bottom: 25px; display: block; border-bottom: 1px solid rgba(0,0,0,0.1); padding-bottom: 10px; }
 
-        /* Cards e Itens */
-        .card { background: #fff; padding: 25px; border: 1px solid #eee; margin-bottom: 20px; border-top: 4px solid var(--alert-red); }
-        .juris-item { background: #fff; padding: 20px; border: 1px solid #eee; margin-bottom: 10px; cursor: pointer; transition: 0.3s; }
-        .juris-item:hover { border-left: 5px solid var(--accent-gold); }
+        /* Cards e Formulários Alinhados */
+        .card { background: #fff; padding: 30px; border: 1px solid #eee; margin-bottom: 25px; border-top: 4px solid var(--alert-red); }
+        .sidebar-block { background: #111; color: #fff; padding: 30px; margin-bottom: 25px; border-top: 4px solid var(--accent-gold); }
+        
+        .form-row { display: grid; grid-template-columns: 1fr; gap: 12px; margin-bottom: 12px; }
+        @media (min-width: 600px) { .form-row { grid-template-columns: 1fr 1fr; } }
+        
+        input, select, textarea { width: 100%; padding: 15px; background: #1a1a1a; border: 1px solid #333; color: #fff; font-size: 14px; outline: none; }
+        input:focus, textarea:focus { border-color: var(--accent-gold); }
+        .btn-action { width: 100%; padding: 18px; background: var(--accent-gold); color: #fff; border: none; font-weight: 700; text-transform: uppercase; cursor: pointer; letter-spacing: 1px; }
 
         /* Modais */
         .modal-overlay { display: none; position: fixed; top:0; left:0; width:100%; height:100%; background: rgba(0,0,0,0.9); z-index: 9000; padding: 20px; align-items: center; justify-content: center; overflow-y: auto; }
         .modal-box { background: var(--white); max-width: 750px; width: 100%; padding: 40px; position: relative; border-radius: 4px; }
-        .close-x { position: absolute; top: 15px; right: 20px; font-size: 35px; cursor: pointer; color: #999; }
-        
-        .btn-action { width: 100%; padding: 18px; background: var(--accent-gold); color: #fff; border: none; font-weight: 700; text-transform: uppercase; cursor: pointer; }
-        .wpp-float { position: fixed; bottom: 20px; right: 20px; background: #25d366; color: #fff; width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 30px; z-index: 8000; text-decoration: none; box-shadow: 0 10px 25px rgba(0,0,0,0.2); }
+        .close-x { position: absolute; top: 15px; right: 20px; font-size: 35px; cursor: pointer; color: #999; line-height: 1; }
 
-        footer { padding: 60px 20px; text-align: center; font-size: 11px; color: #888; background: #fff; }
+        .wpp-float { position: fixed; bottom: 20px; right: 20px; background: #25d366; color: #fff; width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 30px; z-index: 8000; text-decoration: none; }
+
+        footer { padding: 60px 20px; text-align: center; font-size: 11px; color: #888; }
     </style>
 </head>
 <body>
@@ -78,8 +83,8 @@
     <main class="container">
         <section class="quiz-section">
             <div style="text-align:center; margin-bottom:30px;">
-                <h3 style="font-family:'Playfair Display'; color:var(--accent-gold); font-size:28px;">Teste de Maturidade Patrimonial</h3>
-                <p style="font-size:13px; opacity:0.8;">Avalie seus conhecimentos. Sorteamos 5 questões do nosso banco de inteligência.</p>
+                <h3 style="font-family:'Playfair Display'; color:var(--accent-gold); font-size:26px;">Teste de Maturidade Patrimonial</h3>
+                <p style="font-size:13px; opacity:0.8;">Sorteamos 5 questões do nosso banco de inteligência estratégica.</p>
             </div>
             <div class="progress-bar"><div id="progress-fill"></div></div>
             <div id="quiz-body"></div>
@@ -87,7 +92,7 @@
 
         <div class="portal-grid">
             <section>
-                <span class="section-label">Na Vida Real: Inteligência Aplicada</span>
+                <span class="section-label">Na Vida Real: Casos e Lições</span>
                 <div id="container-casos"></div>
 
                 <span class="section-label" style="margin-top:40px;">Jurisprudência em Foco (Top 5)</span>
@@ -95,25 +100,29 @@
             </section>
 
             <aside>
-                <div class="card" style="background:#111; color:#fff; border-top-color:var(--accent-gold);">
-                    <h3 style="font-family:'Playfair Display'; margin-bottom:20px; color:var(--accent-gold);">Como podemos ajudar?</h3>
+                <div class="sidebar-block">
+                    <h3>Como podemos ajudar?</h3>
                     <form>
-                        <input type="text" placeholder="Nome Completo" required>
-                        <input type="tel" placeholder="WhatsApp" required>
-                        <input type="text" placeholder="Cidade e Estado" required>
-                        <textarea placeholder="Resumo do caso..." rows="3"></textarea>
+                        <div class="form-row">
+                            <input type="text" placeholder="Nome Completo" required>
+                            <input type="tel" placeholder="WhatsApp" required>
+                        </div>
+                        <input type="text" placeholder="Cidade e Estado" required style="margin-bottom:12px;">
+                        <textarea placeholder="Resumo do caso..." rows="4" style="margin-bottom:12px;"></textarea>
                         <button class="btn-action">Solicitar Análise</button>
                     </form>
                 </div>
 
-                <div class="card" style="background:#fff; color:#111; border:1px solid #ddd;">
-                    <h3 style="font-family:'Playfair Display'; margin-bottom:15px;">Encontre um Corretor</h3>
-                    <select style="background:#f9f9f9; color:#000; border:1px solid #eee;">
-                        <option>Área de Atuação</option>
-                        <option>Alto Padrão</option>
-                        <option>Leilões</option>
-                    </select>
-                    <button class="btn-action" style="background:#111;">Buscar Parceiro</button>
+                <div class="sidebar-block" style="background:#fff; color:#111; border:1px solid #ddd;">
+                    <h3 style="color:#111;">Encontre um Corretor</h3>
+                    <form>
+                        <select style="background:#f9f9f9; color:#000; border:1px solid #eee; margin-bottom:12px;">
+                            <option value="" disabled selected>Área de Atuação</option>
+                            <option>Alto Padrão</option>
+                            <option>Leilões</option>
+                        </select>
+                        <button class="btn-action" style="background:#111;">Buscar Parceiro</button>
+                    </form>
                 </div>
             </aside>
         </div>
@@ -129,7 +138,7 @@
                     <p style="color:var(--accent-gold); font-weight:700; font-size:12px; text-transform:uppercase;">Estrategista Jurídico | Pós-Doutorando | Autor</p>
                 </div>
             </div>
-            <p style="font-size:14px; margin-bottom:20px;">Especialista com vasta vivência no <strong>TJRN</strong> (14ª Vara Criminal e 2ª Vara da Fazenda Pública). Autor do livro <em>"Advocacia sob uma Análise de Gênero"</em> (2024).</p>
+            <p style="font-size:14px;">Especialista com vasta vivência no <strong>TJRN</strong>. Autor do livro <em>"Advocacia sob uma Análise de Gênero"</em> (2024).</p>
         </div>
     </div>
 
@@ -148,36 +157,21 @@
     </footer>
 
     <script>
-    // AUTOMAÇÃO DE BRANDING
+    // AUTOMAÇÃO
     const frases = ["SEGURANÇA JURÍDICA PATRIMONIAL", "PÓS-DOUTORANDO EM DIREITO", "ESTRATEGISTA NO MERCADO IMOBILIÁRIO", "2 ANOS DE VIVÊNCIA NO TJRN"];
     let fIdx = 0; setInterval(() => { document.getElementById('frase-dinamica').innerText = frases[fIdx]; fIdx = (fIdx + 1) % frases.length; }, 3500);
 
-    // BANCO DE DADOS MASTER (20 QUESTÕES)
     const bancoQuestoes = [
-        { q: "Quem não registra é dono?", o: ["Sim, o contrato garante a posse.", "Não, no Brasil a propriedade só se transfere com o registro na matrícula."], r: 1, e: "O contrato de gaveta gera apenas obrigação pessoal. Sem registro, o vendedor continua sendo o dono perante a lei." },
-        { q: "Imóvel de leilão vem livre de dívidas?", o: ["Sim, a arrematação limpa o histórico.", "Não, dívidas de condomínio e IPTU podem ser repassadas se não houver ressalva no edital."], r: 1, e: "A obrigação 'propter rem' segue o imóvel. Auditoria de edital é vital." },
-        { q: "Bem de família do fiador é impenhorável?", o: ["Sim, moradia é direito sagrado.", "Não, o STF permite a penhora do único bem do fiador em locações."], r: 1, e: "Cuidado ao garantir contratos de terceiros com seu patrimônio." },
-        { q: "Duração da garantia por vício estrutural?", o: ["90 dias.", "Até 10 anos."], r: 1, e: "Defeitos que comprometem a solidez e segurança têm prazos prescricionais longos." },
-        { q: "O que é Due Diligence?", o: ["Taxa de corretagem.", "Investigação profunda sobre o passado jurídico do imóvel."], r: 1, e: "É o seguro preventivo do seu investimento." },
-        { q: "Retomada de imóvel financiado exige juiz?", o: ["Sim, sempre.", "Não, na alienação fiduciária é extrajudicial."], r: 1, e: "O banco retoma via cartório em tempo recorde." },
-        { q: "Distrato por culpa da obra é 100%?", o: ["Não, a construtora retém 25%.", "Sim, devolução integral e imediata."], r: 1, e: "Súmula 543 do STJ protege o comprador contra falhas da obra." },
-        { q: "Taxa de condomínio em loteamento aberto?", o: ["Sempre obrigatória.", "Só se houver registro na matrícula ou adesão formal."], r: 1, e: "Tema 492 do STF barrou cobranças abusivas de associações." },
-        { q: "Dívida de condomínio segue quem?", o: ["O antigo morador.", "O próprio imóvel."], r: 1, e: "Você herda a dívida ao comprar o bem." },
-        { q: "Herdeiro oculto pode anular venda?", o: ["Não, venda é ato perfeito.", "Sim, se for herdeiro necessário não consultado."], r: 1, e: "Investigação sucessória evita nulidades futuras." }
+        { q: "Quem não registra é dono?", o: ["Sim, contrato garante a posse.", "Não, propriedade exige registro na matrícula."], r: 1, e: "Sem registro, o vendedor continua sendo o dono legal. O contrato particular não protege contra penhoras do antigo proprietário." },
+        { q: "Dívidas de condomínio seguem a pessoa?", o: ["Sim, quem morava paga.", "Não, elas seguem o imóvel (propter rem)."], r: 1, e: "Ao comprar um imóvel, você herda todas as dívidas condominiais acumuladas. Auditoria prévia é obrigatória." }
     ];
 
     const casos = [
-        { t: "Penhora de Imóvel 'Limpo'", f: "Compra sem auditoria nacional.", d: "Processos ocultos em outro estado anularam a venda por fraude à execução.", l: "Sua segurança não depende da certidão local, mas da busca nacional." },
-        { t: "O Herdeiro Surpresa", f: "Compra de herdeiro único.", d: "Surgimento de herdeiro via DNA anulou a partilha e a venda posterior.", l: "Prazos prescricionais de sucessão devem ser auditados estrategicamente." },
-        { t: "Ato de Distrato Abusivo", f: "Construtora reteve 70% do valor.", d: "Justiça reduziu para 20% após auditoria técnica de cláusulas leoninas.", l: "Nunca aceite acordos de rescisão sem conferência de planilha." }
+        { t: "A Penhora de um Imóvel 'Limpo'", f: "Compra sem auditoria nacional.", d: "Processos ocultos em outro estado geraram fraude à execução.", l: "Sua segurança exige busca nacional nos tribunais." }
     ];
 
     const juris = [
-        { t: "Retomada Extrajudicial (STF)", r: "Celeridade da Lei 9.514/97.", c: "O STF validou a retomada rápida via Cartório sem processo judicial.", e: "Exige defesa imediata em caso de inadimplência." },
-        { t: "Súmula 543 (STJ)", r: "Restituição integral em distratos.", c: "Culpa da construtora exige devolução de 100% imediata.", e: "Garante liquidez para o investidor lesado." },
-        { t: "Penhora de Fiador (STJ)", r: "Alerta para garantidores.", c: "Único imóvel do fiador comercial pode ser leiloado para pagar dívida.", e: "Necessidade de blindagem patrimonial preventiva." },
-        { t: "Taxas em Loteamentos (STF)", r: "Livre associação (Tema 492).", c: "Cobranças só valem com adesão formal ou registro na matrícula.", e: "Proteção contra taxas de manutenção abusivas." },
-        { t: "Vícios de Construção (STJ)", r: "Prazo de 10 anos.", c: "Defeitos graves de segurança permitem ação de reparação por uma década.", e: "Protege o valor do ativo imobiliário a longo prazo." }
+        { t: "1. Retomada Extrajudicial (STF)", r: "Celeridade da Lei 9.514/97.", c: "O STF validou a retomada rápida via Cartório em alienação fiduciária.", e: "Exige defesa estratégica imediata." }
     ];
 
     let qAtuais = []; let qIdx = 0; let score = 0;
@@ -185,7 +179,7 @@
     function init() {
         qAtuais = bancoQuestoes.sort(() => 0.5 - Math.random()).slice(0, 5);
         showQ();
-        document.getElementById('container-casos').innerHTML = casos.map(c => `<div class="card"><h4>${c.t}</h4><p style="font-size:14px;"><strong>Início:</strong> ${c.f}</p><button class="btn-action" style="padding:10px; font-size:11px;" onclick="abrirInfo('${c.t}', '${c.d}', 'Lição: ${c.l}')">Ver Desfecho →</button></div>`).join('');
+        document.getElementById('container-casos').innerHTML = casos.map(c => `<div class="card"><h4>${c.t}</h4><p style="font-size:14px; margin:10px 0;"><strong>Início:</strong> ${c.f}</p><button class="btn-action" style="padding:10px; font-size:11px;" onclick="abrirInfo('${c.t}', '${c.d}', 'Lição: ${c.l}')">Ver Desfecho →</button></div>`).join('');
         document.getElementById('container-juris').innerHTML = juris.map(j => `<div class="juris-item" onclick="abrirInfo('${j.t}', '${j.c}', '💎 Impacto: ${j.e}')"><p style="font-weight:700;">${j.t}</p><p style="font-size:12px; color:#666;">${j.r}</p></div>`).join('');
     }
 
@@ -200,11 +194,7 @@
         qIdx++; if(qIdx < 5) showQ(); else endQuiz();
     }
 
-    function endQuiz() {
-        document.getElementById('progress-fill').style.width = "100%";
-        abrirInfo('Teste Concluído', `Você acertou ${score} de 5.`, (score >= 4 ? 'Maturidade Patrimonial Elevada.' : 'Alerta: Patrimônio em Risco.'));
-    }
-
+    function endQuiz() { abrirInfo('Fim do Teste', `Acertos: ${score} de 5.`, 'Procure um especialista para blindar seu patrimônio.'); }
     function abrirModal(id) { document.getElementById(id).style.display = 'flex'; }
     function fecharModal(id) { document.getElementById(id).style.display = 'none'; }
     function fecharModalExterno(e, id) { if(e.target.id === id) fecharModal(id); }
