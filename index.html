@@ -21,7 +21,6 @@
             --cinza-chique: linear-gradient(135deg, #8e8e8e 0%, #2c2c2c 100%);
             --text-dark: #1a1a1a;
             --accent-gold: #c5a059;
-            --accent-silver: #C0C0C0;
             --alert-red: #8b0000;
             --white: #ffffff;
         }
@@ -82,8 +81,8 @@
     <main class="container">
         <section class="quiz-section">
             <div style="text-align:center; margin-bottom:30px;">
-                <h3 style="font-family:'Playfair Display'; color:var(--accent-gold); font-size:26px;">Teste de Maturidade Patrimonial</h3>
-                <p style="font-size:13px; opacity:0.8;">Avalie seus riscos reais em questões estratégicas.</p>
+                <h3 style="font-family:'Playfair Display'; color:var(--accent-gold); font-size:26px;">Maturidade Patrimonial</h3>
+                <p style="font-size:13px; opacity:0.8;">Avalie seus riscos em questões estratégicas.</p>
             </div>
             <div class="progress-bar"><div id="progress-fill"></div></div>
             <div id="quiz-body"></div>
@@ -95,14 +94,14 @@
                 <div class="obra-card">
                     <img src="noticia.jpg" alt="Capa Notícia" class="capa-livro">
                     <h4 style="font-family:'Playfair Display';">O Que Está Por Trás da Notícia?</h4>
-                    <p style="font-size:13px; color:#444; text-align: justify; margin: 15px 0;">Análise profunda dos dilemas entre liberdade de imprensa e direitos individuais na era digital.</p>
+                    <p style="font-size:13px; color:#444; text-align: justify; margin: 15px 0;">Análise profunda dos dilemas entre liberdade de imprensa e direitos individuais na era digital, examinando os impactos da desinformação.</p>
                     <a href="https://insigneacademica.com.br/editora-insigne/livros?busca=Antonio+Eduardo" class="btn-action" target="_blank" style="padding:12px; font-size:11px;">ADQUIRIR OBRA →</a>
                 </div>
 
                 <div class="obra-card">
                     <img src="genero.jpg" alt="Capa Gênero" class="capa-livro">
                     <h4 style="font-family:'Playfair Display';">Advocacia sob uma Análise de Gênero</h4>
-                    <p style="font-size:13px; color:#444; text-align: justify; margin: 15px 0;">Estudo revelador sobre barreiras estruturais enfrentadas pelas mulheres na advocacia potiguar.</p>
+                    <p style="font-size:13px; color:#444; text-align: justify; margin: 15px 0;">Estudo revelador sobre as dificuldades e barreiras estruturais enfrentadas pelas mulheres advogadas na cidade de Natal-RN.</p>
                     <a href="https://insigneacademica.com.br/editora-insigne/livros?busca=Antonio+Eduardo" class="btn-action" target="_blank" style="padding:12px; font-size:11px;">ADQUIRIR OBRA →</a>
                 </div>
 
@@ -119,10 +118,10 @@
                     <form onsubmit="event.preventDefault(); alert('Pergunta enviada com sucesso!');">
                         <input type="text" placeholder="Nome Completo" required>
                         <input type="tel" placeholder="WhatsApp" required>
-                        <textarea placeholder="Escreva sua pergunta ou resumo do caso..." rows="4" required></textarea>
+                        <textarea placeholder="Escreva sua dúvida ou resumo do caso..." rows="4" required></textarea>
                         <button type="submit" class="btn-action">Enviar Pergunta</button>
                     </form>
-                    <button class="btn-action btn-share" onclick="compartilharSite()">📲 Compartilhar Site</button>
+                    <button class="btn-action btn-share" onclick="compartilharSite()">📲 Compartilhar Portal</button>
                 </div>
                 
                 <div class="sidebar-block" style="background:#fff; color:#111; border:1px solid #ddd;">
@@ -152,16 +151,16 @@
                 </div>
                 <p style="font-size:14px; text-align: justify; margin-top:20px;">Bacharel em Direito com vivência estratégica de 2 anos no <strong>TJRN</strong>. Experiência na <strong>PGE-RN</strong> e <strong>Sefaz-RN</strong>. Especialista em Processo Civil e Pós-graduando em Direito Negocial e Imobiliário.</p>
                 
-                <span class="section-label" style="margin-top:25px;">Dossiê Literário</span>
+                <span class="section-label" style="margin-top:25px;">Acervo Intelectual</span>
                 <div class="obra-card">
-                    <img src="noticia.jpg" alt="Capa Notícia" class="capa-livro">
-                    <h4 style="font-family:'Playfair Display';">O Que Está Por Trás da Notícia?</h4>
-                    <p style="font-size:12px; color:#555; text-align: justify;">Uma análise abrangente e profunda dos dilemas enfrentados pela liberdade de imprensa no Brasil contemporâneo.</p>
+                    <img src="noticia.jpg" alt="Capa Livro Notícia" class="capa-livro">
+                    <h4 style="font-family:'Playfair Display';">O Que Está Por Trás da Notícia? (2024)</h4>
+                    <p style="font-size:12px; color:#555; text-align: justify;">Análise detalhada sobre o equilíbrio jurídico necessário entre a liberdade de imprensa e a privacidade no Brasil contemporâneo.</p>
                 </div>
                 <div class="obra-card">
-                    <img src="genero.jpg" alt="Capa Gênero" class="capa-livro">
-                    <h4 style="font-family:'Playfair Display';">Advocacia sob uma Análise de Gênero</h4>
-                    <p style="font-size:12px; color:#555; text-align: justify;">Estudo revelador sobre os desafios únicos enfrentados pelas mulheres na advocacia potiguar.</p>
+                    <img src="genero.jpg" alt="Capa Livro Gênero" class="capa-livro">
+                    <h4 style="font-family:'Playfair Display';">Advocacia sob uma Análise de Gênero (2024)</h4>
+                    <p style="font-size:12px; color:#555; text-align: justify;">Pesquisa acadêmica sobre o protagonismo e os desafios sistêmicos enfrentados por mulheres no exercício da advocacia potiguar.</p>
                 </div>
             </div>
         </div>
@@ -183,31 +182,61 @@
     let fIdx = 0; setInterval(() => { document.getElementById('frase-dinamica').innerText = frases[fIdx]; fIdx = (fIdx + 1) % frases.length; }, 3500);
 
     const bancoCasos = [
-        { t: "1. Penhora de Imóvel 'Limpo'", r: "A compra de um imóvel aparentemente sem dívidas pode ser anulada meses depois se o vendedor tiver processos trabalhistas ocultos.", f: "Ocorre quando dívidas em outros estados não aparecem localmente.", d: "A justiça anulou a venda para pagar credores. O comprador perdeu o bem e o dinheiro.", l: "Auditorias nacionais profundas são o único seguro real." },
-        { t: "2. O Herdeiro Surpresa", r: "Ao comprar de um herdeiro único, existe o risco de um novo filho provar paternidade e anular a venda original para garantir sua parte.", f: "Filho desconhecido provou paternidade via DNA após o negócio.", d: "A partilha foi desfeita e a venda anulada. O comprador ficou no prejuízo.", l: "Prazos sucessórios e histórico familiar exigem análise estratégica." },
-        { t: "3. Retenção de 70% em Distrato", r: "Construtoras frequentemente aplicam multas abusivas para quem desiste de imóveis na planta, retendo quase todo o valor pago.", f: "A empresa tentou reter 70% do valor pago pelo cliente em distrato.", d: "Após análise técnica, a justiça reduziu a multa para 20%, protegendo o patrimônio do comprador.", l: "Cláusulas abusivas podem ser anuladas com a estratégia correta." },
-        { t: "4. Dívida de Condomínio Propter Rem", r: "Dívidas de condomínio 'andam' com o imóvel. Quem compra o bem, herda automaticamente toda a dívida acumulada.", f: "Investidor arrematou imóvel em leilão sem auditar débitos de 10 anos.", d: "Foi obrigado a pagar R$ 100 mil em taxas acumuladas, zerando o lucro do investimento.", l: "Auditoria de editais é obrigatória antes de qualquer lance em leilão." },
-        { t: "5. Fraude por Procuração Falsa", r: "Criminosos usam documentos forjados para vender casas de terceiros sem que o verdadeiro dono saiba do negócio.", f: "Criminosos forjaram procuração em outro estado e venderam casa de alto padrão.", d: "O dono real retomou o bem e o comprador ficou no prejuízo total.", l: "Sempre verifique a validade de mandatos diretamente no cartório de origem." }
+        { t: "1. Penhora de Imóvel 'Limpo'", r: "Muitas vezes, uma pessoa compra um imóvel que parece estar livre de qualquer problema, mas acaba perdendo o bem pouco tempo depois devido a erros na auditoria.", f: "Isso ocorre quando o antigo dono possui dívidas em outros estados que não aparecem na certidão local.", d: "Nesse caso, a justiça anulou a venda para pagar processos trabalhistas do vendedor. O comprador perdeu o imóvel e o investimento.", l: "Auditorias nacionais profundas são o único seguro real contra surpresas jurídicas." },
+        { t: "2. O Herdeiro Surpresa", r: "Comprar um imóvel de um herdeiro único parece seguro, mas existe o risco jurídico de um novo herdeiro surgir após o fechamento do negócio.", f: "Neste caso real, um filho desconhecido provou a paternidade via DNA meses após a venda da casa.", d: "A partilha original foi anulada pela justiça e a venda do imóvel também foi desfeita para garantir a parte do novo herdeiro.", l: "Histórico familiar e prazos de sucessão devem ser auditados estrategicamente por um especialista." },
+        { t: "3. Retenção de 70% em Distrato", r: "Quando um comprador desiste de um imóvel na planta, as construtoras costumam aplicar multas contratuais pesadíssimas e abusivas.", f: "Neste exemplo, a empresa tentou reter 70% de todo o valor pago pelo cliente no momento da desistência.", d: "Após análise técnica das cláusulas, a justiça reduziu a multa para apenas 20%, garantindo o retorno justo do patrimônio.", l: "Cláusulas abusivas podem e devem ser contestadas através de inteligência jurídica preventiva." },
+        { t: "4. Dívida de Condomínio Propter Rem", r: "Dívidas de condomínio 'seguem' o imóvel. Isso significa que, se você compra um bem com dívida, ela passa a ser sua obrigatoriamente.", f: "Um investidor comprou um apartamento em leilão sem analisar os débitos acumulados de 10 anos descritos no edital.", d: "Ele herdou R$ 100 mil em taxas condominiais não pagas, o que transformou o lucro esperado em um prejuízo amargo.", l: "Análise profunda de editais de leilão é obrigatória para evitar armadilhas financeiras." },
+        { t: "5. Fraude por Procuração Falsa", r: "Criminosos forjam documentos e procurações para vender casas de terceiros sem que o verdadeiro proprietário saiba.", f: "Nesse golpe, bandidos usaram um mandato falso de outro estado para vender uma residência de alto padrão.", d: "O dono real provou a fraude e retomou o imóvel. O comprador ficou no prejuízo total e sem garantias de reaver o dinheiro.", l: "A validade de documentos deve ser checada diretamente no cartório de origem para blindar o negócio." }
     ];
 
     const bancoJuris = [
-        { t: "1. Retomada Extrajudicial (STF)", desc: "Bancos podem retomar imóveis financiados com parcelas atrasadas de forma rápida via Cartório, sem juiz.", r: "Lei 9.514/97.", c: "O STF validou a retomada direta após notificação.", e: "Exige atenção total aos prazos e defesas imediatas." },
-        { t: "2. Súmula 543 (STJ)", desc: "Garante que, se a construtora atrasar a entrega, o comprador deve receber todo o seu dinheiro de volta de uma vez só.", r: "Restituição integral.", c: "A devolução deve ser de 100% e imediata em caso de culpa da empresa.", e: "Proteção essencial para quem investe em imóveis na planta." },
-        { t: "3. Penhora de Fiador (STF)", desc: "Fiadores de contratos comerciais correm o risco de perder a própria casa para pagar a dívida do inquilino.", r: "Bem de família.", c: "O STF autoriza o leilão do único bem do fiador comercial.", e: "Reforça a necessidade de blindagem preventiva de patrimônio." },
-        { t: "4. Taxas em Loteamentos (STF)", desc: "Loteamentos fechados só podem cobrar taxas de moradores que concordaram expressamente em participar da associação.", r: "Tema 492.", c: "Cobrança exige adesão formal ou registro prévio na matrícula.", e: "Segurança jurídica contra cobranças inesperadas." },
-        { t: "5. Vícios de Construção (STJ)", desc: "Proprietários têm até 10 anos para processar construtoras por defeitos estruturais graves (rachaduras, infiltrações).", r: "Prazo Decenal.", c: "O prazo de garantia para vícios graves é de uma década.", e: "Garante reparação de longo prazo para investidores." }
+        { 
+            t: "1. Retomada Extrajudicial (STF)", 
+            r: "Decisão do STF (Lei 9.514/97)",
+            desc: "Bancos e credores agora podem retomar imóveis financiados com parcelas em atraso de forma muito rápida e sem precisar de um processo demorado na justiça comum.",
+            c: "O STF decidiu que o leilão do bem pode ser feito diretamente via Cartório após a notificação do devedor, acelerando a perda da posse.", 
+            e: "Isso exige que o proprietário tenha atenção redobrada aos prazos e busque defesas estratégicas imediatamente em caso de atraso." 
+        },
+        { 
+            t: "2. Súmula 543 (STJ)", 
+            r: "Proteção em Imóvel na Planta",
+            desc: "Essa regra garante que, se a construtora atrasar a entrega da obra e o cliente quiser cancelar, ela deve devolver todo o dinheiro de uma vez.",
+            c: "A justiça definiu que a devolução deve ser de 100% e imediata caso a culpa pelo distrato seja exclusivamente da empresa (atraso na obra).", 
+            e: "É uma proteção essencial que impede o parcelamento abusivo do reembolso por parte das incorporadoras." 
+        },
+        { 
+            t: "3. Penhora de Fiador (STF)", 
+            r: "Risco em Locação Comercial",
+            desc: "Pessoas que aceitam ser fiadoras em contratos de aluguel comercial correm o risco real de perder sua única casa para pagar a dívida do inquilino.",
+            c: "O STF autorizou que o imóvel de família do fiador vá a leilão para quitar débitos de aluguel comercial, sem direito à impenhorabilidade.", 
+            e: "Reforça a extrema necessidade de blindagem patrimonial preventiva antes de oferecer garantias pessoais em negócios." 
+        },
+        { 
+            t: "4. Taxas em Loteamentos (STF)", 
+            r: "Tema 492: Cobranças Indevidas",
+            desc: "Moradores de loteamentos fechados só podem ser obrigados a pagar taxas de manutenção se concordarem expressamente com isso.",
+            c: "A cobrança só vale se o proprietário aderiu formalmente à associação ou se a obrigação já estava registrada na matrícula do imóvel antes de 2017.", 
+            e: "Protege o patrimônio contra cobranças inesperadas de associações com as quais o morador nunca teve vínculo formal." 
+        },
+        { 
+            t: "5. Vícios de Construção (STJ)", 
+            r: "Prazo de Garantia de 10 Anos",
+            desc: "Se o seu imóvel apresentar problemas estruturais graves (como rachaduras ou infiltrações severas), você tem um longo tempo para agir judicialmente.",
+            c: "O STJ consolidou que o prazo para processar a construtora por defeitos graves que comprometam a segurança é de até 10 anos após a entrega.", 
+            e: "Garante ao proprietário um fôlego jurídico para exigir reparações caras que só surgem com o uso prolongado do bem." 
+        }
     ];
 
     const bancoQuestoes = [
-        { q: "Quem não registra na matrícula é dono?", o: ["Sim.", "Não, exige registro."], r: 1, e: "O registro na matrícula é o único ato que transfere a propriedade legal." },
-        { q: "Dívidas de condomínio seguem o imóvel?", o: ["Não.", "Sim (Propter Rem)."], r: 1, e: "Ao comprar, você herda as dívidas acumuladas do bem." }
+        { q: "Quem não registra o contrato na matrícula é dono?", o: ["Sim.", "Não, apenas quem registra."], r: 1, e: "O registro na matrícula do imóvel é o único ato que transfere a propriedade legal no Brasil." },
+        { q: "Dívidas de condomínio ficam com o dono antigo?", o: ["Não.", "Sim."], r: 0, e: "As dívidas seguem o imóvel. Ao comprar o bem, você assume todos os débitos acumulados." }
     ];
 
     let qIdx = 0; let score = 0;
     function init() {
         showQ();
-        document.getElementById('container-casos').innerHTML = bancoCasos.map(c => `<div class="card"><h4>${c.t}</h4><p style="font-size:13px; margin:10px 0; color:#444;">${c.r}</p><button class="btn-action" style="padding:10px; font-size:11px;" onclick="abrirInfo('${c.t.replace(/'/g, "\\'")}', '${c.f.replace(/'/g, "\\'")}<br><br>${c.d.replace(/'/g, "\\'")}', '🚨 Lição: ${c.l.replace(/'/g, "\\'")}')">Ver Desfecho →</button></div>`).join('');
-        document.getElementById('container-juris').innerHTML = bancoJuris.map(j => `<div class="juris-item" onclick="abrirInfo('${j.t.replace(/'/g, "\\'")}', '${j.desc.replace(/'/g, "\\'")}<br><br><strong>Base:</strong> ${j.c.replace(/'/g, "\\'")}', 'Impacto: ${j.e.replace(/'/g, "\\'")}')"><p style="font-weight:700;">${j.t}</p><p style="font-size:12px; color:#666; margin-top:5px;">${j.r}</p></div>`).join('');
+        document.getElementById('container-casos').innerHTML = bancoCasos.map(c => `<div class="card"><h4>${c.t}</h4><p style="font-size:13px; margin:10px 0; color:#444;">${c.r}</p><button class="btn-action" style="padding:10px; font-size:11px;" onclick="abrirInfo('${c.t.replace(/'/g, "\\'")}', '${c.f.replace(/'/g, "\\'")}<br><br>${c.d.replace(/'/g, "\\'")}', '🚨 Lição: ${c.l.replace(/'/g, "\\'")}')">Análise do Desfecho →</button></div>`).join('');
+        document.getElementById('container-juris').innerHTML = bancoJuris.map(j => `<div class="juris-item" onclick="abrirInfo('${j.t.replace(/'/g, "\\'")}', '${j.desc.replace(/'/g, "\\'")}<br><br><strong>Impacto Prático:</strong> ${j.c.replace(/'/g, "\\'")}', '🚨 O que muda: ${j.e.replace(/'/g, "\\'")}')"><p style="font-weight:700;">${j.t}</p><p style="font-size:12px; color:#666; margin-top:5px;">${j.r}</p></div>`).join('');
     }
 
     function showQ() {
@@ -222,12 +251,12 @@
         qIdx++; if(qIdx < bancoQuestoes.length) { showQ(); } else { endQuiz(); }
     }
 
-    function endQuiz() { abrirInfo('Fim', `Acertos: ${score}/${bancoQuestoes.length}.`, 'Consulte um estrategista para blindar seu patrimônio.'); qIdx = 0; score = 0; init(); }
+    function endQuiz() { abrirInfo('Resultado Final', `Sua pontuação: ${score}/${bancoQuestoes.length}.`, 'O mercado imobiliário exige estratégia. Busque um especialista.'); qIdx = 0; score = 0; init(); }
     function abrirModal(id) { document.getElementById(id).style.display = 'flex'; }
     function fecharModal(id) { document.getElementById(id).style.display = 'none'; }
     function fecharModalExterno(e, id) { if(e.target.id === id) fecharModal(id); }
     function abrirInfo(t, c, ex) { document.getElementById('info-titulo').innerText = t; document.getElementById('info-corpo').innerHTML = c; document.getElementById('info-extra').innerText = ex; abrirModal('modal-info'); }
-    function compartilharSite() { const msg = encodeURIComponent("Conheça o portal do estrategista Antônio Appratto Miranda.\n🌐 " + window.location.href); window.open("https://wa.me/?text=" + msg, "_blank"); }
+    function compartilharSite() { const msg = encodeURIComponent("Explore o portal do estrategista Antônio Appratto Miranda sobre Inteligência Imobiliária.\n🌐 " + window.location.href); window.open("https://wa.me/?text=" + msg, "_blank"); }
     
     window.onload = init;
     </script>
