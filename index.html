@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Antônio Appratto Miranda | Inteligência e Estratégia Imobiliária</title>
+    <title>Eduardo Miranda Souza | Inteligência e Estratégia Imobiliária</title>
     
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-3V0T0RHH8L"></script>
     <script>
@@ -17,12 +17,11 @@
     
     <style>
         :root {
-            --bege-base: #F7F7F2;
-            --cinza-chique: linear-gradient(135deg, #8e8e8e 0%, #2c2c2c 100%);
-            --text-dark: #1a1a1a;
-            --accent-gold: #c5a059;
+            --bege-base: #F9F7F2; /* Tom cru/bege */
+            --text-dark: #2C2C2C;
+            --accent-gold: #D4AF37; /* Dourado claro */
+            --header-bg: #E8E2D6; /* Dourado cru suave */
             --white: #ffffff;
-            /* AJUSTE: Cor unificada para bater com o fundo da logo JPG */
             --logo-bg: #1a1a1b; 
         }
 
@@ -30,7 +29,6 @@
         body { font-family: 'Outfit', sans-serif; background: var(--bege-base); color: var(--text-dark); line-height: 1.6; }
         .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
 
-        /* Estilização do cabeçalho corrigida para cor única */
         header { padding: 40px 0; text-align: center; background: var(--logo-bg); border-bottom: none; }
         .logo-img { max-width: 350px; width: 85%; height: auto; display: block; margin: 0 auto; }
         
@@ -38,43 +36,38 @@
 
         .bio-home { background: #fff; padding: 40px; border-radius: 4px; border-left: 5px solid var(--accent-gold); margin-bottom: 40px; box-shadow: 0 5px 15px rgba(0,0,0,0.05); }
         .bio-home h2 { font-family: 'Playfair Display', serif; color: var(--accent-gold); margin-bottom: 15px; font-size: 24px; line-height: 1.3; }
-        .bio-list { list-style: none; margin-top: 20px; }
-        .bio-list li { margin-bottom: 10px; padding-left: 25px; position: relative; font-size: 14px; }
-        .bio-list li::before { content: '•'; color: var(--accent-gold); position: absolute; left: 0; font-weight: bold; font-size: 20px; }
+        .bio-list { list-style: none; margin-top: 20px; display: grid; grid-template-columns: 1fr; gap: 15px; }
+        @media (min-width: 768px) { .bio-list { grid-template-columns: 1fr 1fr; } }
+        .bio-list li { padding: 15px; background: #fdfdfd; border: 1px solid #f0f0f0; border-radius: 4px; font-size: 13px; line-height: 1.4; }
+        .bio-list li strong { color: var(--accent-gold); display: block; margin-bottom: 5px; text-transform: uppercase; font-size: 12px; }
 
-        .quiz-section { background: #111; color: #fff; padding: clamp(25px, 5vw, 45px); border-radius: 4px; margin: 40px 0; border-top: 5px solid var(--accent-gold); }
-        .progress-bar { height: 4px; background: #333; margin-bottom: 25px; }
+        .quiz-section { background: var(--header-bg); color: var(--text-dark); padding: clamp(25px, 5vw, 45px); border-radius: 4px; margin: 40px 0; border-top: 5px solid var(--accent-gold); }
+        .progress-bar { height: 4px; background: #d1cbc0; margin-bottom: 25px; }
         #progress-fill { height: 100%; background: var(--accent-gold); width: 0%; transition: 0.5s; }
-        .option-btn { display: block; width: 100%; padding: 16px; margin-bottom: 12px; background: #1a1a1a; border: 1px solid #333; color: #fff; text-align: left; cursor: pointer; transition: 0.3s; font-size: 14px; border-radius: 4px; }
+        .option-btn { display: block; width: 100%; padding: 16px; margin-bottom: 12px; background: var(--white); border: 1px solid #d1cbc0; color: var(--text-dark); text-align: left; cursor: pointer; transition: 0.3s; font-size: 14px; border-radius: 4px; }
+        .option-btn:hover { background: var(--accent-gold); color: #fff; }
 
         .portal-grid { display: flex; flex-direction: column; gap: 40px; margin: 40px auto; }
         @media (min-width: 992px) { .portal-grid { display: grid; grid-template-columns: 2fr 1fr; gap: 60px; } }
         .section-label { font-size: 11px; font-weight: 700; color: var(--accent-gold); text-transform: uppercase; margin-bottom: 25px; display: block; border-bottom: 1px solid rgba(0,0,0,0.1); padding-bottom: 10px; }
 
-        .card { background: #fff; padding: 30px; border: 1px solid #eee; margin-bottom: 25px; border-top: 4px solid var(--alert-red); border-radius: 4px; }
+        .card { background: #fff; padding: 30px; border: 1px solid #eee; margin-bottom: 25px; border-top: 4px solid var(--accent-gold); border-radius: 4px; }
         .obra-card { background: #f9f9f9; padding: 25px; border-left: 4px solid var(--accent-gold); margin-bottom: 30px; border-radius: 4px; text-align: center; }
         .capa-livro { width: 140px; height: auto; box-shadow: 0 8px 20px rgba(0,0,0,0.3); margin-bottom: 20px; border-radius: 2px; }
         
-        .video-grid { display: grid; grid-template-columns: 1fr; gap: 15px; margin-top: 15px; margin-bottom: 40px; }
-        @media (min-width: 600px) { .video-grid { grid-template-columns: 1fr 1fr; } }
-        .video-placeholder { background: #eee; aspect-ratio: 9/16; border-radius: 8px; display: flex; align-items: center; justify-content: center; text-align: center; padding: 20px; color: #888; border: 2px dashed #ccc; font-size: 12px; }
-
-        .juris-item { background: #fff; padding: 20px; border: 1px solid #eee; margin-bottom: 10px; cursor: pointer; transition: 0.3s; border-radius: 4px; }
-        .juris-item:hover { border-left: 5px solid var(--accent-gold); background: #fafafa; }
-
-        .sidebar-block { background: #111; color: #fff; padding: 30px; margin-bottom: 25px; border-top: 4px solid var(--accent-gold); border-radius: 4px; }
+        .sidebar-block { background: var(--header-bg); color: var(--text-dark); padding: 30px; margin-bottom: 25px; border-top: 4px solid var(--accent-gold); border-radius: 4px; }
         .btn-action { width: 100%; padding: 18px; background: var(--accent-gold); color: #fff; border: none; font-weight: 700; text-transform: uppercase; cursor: pointer; border-radius: 4px; transition: 0.3s; display: block; text-align: center; text-decoration: none; margin-bottom: 10px; }
-        input, select, textarea { width: 100%; padding: 15px; background: #1a1a1a; border: 1px solid #333; color: #fff; font-size: 14px; border-radius: 4px; margin-bottom: 12px; }
+        input, select, textarea { width: 100%; padding: 15px; background: var(--white); border: 1px solid #d1cbc0; color: var(--text-dark); font-size: 14px; border-radius: 4px; margin-bottom: 12px; }
 
-        .modal-overlay { display: none; position: fixed; top:0; left:0; width:100%; height:100%; background: rgba(0,0,0,0.9); z-index: 9999; padding: 20px; align-items: center; justify-content: center; }
-        .modal-box { background: var(--white); max-width: 650px; width: 100%; max-height: 85vh; padding: 50px 30px 40px; position: relative; border-radius: 8px; border-top: 8px solid var(--accent-gold); overflow-y: auto; box-shadow: 0 20px 50px rgba(0,0,0,0.5); }
-        .close-x { position: absolute; top: 10px; right: 20px; font-size: 40px; cursor: pointer; color: #333; font-weight: bold; z-index: 10000; }
+        .modal-overlay { display: none; position: fixed; top:0; left:0; width:100%; height:100%; background: rgba(0,0,0,0.8); z-index: 9999; padding: 20px; align-items: center; justify-content: center; }
+        .modal-box { background: var(--white); max-width: 650px; width: 100%; max-height: 85vh; padding: 50px 30px 40px; position: relative; border-radius: 8px; border-top: 8px solid var(--accent-gold); overflow-y: auto; }
+        .close-x { position: absolute; top: 10px; right: 20px; font-size: 40px; cursor: pointer; color: #333; }
 
         .perfil-img { width: 180px; height: 180px; border-radius: 50%; border: 4px solid var(--accent-gold); object-fit: cover; object-position: top; margin-bottom: 20px; background: #eee; }
         .social-links { display: flex; gap: 15px; justify-content: center; margin-top: 15px; }
         .social-links a { font-size: 13px; color: var(--accent-gold); text-decoration: underline; font-weight: 600; }
         
-        .wpp-float { position: fixed; bottom: 20px; right: 20px; background: #25d366; color: #fff; width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 30px; z-index: 9000; text-decoration: none; box-shadow: 0 10px 25px rgba(0,0,0,0.2); }
+        .wpp-float { position: fixed; bottom: 20px; right: 20px; background: #25d366; color: #fff; width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 30px; z-index: 9000; text-decoration: none; }
         footer { padding: 40px; text-align: center; font-size: 11px; opacity: 0.7; }
     </style>
 </head>
@@ -84,10 +77,8 @@
 
     <header>
         <div class="container">
-            <img src="logo.jpg" alt="Antônio Appratto Miranda" class="logo-img">
-            
+            <img src="logo.jpg" alt="Eduardo Miranda Souza" class="logo-img">
             <div id="frase-dinamica">ESTRATEGISTA JURÍDICO | ESPECIALISTA</div>
-            
             <div style="cursor:pointer; font-size:11px; text-decoration:underline; margin-top:10px; font-weight:700; color:#ffffff;" onclick="abrirModal('modal-perfil')">Informações Técnicas e Literárias</div>
         </div>
     </header>
@@ -95,13 +86,16 @@
     <main class="container">
         <section class="bio-home" style="margin-top: 40px;">
             <h2>Protegendo o que você construiu e estruturando o que você ainda vai conquistar.</h2>
-            <p style="font-size: 15px; color: #444; margin-bottom: 20px; text-align: justify;">Transformo a complexidade jurídica em segurança para o seu patrimônio. Meu trabalho é garantir que seus bens estejam blindados contra riscos, que sua sucessão familiar ocorra sem conflitos e que seus negócios imobiliários sejam financeiramente eficientes.</p>
+            <p style="font-size: 15px; color: #444; margin-bottom: 20px; text-align: justify;">Aliamos inteligência jurídica e visão de mercado para blindar seu patrimônio e viabilizar empreendimentos de alto valor. Nossa atuação transforma complexidade em segurança e lucro.</p>
+            
             <span class="section-label" style="margin-bottom: 10px; border:none; padding:0;">O que nós fazemos por você:</span>
             <ul class="bio-list">
-                <li><strong>Proteção de Patrimônio:</strong> Estruturas inteligentes (como Holdings) para blindar seus bens familiares e empresariais.</li>
-                <li><strong>Estratégia Imobiliária:</strong> Segurança jurídica total na compra, venda, leilões e regularização de imóveis.</li>
-                <li><strong>Planejamento de Herança:</strong> Organização da sucessão em vida para evitar inventários demorados, caros e desgastantes.</li>
-                <li><strong>Eficiência Tributária:</strong> Planejamento legal para reduzir o impacto de impostos em transações e transações de aluguéis.</li>
+                <li><strong>Regularização Dominial:</strong> Usucapião (Judicial/Extrajudicial) e adjudicação compulsória para transformar posse em propriedade real e valorizada.</li>
+                <li><strong>Soluções Sucessórias:</strong> Inventários ágeis e Planejamento Sucessório (Holdings) para transmissão de bens com economia tributária e sem conflitos.</li>
+                <li><strong>Direito Condominial:</strong> Gestão jurídica de governança, assessoria a síndicos e cobrança estratégica de inadimplência para garantir o caixa.</li>
+                <li><strong>Engenharia Contratual:</strong> Elaboração de instrumentos blindados para Locação (BTS), Compra e Venda, Permutas e Distratos Imobiliários.</li>
+                <li><strong>Estruturação de Negócios:</strong> Inteligência em Incorporações, Loteamentos e Auditoria (Due Diligence) para afastar riscos de fraudes e prejuízos.</li>
+                <li><strong>Direito Urbano e Ambiental:</strong> Atuação em licenciamentos, TACs e reversão de multas que impedem a exploração do imóvel.</li>
             </ul>
         </section>
 
@@ -116,28 +110,15 @@
 
         <div class="portal-grid">
             <section>
-                <span class="section-label">Obras Publicadas</span>
+                <span class="section-label">Casos Reais: Inteligência Aplicada</span>
+                <div id="container-casos"></div>
+
+                <span class="section-label" style="margin-top:40px;">Obras Publicadas</span>
                 <div class="obra-card">
                     <img src="noticia.jpg" alt="Capa Livro Notícia" class="capa-livro">
                     <h4 style="font-family:'Playfair Display';">O Que Está Por Trás da Notícia?</h4>
-                    <p style="font-size:13px; color:#444; text-align: justify; margin: 15px 0;">Análise profunda sobre os limites da liberdade de imprensa e a proteção dos direitos da personalidade no ambiente digital contemporâneo.</p>
+                    <p style="font-size:13px; color:#444; text-align: justify; margin: 15px 0;">Análise profunda sobre os limites da liberdade de imprensa e a proteção dos direitos da personalidade.</p>
                     <a href="https://insigneacademica.com.br/editora-insigne/livros?busca=Antonio+Eduardo" class="btn-action" target="_blank" style="padding:12px; font-size:11px;">ADQUIRIR OBRA →</a>
-                </div>
-
-                <div class="obra-card">
-                    <img src="genero.jpg" alt="Capa Livro Gênero" class="capa-livro">
-                    <h4 style="font-family:'Playfair Display';">Advocacia sob uma Análise de Gênero</h4>
-                    <p style="font-size:13px; color:#444; text-align: justify; margin: 15px 0;">Estudo crítico sobre as barreiras estruturais e desafios enfrentados pelas mulheres advogadas na capital potiguar.</p>
-                    <a href="https://insigneacademica.com.br/editora-insigne/livros?busca=Antonio+Eduardo" class="btn-action" target="_blank" style="padding:12px; font-size:11px;">ADQUIRIR OBRA →</a>
-                </div>
-
-                <span class="section-label" style="margin-top:40px;">Casos Reais: Inteligência Aplicada</span>
-                <div id="container-casos"></div>
-                
-                <span class="section-label" style="margin-top:40px;">Pílulas de Inteligência (Vídeos)</span>
-                <div class="video-grid">
-                    <div class="video-placeholder">🎬 Em breve: Vídeo sobre Blindagem de Ativos</div>
-                    <div class="video-placeholder">🎬 Em breve: Vídeo sobre Regularização Fiduciária</div>
                 </div>
 
                 <span class="section-label" style="margin-top:40px;">Jurisprudência em Foco (Top 5)</span>
@@ -153,18 +134,6 @@
                         <textarea placeholder="Descreva sua dúvida jurídica ou resumo do caso..." rows="4" required></textarea>
                         <button type="submit" class="btn-action">Enviar Pergunta</button>
                     </form>
-                    <button class="btn-action" style="background:#25d366 !important;" onclick="compartilharSite()">📲 Compartilhar Portal</button>
-                </div>
-                
-                <div class="sidebar-block" style="background:#fff; color:#111; border:1px solid #ddd;">
-                    <h3 style="font-family:'Playfair Display'; color:#111; margin-bottom:15px;">Localizar um Corretor</h3>
-                    <select style="background:#f9f9f9; color:#000; border:1px solid #eee;">
-                        <option value="" disabled selected>Área de Atuação</option>
-                        <option>Alto Padrão</option>
-                        <option>Leilões</option>
-                        <option>Regularização</option>
-                    </select>
-                    <button class="btn-action" style="background:#111;">Buscar Parceiro</button>
                 </div>
             </aside>
         </div>
@@ -174,26 +143,14 @@
         <div class="modal-box">
             <span class="close-x" onclick="fecharModal('modal-perfil')">&times;</span>
             <div style="text-align:center;">
-                <img src="perfil.jpg" alt="Antônio Appratto Miranda" class="perfil-img" onerror="this.src='Perfil.jpeg.jpg';">
-                <h2 style="font-family:'Playfair Display'; font-size: 28px;">Antônio Appratto Miranda</h2>
+                <img src="perfil.jpg" alt="Eduardo Miranda Souza" class="perfil-img" onerror="this.src='Perfil.jpeg.jpg';">
+                <h2 style="font-family:'Playfair Display'; font-size: 28px;">Eduardo Miranda Souza</h2>
                 <p style="color:var(--accent-gold); font-weight:700; font-size:12px; text-transform:uppercase;">Estrategista Jurídico | Especialista</p>
                 <div class="social-links">
                     <a href="https://www.instagram.com/antonioadvogado_/" target="_blank">Instagram</a>
                     <a href="https://www.linkedin.com/in/antonioeduardo--/" target="_blank">LinkedIn</a>
                 </div>
-                <p style="font-size:14px; text-align: justify; margin-top:20px;">Bacharel em Direito com vivência estratégica de 2 anos no <strong>TJRN</strong> (Residente Judicial), <strong>PGE-RN</strong> e <strong>Sefaz-RN</strong>. Especialista em Processo Civil e Pós-graduando em Direito Negocial e Imobiliário.</p>
-                
-                <span class="section-label" style="margin-top:25px;">Informações Literárias</span>
-                <div class="obra-card">
-                    <img src="noticia.jpg" alt="Capa Notícia" class="capa-livro">
-                    <h4 style="font-family:'Playfair Display';">O Que Está Por Trás da Notícia? (2024)</h4>
-                    <p style="font-size:12px; color:#555; text-align: justify;">Uma análise detalhada sobre os dilemas enfrentados pela liberdade de imprensa no Brasil frente aos direitos individuais.</p>
-                </div>
-                <div class="obra-card">
-                    <img src="genero.jpg" alt="Capa Gênero" class="capa-livro">
-                    <h4 style="font-family:'Playfair Display';">Advocacia sob uma Análise de Gênero (2024)</h4>
-                    <p style="font-size:12px; color:#555; text-align: justify;">Estudo revelador sobre o protagonismo e os desafios sistêmicos enfrentados pelas mulheres na advocacia potiguar.</p>
-                </div>
+                <p style="font-size:14px; text-align: justify; margin-top:20px;">Bacharel em Direito com vivência estratégica no <strong>TJRN</strong>, <strong>PGE-RN</strong> e <strong>Sefaz-RN</strong>. Especialista em Processo Civil e Pós-graduando em Direito Negocial e Imobiliário.</p>
             </div>
         </div>
     </div>
@@ -201,44 +158,40 @@
     <div id="modal-info" class="modal-overlay" onclick="fecharModalExterno(event, 'modal-info')">
         <div class="modal-box">
             <span class="close-x" onclick="fecharModal('modal-info')">&times;</span>
-            <h3 id="info-titulo" style="font-family:'Playfair Display'; margin-bottom:20px; color:var(--alert-red);"></h3>
+            <h3 id="info-titulo" style="font-family:'Playfair Display'; margin-bottom:20px; color:var(--accent-gold);"></h3>
             <div id="info-corpo" style="font-size:15px; color:#444;"></div>
-            <div id="info-extra" style="background:#fdf2f2; padding:20px; margin-top:20px; border-left:4px solid var(--accent-gold); font-size:14px;"></div>
+            <div id="info-extra" style="background:#fdfcf8; padding:20px; margin-top:20px; border-left:4px solid var(--accent-gold); font-size:14px;"></div>
         </div>
     </div>
 
-    <footer><p><strong>ANTÔNIO APPRATTO MIRANDA</strong> | Natal/RN | 2026</p></footer>
+    <footer><p><strong>EDUARDO MIRANDA SOUZA</strong> | Natal/RN | 2026</p></footer>
 
     <script>
     const frases = ["SEGURANÇA JURÍDICA PATRIMONIAL", "ESTRATÉGIA IMOBILIÁRIA", "ESPECIALISTA EM PROCESSO CIVIL"];
     let fIdx = 0; setInterval(() => { document.getElementById('frase-dinamica').innerText = frases[fIdx]; fIdx = (fIdx + 1) % frases.length; }, 3500);
 
     const bancoCasos = [
-        { t: "1. Penhora de Imóvel 'Limpo'", r: "A compra de um imóvel aparentemente sem dívidas pode ser anulada meses depois devido a processos trabalhistas do antigo dono em outros estados.", f: "Ocorre quando a auditoria foca apenas em certidões locais.", d: "A justiça retomou o bem para pagar credores do vendedor. O comprador perdeu o imóvel.", l: "Auditorias nacionais são o único seguro real contra surpresas jurídicas." },
-        { t: "2. O Herdeiro Surpresa", r: "Ao comprar de um herdeiro único, existe o risco jurídico de um novo herdeiro surgir e anular a venda original para garantir sua parte.", f: "Filho desconhecido provou paternidade via DNA após o negócio.", d: "A partilha foi anulada e a venda do imóvel desfeita pela justiça.", l: "Prazos sucessórios e histórico familiar exigem auditoria estratégica preventiva." },
-        { t: "3. Retenção de 70% em Distrato", r: "Construtoras frequentemente aplicam multas abusivas para quem desiste de imóveis na planta, tentando reter quase todo o valor pago.", f: "A empresa tentou reter 70% do valor pago em um cancelamento de contrato.", d: "Após auditoria técnica, a justiça reduziu a multa para 20%, protegendo o comprador.", l: "Cláusulas abusivas podem ser contestadas com inteligência jurídica especializada." },
-        { t: "4. Dívida de Condomínio Propter Rem", r: "As dívidas de condomínio 'andam' com o imóvel. Quem compra o bem, herda automaticamente toda a dívida acumulada.", f: "Investidor arrematou imóvel em leilão sem analisar débitos condominiais acumulados.", d: "Foi obrigado a pagar R$ 100 mil em taxas antigas, zerando o lucro da operação.", l: "Análise técnica de editais de leilão é obrigatória para evitar armadilhas." },
-        { t: "5. Fraude por Procuração Falsa", r: "Criminosos usam documentos forjados para vender imóveis de terceiros sem que o verdadeiro dono saiba.", f: "Golpistas forjaram procuração em outro estado para vender casa de alto padrão.", d: "O dono real provou a fraude e retomou o imóvel. O comprador ficou no prejuízo total.", l: "Sempre valide mandatos diretamente no cartório de origem para blindar o negócio." }
+        { t: "1. Penhora de Imóvel 'Limpo'", r: "A compra de um imóvel aparentemente sem dívidas pode ser anulada por processos do antigo dono em outros estados.", f: "Auditoria focada apenas em certidões locais.", d: "O comprador perdeu o imóvel para pagar credores do vendedor.", l: "Due Diligence nacional é a única proteção real contra surpresas." },
+        { t: "2. O Herdeiro Surpresa", r: "Ao comprar de um herdeiro único, um novo filho pode surgir após a venda e anular o negócio.", f: "Reconhecimento de paternidade pós-venda.", d: "A venda foi desfeita para garantir a parte do novo herdeiro.", l: "Prazos sucessórios e histórico familiar exigem análise preventiva." },
+        { t: "3. Retenção de 70% em Distrato", r: "Construtoras aplicam multas abusivas em desistências de imóveis na planta.", f: "Tentativa de retenção de 70% do valor pago.", d: "Justiça reduziu a multa para 20%, protegendo o investidor.", l: "Cláusulas abusivas devem ser contestadas com engenharia contratual." },
+        { t: "4. Fraude por Procuração Falsa", r: "Criminosos forjam documentos para vender imóveis de terceiros.", f: "Procuração falsa usada em venda de alto padrão.", d: "Dono real retomou o bem e o comprador ficou no prejuízo.", l: "Validação direta no cartório de origem é indispensável." }
     ];
 
     const bancoJuris = [
-        { t: "1. Retomada Extrajudicial (STF)", r: "Decisão Lei 9.514/97.", desc: "Bancos podem retomar imóveis financiados com parcelas em atraso de forma rápida via Cartório, sem necessidade de juiz.", c: "O STF validou que o leilão pode ser feito diretamente após a notificação no Cartório.", e: "Exige atenção redobrada aos prazos e defesa estratégica imediata." },
-        { t: "2. Súmula 543 (STJ)", r: "Proteção em Imóvel na Planta.", desc: "Se a construtora atrasar a entrega da obra, o comprador tem o direito de receber todo o seu dinheiro de volta de uma só vez.", c: "A justiça definiu devolução de 100% imediata caso a culpa seja da empresa.", e: "Protege contra parcelamentos abusivos de devolução por parte das incorporadoras." },
-        { t: "3. Penhora de Fiador (STF)", r: "Risco em Locação Comercial.", desc: "Pessoas que aceitam ser fiadoras em contratos comerciais podem perder sua única casa para pagar a dívida do inquilino.", c: "O STF autorizou o leilão do imóvel de família do fiador comercial.", e: "Reforça a necessidade vital de blindagem patrimonial preventiva." },
-        { t: "4. Taxas em Loteamentos (STF)", r: "Tema 492: Cobranças Abusivas.", desc: "Moradores de loteamentos fechados só devem pagar taxas se concordarem expressamente ou se constar na matrícula.", c: "A cobrança só vale se o proprietário aderiu à associação formalmente.", e: "Segurança jurídica contra cobranças inesperadas de associações sem vínculo." },
-        { t: "5. Vícios de Construção (STJ)", r: "Garantia de 10 Anos.", desc: "Se o seu imóvel apresentar problemas estruturais graves, você tem um longo tempo para agir judicialmente.", c: "O STJ consolidou o prazo de 10 anos para processar a construtora por defeitos graves.", e: "Garante ao proprietário fôlego jurídico para exigir reparações caras." }
+        { t: "1. Retomada Extrajudicial (STF)", r: "Lei 9.514/97.", desc: "Bancos podem retomar imóveis financiados em atraso via Cartório, sem juiz.", c: "O STF validou o leilão direto após notificação.", e: "Atenção redobrada aos prazos e defesa imediata." },
+        { t: "2. Súmula 543 (STJ)", r: "Imóvel na Planta.", desc: "Em atraso da obra, o comprador recebe 100% do dinheiro de volta à vista.", c: "Justiça proíbe parcelamento da devolução pela construtora.", e: "Segurança total para o investidor em distratos por culpa da empresa." }
     ];
 
     const bancoQuestoes = [
         { q: "Quem não registra o contrato na matrícula é dono?", o: ["Sim, contrato basta.", "Não, exige registro."], r: 1, e: "O registro na matrícula é o único ato que transfere a propriedade legal." },
-        { q: "Dívidas de condomínio seguem o imóvel?", o: ["Não.", "Sim (Propter Rem)."], r: 1, e: "Ao comprar um bem, você assume todas as dívidas acumuladas ligadas a ele." }
+        { q: "Posse de imóvel irregular pode virar escritura?", o: ["Não, nunca.", "Sim, via Usucapião."], r: 1, e: "A Usucapião extrajudicial limpa o histórico e garante a propriedade definitiva." }
     ];
 
     let qIdx = 0; let score = 0;
     function init() {
         showQ();
         document.getElementById('container-casos').innerHTML = bancoCasos.map(c => `<div class="card"><h4>${c.t}</h4><p style="font-size:13px; margin:10px 0; color:#444;">${c.r}</p><button class="btn-action" style="padding:10px; font-size:11px;" onclick="abrirInfo('${c.t.replace(/'/g, "\\'")}', '${c.f.replace(/'/g, "\\'")}<br><br>${c.d.replace(/'/g, "\\'")}', '🚨 Lição: ${c.l.replace(/'/g, "\\'")}')">Análise do Desfecho →</button></div>`).join('');
-        document.getElementById('container-juris').innerHTML = bancoJuris.map(j => `<div class="juris-item" onclick="abrirInfo('${j.t.replace(/'/g, "\\'")}', '${j.desc.replace(/'/g, "\\'")}<br><br><strong>Impacto Prático:</strong> ${j.c.replace(/'/g, "\\'")}', '🚨 O que muda: ${j.e.replace(/'/g, "\\'")}')"><p style="font-weight:700;">${j.t}</p><p style="font-size:12px; color:#666; margin-top:5px;">${j.r}</p></div>`).join('');
+        document.getElementById('container-juris').innerHTML = bancoJuris.map(j => `<div class="juris-item" onclick="abrirInfo('${j.t.replace(/'/g, "\\'")}', '${j.desc.replace(/'/g, "\\'")}<br><br><strong>Impacto:</strong> ${j.c.replace(/'/g, "\\'")}', '🚨 Fique atento: ${j.e.replace(/'/g, "\\'")}')"><p style="font-weight:700;">${j.t}</p><p style="font-size:12px; color:#666; margin-top:5px;">${j.r}</p></div>`).join('');
     }
 
     function showQ() {
@@ -253,12 +206,11 @@
         qIdx++; if(qIdx < bancoQuestoes.length) { showQ(); } else { endQuiz(); }
     }
 
-    function endQuiz() { abrirInfo('Fim do Teste', `Sua pontuação: ${score}/${bancoQuestoes.length}.`, 'O mercado exige estratégia. Busque um especialista.'); qIdx = 0; score = 0; init(); }
+    function endQuiz() { abrirInfo('Fim do Teste', `Pontuação: ${score}/${bancoQuestoes.length}.`, 'Proteja seu patrimônio com estratégia.'); qIdx = 0; score = 0; init(); }
     function abrirModal(id) { document.getElementById(id).style.display = 'flex'; }
     function fecharModal(id) { document.getElementById(id).style.display = 'none'; }
     function fecharModalExterno(e, id) { if(e.target.id === id) fecharModal(id); }
     function abrirInfo(t, c, ex) { document.getElementById('info-titulo').innerText = t; document.getElementById('info-corpo').innerHTML = c; document.getElementById('info-extra').innerText = ex; abrirModal('modal-info'); }
-    function compartilharSite() { const msg = encodeURIComponent("Conheça o portal do estrategista Antônio Appratto Miranda sobre Inteligência Imobiliária.\n🌐 " + window.location.href); window.open("https://wa.me/?text=" + msg, "_blank"); }
     
     window.onload = init;
     </script>
