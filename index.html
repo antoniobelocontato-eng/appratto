@@ -33,23 +33,34 @@
         .logo { font-family: 'Playfair Display', serif; font-size: clamp(26px, 7vw, 44px); font-weight: 700; background: var(--cinza-chique); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
         #frase-dinamica { font-size: 11px; color: var(--accent-gold); text-transform: uppercase; letter-spacing: 4px; margin: 15px 0; font-weight: 700; height: 15px; }
 
+        /* Quiz */
         .quiz-section { background: #111; color: #fff; padding: clamp(25px, 5vw, 45px); border-radius: 4px; margin: 40px 0; border-top: 5px solid var(--accent-gold); }
         .progress-bar { height: 4px; background: #333; margin-bottom: 25px; }
         #progress-fill { height: 100%; background: var(--accent-gold); width: 0%; transition: 0.5s; }
         .option-btn { display: block; width: 100%; padding: 16px; margin-bottom: 12px; background: #1a1a1a; border: 1px solid #333; color: #fff; text-align: left; cursor: pointer; transition: 0.3s; font-size: 14px; border-radius: 4px; }
         .option-btn:hover { background: #222; border-color: var(--accent-gold); }
 
+        /* Grid */
         .portal-grid { display: flex; flex-direction: column; gap: 40px; margin: 40px auto; }
         @media (min-width: 992px) { .portal-grid { display: grid; grid-template-columns: 2fr 1fr; gap: 60px; } }
         .section-label { font-size: 11px; font-weight: 700; color: var(--accent-gold); text-transform: uppercase; margin-bottom: 25px; display: block; border-bottom: 1px solid rgba(0,0,0,0.1); padding-bottom: 10px; }
 
+        /* Cards */
         .card { background: #fff; padding: 30px; border: 1px solid #eee; margin-bottom: 25px; border-top: 4px solid var(--alert-red); border-radius: 4px; position: relative; }
-        .btn-action { width: 100%; padding: 18px; background: var(--accent-gold); color: #fff; border: none; font-weight: 700; text-transform: uppercase; cursor: pointer; border-radius: 4px; transition: 0.3s; display: block; text-align: center; text-decoration: none; margin-bottom: 10px; }
+        .juris-item { background: #fff; padding: 20px; border: 1px solid #eee; margin-bottom: 10px; cursor: pointer; transition: 0.3s; border-radius: 4px; }
+        .juris-item:hover { border-left: 5px solid var(--accent-gold); background: #fafafa; }
 
+        /* Sidebars e Botões */
+        .sidebar-block { background: #111; color: #fff; padding: 30px; margin-bottom: 25px; border-top: 4px solid var(--accent-gold); border-radius: 4px; }
+        .btn-action { width: 100%; padding: 18px; background: var(--accent-gold); color: #fff; border: none; font-weight: 700; text-transform: uppercase; cursor: pointer; border-radius: 4px; transition: 0.3s; display: block; text-align: center; text-decoration: none; margin-bottom: 10px; }
+        .btn-share { background: #25d366 !important; font-size: 12px !important; padding: 12px !important; }
+
+        /* Modais */
         .modal-overlay { display: none; position: fixed; top:0; left:0; width:100%; height:100%; background: rgba(0,0,0,0.9); z-index: 9999; padding: 20px; align-items: center; justify-content: center; }
         .modal-box { background: var(--white); max-width: 600px; width: 100%; max-height: 85vh; padding: 50px 30px 40px; position: relative; border-radius: 8px; border-top: 8px solid var(--accent-gold); overflow-y: auto; box-shadow: 0 20px 50px rgba(0,0,0,0.5); }
         .close-x { position: absolute; top: 10px; right: 20px; font-size: 40px; cursor: pointer; color: #333; font-weight: bold; z-index: 10000; line-height: 1; }
 
+        /* Imagens */
         .perfil-img { width: 180px; height: 180px; border-radius: 50%; border: 4px solid var(--accent-gold); object-fit: cover; object-position: top; margin-bottom: 20px; background: #eee; }
         .obra-card { background: #f9f9f9; padding: 20px; border-left: 4px solid var(--accent-gold); margin-top: 25px; border-radius: 4px; text-align: center; }
         .capa-livro { width: 150px; height: auto; box-shadow: 0 8px 20px rgba(0,0,0,0.3); margin-bottom: 15px; border-radius: 3px; display: inline-block; }
@@ -86,13 +97,13 @@
             <section>
                 <span class="section-label">Casos Reais e Inteligência Aplicada</span>
                 <div id="container-casos"></div>
-                <span class="section-label" style="margin-top:40px;">Jurisprudência em Foco</span>
+                <span class="section-label" style="margin-top:40px;">Jurisprudência em Foco (Top 5)</span>
                 <div id="container-juris"></div>
             </section>
             <aside>
                 <div class="sidebar-block">
                     <h3 style="font-family:'Playfair Display'; color:var(--accent-gold); margin-bottom:20px;">Análise Estratégica</h3>
-                    <button class="btn-action" style="background:#25d366" onclick="compartilharSite()">📲 Compartilhar Site</button>
+                    <button class="btn-action btn-share" onclick="compartilharSite()">📲 Compartilhar com alguém</button>
                 </div>
             </aside>
         </div>
@@ -102,7 +113,9 @@
         <div class="modal-box">
             <span class="close-x" onclick="fecharModal('modal-perfil')">&times;</span>
             <div style="display:flex; flex-direction:column; align-items:center; text-align:center;">
-                <img src="perfil.jpg" id="img-perfil" alt="Antonio Eduardo Miranda" class="perfil-img">
+                <img src="perfil.jpg" id="img-perfil" alt="Antonio Eduardo Miranda" class="perfil-img" 
+                     onerror="this.onerror=null; this.src='Perfil.jpeg.jpg';">
+                
                 <h2 style="font-family:'Playfair Display'; font-size: 28px;">Antonio Eduardo Miranda de Souza</h2>
                 <p style="color:var(--accent-gold); font-weight:700; font-size:12px; text-transform:uppercase;">Estrategista Jurídico | Especialista em Proc. Civil | Pós-graduando em Direito Imobiliário</p>
                 
@@ -113,9 +126,9 @@
             </div>
             
             <div style="margin-top:30px;">
-                <span class="section-label">Informações Técnicas</span>
+                <span class="section-label">Informações Técnicas e Acadêmicas</span>
                 <p style="font-size:14px; text-align: justify;">
-                    Bacharel em Direito com vivência estratégica de 2 anos no <strong>TJRN</strong> (Residente Judicial). Especialista em Processo Civil e Pós-graduando em Direito Negocial e Imobiliário pela EBRADI ESA OAB. Atuação focada em blindagem documental e regularização de ativos de alto valor.
+                    Bacharel em Direito com vivência estratégica de 2 anos no <strong>TJRN</strong> (14ª Vara Criminal e 2ª Vara da Fazenda Pública). Experiência na <strong>PGE-RN</strong> (Dívida Ativa) e <strong>Sefaz-RN</strong>. Especialista em Processo Civil e Pós-graduando em Direito Negocial e Imobiliário pela EBRADI/ESA OAB. Atuação focada em blindagem documental e regularização de ativos de alto valor.
                 </p>
                 
                 <span class="section-label" style="margin-top:25px;">Vitrine Literária</span>
@@ -123,15 +136,15 @@
                 <div class="obra-card">
                     <img src="noticia.jpg" alt="Capa Livro Notícia" class="capa-livro">
                     <h4 style="font-family:'Playfair Display';">O Que Está Por Trás da Notícia? (2024)</h4>
-                    <p style="font-size:12px; color:#555; text-align: justify; margin-top:10px;">Análise abrangente dos dilemas enfrentados pela liberdade de imprensa no Brasil contemporâneo frente aos direitos individuais.</p>
-                    <a href="https://insigneacademica.com.br/editora-insigne/livros?busca=Antonio+Eduardo" class="btn-action" target="_blank" style="padding:10px; font-size:11px;">ADQUIRIR OBRA →</a>
+                    <p style="font-size:12px; color:#555; text-align: justify; margin-top:10px;">Uma análise abrangente e profunda dos dilemas enfrentados pela liberdade de imprensa no Brasil contemporâneo, contrastando com os direitos individuais e os desafios da era digital.</p>
+                    <a href="https://insigneacademica.com.br/editora-insigne/livros?busca=Antonio+Eduardo" class="btn-action" target="_blank" style="padding:10px; font-size:11px; margin-top:15px;">ADQUIRIR OBRA →</a>
                 </div>
 
                 <div class="obra-card" style="margin-top:30px;">
                     <img src="genero.jpg" alt="Capa Livro Gênero" class="capa-livro">
                     <h4 style="font-family:'Playfair Display';">Advocacia sob uma Análise de Gênero (2024)</h4>
-                    <p style="font-size:12px; color:#555; text-align: justify; margin-top:10px;">Obra que mergulha nas questões de gênero no campo jurídico, explorando desafios enfrentados pelas mulheres na advocacia em Natal-RN.</p>
-                    <a href="https://insigneacademica.com.br/editora-insigne/livros?busca=Antonio+Eduardo" class="btn-action" target="_blank" style="padding:10px; font-size:11px;">ADQUIRIR OBRA →</a>
+                    <p style="font-size:12px; color:#555; text-align: justify; margin-top:10px;">Obra reveladora que mergulha nas questões de gênero dentro do campo jurídico, focando nas dificuldades únicas enfrentadas pelas mulheres na advocacia em Natal-RN.</p>
+                    <a href="https://insigneacademica.com.br/editora-insigne/livros?busca=Antonio+Eduardo" class="btn-action" target="_blank" style="padding:10px; font-size:11px; margin-top:15px;">ADQUIRIR OBRA →</a>
                 </div>
             </div>
         </div>
@@ -149,8 +162,12 @@
     <footer><p><strong>ANTONIO EDUARDO MIRANDA DE SOUZA</strong> | Natal/RN | 2026</p></footer>
 
     <script>
+    const frases = ["SEGURANÇA JURÍDICA PATRIMONIAL", "ESTRATÉGIA IMOBILIÁRIA", "ESPECIALISTA EM PROCESSO CIVIL"];
+    let fIdx = 0; setInterval(() => { document.getElementById('frase-dinamica').innerText = frases[fIdx]; fIdx = (fIdx + 1) % frases.length; }, 3500);
+
     const bancoCasos = [
-        { t: "1. Penhora de Imóvel 'Limpo'", f: "Compra sem auditoria.", d: "Dívidas em outro estado anularam a venda por fraude.", l: "Busca nacional em tribunais é vital." }
+        { t: "1. Penhora de Imóvel 'Limpo'", f: "Compra sem auditoria nacional.", d: "Dívidas em outro estado anularam a venda por fraude.", l: "Busca nacional em tribunais é vital." },
+        { t: "2. O Herdeiro Surpresa", f: "Compra de herdeiro único.", d: "Herdeiro via DNA anulou a partilha e a venda.", l: "Prazos de sucessão devem ser auditados." }
     ];
 
     const bancoJuris = [
@@ -181,13 +198,17 @@
         qIdx++; if(qIdx < bancoQuestoes.length) { showQ(); } else { endQuiz(); }
     }
 
-    function endQuiz() { abrirInfo('Fim', `Acertos: ${score}/${bancoQuestoes.length}.`, 'Consulte um estrategista.'); qIdx = 0; score = 0; init(); }
+    function endQuiz() { abrirInfo('Fim', `Acertos: ${score}/${bancoQuestoes.length}.`, 'Consulte um estrategista para blindar o seu patrimônio.'); qIdx = 0; score = 0; init(); }
     function abrirModal(id) { document.getElementById(id).style.display = 'flex'; }
     function fecharModal(id) { document.getElementById(id).style.display = 'none'; }
     function fecharModalExterno(e, id) { if(e.target.id === id) fecharModal(id); }
     function abrirInfo(t, c, ex) { document.getElementById('info-titulo').innerText = t; document.getElementById('info-corpo').innerText = c; document.getElementById('info-extra').innerText = ex; abrirModal('modal-info'); }
-    function compartilharSite() { const msg = encodeURIComponent("Conheça o portal do Dr. Antonio Eduardo Miranda.\n🌐 " + window.location.href); window.open("https://wa.me/?text=" + msg, "_blank"); }
     
+    function compartilharSite() { 
+        const msg = encodeURIComponent("Olá! Estive no portal do Dr. Antonio Eduardo Miranda e este conteúdo sobre Segurança Patrimonial pode ajudar muito.\n\n🌐 Acesse: " + window.location.href + "\n📞 (84) 98191-1309\n\n💬 Conversar via WhatsApp: https://wa.me/5584981911309"); 
+        window.open("https://wa.me/?text=" + msg, "_blank"); 
+    }
+
     window.onload = init;
     </script>
 </body>
