@@ -17,17 +17,7 @@
     
     <style>
         :root {
-            /* AJUSTE SOLICITADO: Bronze Polido Metalizado e Reflexivo */
-            --bronze-metallic: linear-gradient(
-                135deg, 
-                #4e352e 0%, 
-                #8d5a47 20%, 
-                #c18f76 40%, 
-                #f3e5d8 50%, /* Ponto de brilho da luz incidente */
-                #c18f76 60%, 
-                #8d5a47 80%, 
-                #4e352e 100%
-            );
+            /* COR ATUALIZADA: Marrom extraído da imagem fornecida (#322522) */
             --bg-deep: #322522;      
             --gold-light: #D4AF37;   
             --gold-gradient: linear-gradient(135deg, #D4AF37 0%, #B8860B 100%);
@@ -41,44 +31,13 @@
         body { font-family: 'Outfit', sans-serif; background: var(--off-white); color: var(--text-main); line-height: 1.6; }
         .container { max-width: 1100px; margin: 0 auto; padding: 0 25px; }
 
-        /* CABEÇALHO COM BRONZE POLIDO E REFLEXO DE LUZ */
-        header { 
-            padding: 60px 0; 
-            text-align: center; 
-            background: var(--bronze-metallic); 
-            background-size: 200% 200%;
-            border-bottom: 3px solid var(--gold-light); 
-            box-shadow: inset 0 0 100px rgba(0,0,0,0.2);
-            position: relative;
-            overflow: hidden;
-        }
+        /* CABEÇALHO COM A NOVA COR */
+        header { padding: 60px 0; text-align: center; background: var(--bg-deep); border-bottom: 3px solid var(--gold-light); }
+        .logo-img { max-width: 380px; width: 90%; height: auto; display: block; margin: 0 auto; }
+        #frase-dinamica { font-size: 11px; color: var(--gold-light); text-transform: uppercase; letter-spacing: 5px; margin: 20px 0; font-weight: 700; height: 18px; }
 
-        /* Efeito extra de brilho polido */
-        header::after {
-            content: "";
-            position: absolute;
-            top: 0; left: 0; right: 0; bottom: 0;
-            background: linear-gradient(to bottom, rgba(255,255,255,0.15) 0%, rgba(255,255,255,0) 50%, rgba(0,0,0,0.1) 100%);
-            pointer-events: none;
-        }
-
-        .logo-img { max-width: 380px; width: 90%; height: auto; display: block; margin: 0 auto; position: relative; z-index: 2; }
-        
-        #frase-dinamica { 
-            font-size: 11px; 
-            color: #fff; 
-            text-shadow: 0px 2px 4px rgba(0,0,0,0.5);
-            text-transform: uppercase; 
-            letter-spacing: 5px; 
-            margin: 20px 0; 
-            font-weight: 700; 
-            height: 18px; 
-            position: relative;
-            z-index: 2;
-        }
-
-        /* QUEM SOMOS ENCORPADO */
-        .bio-home { background: #fff; padding: 60px 50px; border-radius: 12px; border-top: 8px solid var(--gold-light); margin-top: -40px; box-shadow: var(--card-shadow); text-align: center; position: relative; z-index: 3; }
+        /* QUEM SOMOS */
+        .bio-home { background: #fff; padding: 60px 50px; border-radius: 12px; border-top: 8px solid var(--gold-light); margin-top: -40px; box-shadow: var(--card-shadow); text-align: center; }
         .perfil-img { width: 170px; height: 170px; border-radius: 50%; border: 4px solid var(--gold-light); object-fit: cover; margin-bottom: 25px; box-shadow: 0 5px 20px rgba(0,0,0,0.15); }
         .bio-text { text-align: justify; color: #444; font-size: 17px; margin: 25px auto; max-width: 950px; line-height: 1.8; }
         
